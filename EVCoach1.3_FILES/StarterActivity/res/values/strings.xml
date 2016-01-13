@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">OpenXC EV Coach</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+
+    <string-array name="can_signals">
+        <item>Engine Speed</item>
+        <item>Vehicle Speed</item>
+        <item>AC Commpressor Power</item>
+        <item>Battery State of Charge</item>
+        <item>HV Battery Currrent</item>
+        <item>Last Regen. Event</item>
+        <item>Relative Drive Power</item>
+    </string-array>
+    
+    <string-array name="car_options">
+    	<item>Combustion City</item>
+    	<item>Combustion Highway</item>
+    	<item>HEV City</item>
+    	<item>HEV Highway</item>
+    	<item>PHEV City</item>
+    	<item>PHEV Highway</item>
+    	<item>BEV City</item>
+    	<item>BEV Highway</item>
+    </string-array>
+
+</resources>
