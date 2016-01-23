@@ -11,6 +11,10 @@ android {
         multiDexEnabled true
     }
 
+    configurations {
+        all*.exclude group: 'com.android.support', module: 'support-v4'
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -29,5 +33,5 @@ dependencies {
     //compile 'com.openxcplatform:library:6.1.6+'
     compile 'com.jjoe64:graphview:4.0.1'
     compile 'com.getpebble:pebblekit:3.0.0'
-    compile 'com.android.support:appcompat-v7:22.0.0'
+    compile 'com.android.support:appcompat-v7:23.0.0'
 }
