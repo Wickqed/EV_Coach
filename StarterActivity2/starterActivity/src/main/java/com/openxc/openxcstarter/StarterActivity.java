@@ -5,6 +5,7 @@ import java.util.UUID;
 import java.util.ArrayList;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -16,6 +17,8 @@ import android.speech.tts.TextToSpeech;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -201,18 +204,42 @@ public class StarterActivity extends Activity {
 			final IgnitionStatus status = (IgnitionStatus) measurement;
 			Log.i(TAG, "received measurement IgnitionStatus");
 			if(status.getValue().toString() == "OFF"){
-				Log.i(TAG, "IS RUNNING");
-				Intent i = new Intent(getApplicationContext(),GraphingActivity.class);
-				i.putExtra("listRPM",listRPM);
-				i.putExtra("listSpeed", listSpeed);
-				i.putExtra("listBatStateCharge",listBatStateCharge);
-				i.putExtra("listHVBatCurr", listHVBatCurr);
-				i.putExtra("listLastRegEventScore",listLastRegEventScore);
-				i.putExtra("listRelDrivePower", listRelDrivePower);
-				i.putExtra("listAcCompressorPower", listAcCompressorPower);
+				final Dialog dialog = new Dialog(StarterActivity.this);
+				dialog.setTitle("Score Screen");
+				dialog.setContentView(R.layout.userinterface);
+				//Calculate score here and put it into the text box
 
+				Button graphButton = (Button)dialog.findViewById(R.id.Graph_Button);
+				Button breakDownButton = (Button)dialog.findViewById(R.id.Break_button);
+				dialog.show();
 
-				startActivity(i);
+				graphButton.setOnClickListener(new View.OnClickListener() {
+					@Override
+					public void onClick(View view) {
+						Log.i(TAG, "IS RUNNING");
+						Intent i = new Intent(getApplicationContext(), GraphingActivity.class);
+						i.putExtra("listRPM", listRPM);
+						i.putExtra("listSpeed", listSpeed);
+						i.putExtra("listBatStateCharge", listBatStateCharge);
+						i.putExtra("listHVBatCurr", listHVBatCurr);
+						i.putExtra("listLastRegEventScore", listLastRegEventScore);
+						i.putExtra("listRelDrivePower", listRelDrivePower);
+						i.putExtra("listAcCompressorPower", listAcCompressorPower);
+						dialog.cancel();
+
+						startActivity(i);
+					}
+				});
+
+				breakDownButton.setOnClickListener(new View.OnClickListener() {
+					@Override
+					public void onClick(View view) {
+						Toast.makeText(getApplicationContext(), "BreakDown", Toast.LENGTH_SHORT).show();
+						dialog.cancel();
+
+					}
+				});
+
 			}
 		}
 
