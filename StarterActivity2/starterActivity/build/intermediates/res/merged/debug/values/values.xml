@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/Users/ZachsComputer/Desktop/EV_Coach/EV_Coach/StarterActivity2/starterActivity/src/main/res/values/strings.xml -->
+    <!-- From: file:/Users/bennerv/StudioProjects/EV_Coach/StarterActivity2/starterActivity/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string-array name="can_signals">
         <item>Engine Speed</item>
@@ -11,7 +11,7 @@
         <item>Last Regen. Event</item>
         <item>Relative Drive Power</item>
     </string-array>
-    <!-- From: file:/Users/ZachsComputer/Desktop/EV_Coach/EV_Coach/StarterActivity2/starterActivity/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values/values.xml -->
+    <!-- From: file:/Users/bennerv/StudioProjects/EV_Coach/StarterActivity2/starterActivity/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values/values.xml -->
     <eat-comment/>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
@@ -170,11 +170,11 @@
     <dimen name="abc_text_size_subtitle_material_toolbar">16dp</dimen>
     <dimen name="abc_text_size_title_material">20sp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
-    <!-- From: file:/Users/ZachsComputer/Desktop/EV_Coach/EV_Coach/StarterActivity2/starterActivity/src/main/res/values/dimens.xml -->
+    <!-- From: file:/Users/bennerv/StudioProjects/EV_Coach/StarterActivity2/starterActivity/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <!-- From: file:/Users/ZachsComputer/Desktop/EV_Coach/EV_Coach/StarterActivity2/starterActivity/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values/values.xml -->
+    <!-- From: file:/Users/bennerv/StudioProjects/EV_Coach/StarterActivity2/starterActivity/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values/values.xml -->
     <eat-comment/>
     <item name="dialog_fixed_height_major" type="dimen">80%</item>
     <item name="dialog_fixed_height_minor" type="dimen">100%</item>
@@ -220,16 +220,16 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
-    <!-- From: file:/Users/ZachsComputer/Desktop/EV_Coach/EV_Coach/StarterActivity2/starterActivity/build/intermediates/exploded-aar/StarterActivity2/openxc/unspecified/res/values/values.xml -->
+    <!-- From: file:/Users/bennerv/StudioProjects/EV_Coach/StarterActivity2/starterActivity/build/intermediates/exploded-aar/StarterActivity2/openxc/unspecified/res/values/values.xml -->
     <eat-comment/>
     <string name="accelerator_pedal_position_label">
         Accelerator Pedal
     </string>
-    <!-- From: file:/Users/ZachsComputer/Desktop/EV_Coach/EV_Coach/StarterActivity2/starterActivity/src/main/res/values/strings.xml -->
+    <!-- From: file:/Users/bennerv/StudioProjects/EV_Coach/StarterActivity2/starterActivity/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="action_settings">Settings</string>
     <string name="app_name">OpenXC EV Coach</string>
-    <!-- From: file:/Users/ZachsComputer/Desktop/EV_Coach/EV_Coach/StarterActivity2/starterActivity/build/intermediates/exploded-aar/StarterActivity2/openxc/unspecified/res/values/values.xml -->
+    <!-- From: file:/Users/bennerv/StudioProjects/EV_Coach/StarterActivity2/starterActivity/build/intermediates/exploded-aar/StarterActivity2/openxc/unspecified/res/values/values.xml -->
     <eat-comment/>
     <string name="bluetooth_mac_key">bluetooth_mac</string>
     <string name="bluetooth_polling_key">bluetooth_polling</string>
@@ -240,10 +240,10 @@
     <string name="fuel_level_label">Fuel Level</string>
     <string name="gps_overwrite_checkbox_key">overwrite_native_gps</string>
     <string name="headlamp_status_label">Headlamp</string>
-    <!-- From: file:/Users/ZachsComputer/Desktop/EV_Coach/EV_Coach/StarterActivity2/starterActivity/src/main/res/values/strings.xml -->
+    <!-- From: file:/Users/bennerv/StudioProjects/EV_Coach/StarterActivity2/starterActivity/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="hello_world">Hello world!</string>
-    <!-- From: file:/Users/ZachsComputer/Desktop/EV_Coach/EV_Coach/StarterActivity2/starterActivity/build/intermediates/exploded-aar/StarterActivity2/openxc/unspecified/res/values/values.xml -->
+    <!-- From: file:/Users/bennerv/StudioProjects/EV_Coach/StarterActivity2/starterActivity/build/intermediates/exploded-aar/StarterActivity2/openxc/unspecified/res/values/values.xml -->
     <eat-comment/>
     <string name="high_beam_status_label">High Beams</string>
     <string name="ignition_status_label">Ignition Status</string>
@@ -258,10 +258,10 @@
     <string name="parking_brake_status_label">Parking Brake</string>
     <string name="recording_checkbox_key">recording_enabled</string>
     <string name="recording_directory_key">recording_output</string>
-    <!-- From: file:/Users/ZachsComputer/Desktop/EV_Coach/EV_Coach/StarterActivity2/starterActivity/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values/values.xml -->
+    <!-- From: file:/Users/bennerv/StudioProjects/EV_Coach/StarterActivity2/starterActivity/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values/values.xml -->
     <eat-comment/>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <!-- From: file:/Users/ZachsComputer/Desktop/EV_Coach/EV_Coach/StarterActivity2/starterActivity/build/intermediates/exploded-aar/StarterActivity2/openxc/unspecified/res/values/values.xml -->
+    <!-- From: file:/Users/bennerv/StudioProjects/EV_Coach/StarterActivity2/starterActivity/build/intermediates/exploded-aar/StarterActivity2/openxc/unspecified/res/values/values.xml -->
     <eat-comment/>
     <string name="steering_wheel_angle_label">Steering Wheel</string>
     <string name="torque_at_transmission_label">Transmission Torque</string>
@@ -273,13 +273,13 @@
     <string name="uploading_path_key">uploading_target</string>
     <string name="vehicle_speed_label">Vehicle Speed</string>
     <string name="windshield_wiper_status_label">Windshield Wiper</string>
-    <!-- From: file:/Users/ZachsComputer/Desktop/EV_Coach/EV_Coach/StarterActivity2/starterActivity/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values/values.xml -->
+    <!-- From: file:/Users/bennerv/StudioProjects/EV_Coach/StarterActivity2/starterActivity/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values/values.xml -->
     <eat-comment/>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
     <style name="Animation.AppCompat.DropDownUp" parent="Base.Animation.AppCompat.DropDownUp"/>
-    <!-- From: file:/Users/ZachsComputer/Desktop/EV_Coach/EV_Coach/StarterActivity2/starterActivity/src/main/res/values/styles.xml -->
+    <!-- From: file:/Users/bennerv/StudioProjects/EV_Coach/StarterActivity2/starterActivity/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!--
@@ -291,7 +291,7 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
-    <!-- From: file:/Users/ZachsComputer/Desktop/EV_Coach/EV_Coach/StarterActivity2/starterActivity/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values/values.xml -->
+    <!-- From: file:/Users/bennerv/StudioProjects/EV_Coach/StarterActivity2/starterActivity/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values/values.xml -->
     <eat-comment/>
     <style name="Base.AlertDialog.AppCompat" parent="android:Widget">
         <item name="android:layout">@layout/abc_alert_dialog_material</item>

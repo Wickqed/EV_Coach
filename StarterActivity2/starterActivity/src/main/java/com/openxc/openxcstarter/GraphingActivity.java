@@ -167,7 +167,7 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 		}
 		else if(canSelect.getSelectedItem().toString().equals("Battery State of Charge")){
 			graph.addSeries(bSCSeries);
-			graph.setTitle("Battery State of Charge");
+			graph.setTitle("Battery Charge");
 			BSChargeBool = true;
 			//Toast.makeText(getApplicationContext(), "Battery State of Charge", Toast.LENGTH_SHORT).show();
 

@@ -43,6 +43,7 @@ public class StarterActivity extends Activity {
 
 	private VehicleManager mVehicleManager;
 	private TextView mEngineSpeedView;
+    private final int moduloValue = 25;
 	TextToSpeech ttobj;
 	String status = "";
 
@@ -152,6 +153,7 @@ public class StarterActivity extends Activity {
 	 * Later in the file, we'll ask the VehicleManager to call the receive()
 	 * function here whenever a new EngineSpeed value arrives.
 	 */
+    int speedListenerCount = 0;
 	EngineSpeed.Listener mSpeedListener = new EngineSpeed.Listener() {
 		@Override
 		public void receive(Measurement measurement) {
@@ -159,8 +161,16 @@ public class StarterActivity extends Activity {
 			// update the UI to display the new value. First we cast the generic
 			// Measurement back to the type we know it to be, an EngineSpeed.
 			final EngineSpeed speed = (EngineSpeed) measurement;
-			Log.i(TAG, "received measurement speed");
-			listRPM.add(speed.getValue().doubleValue());
+
+
+            //add every 25th data point to the ArrayList
+            if(++speedListenerCount % moduloValue != 0) {
+                Log.i(TAG, "Skipped Measurement Speed");
+            } else {
+				Log.i(TAG, "Receieved Measurement Engine Speed");
+                listRPM.add(speed.getValue().doubleValue());
+            }
+
 			// In order to modify the UI, we have to make sure the code is
 			// running on the "UI thread" - Google around for this, it's an
 			// important concept in Android.
@@ -200,7 +210,7 @@ public class StarterActivity extends Activity {
 		public void receive(Measurement measurement) {
 			final IgnitionStatus status = (IgnitionStatus) measurement;
 			Log.i(TAG, "received measurement IgnitionStatus");
-			if(status.getValue().toString() == "OFF"){
+			if(status.getValue().toString().equals("OFF")){
 				Log.i(TAG, "IS RUNNING");
 				Intent i = new Intent(getApplicationContext(),GraphingActivity.class);
 				i.putExtra("listRPM",listRPM);
@@ -218,14 +228,22 @@ public class StarterActivity extends Activity {
 
 	};
 
+    int vehicleSpeedListenerCount = 0;
 	VehicleSpeed.Listener mSpeedVehicleListener = new VehicleSpeed.Listener() {
 		public void receive(Measurement measurement) {
 			// When we receive a new EngineSpeed value from the car, we want to
 			// update the UI to display the new value. First we cast the generic
 			// Measurement back to the type we know it to be, an EngineSpeed.
 			final VehicleSpeed speed = (VehicleSpeed) measurement;
-			Log.i(TAG, "received measurement");
-			listSpeed.add(speed.getValue().doubleValue());
+
+            //add every 25th data point to the ArrayList
+            if(++vehicleSpeedListenerCount % moduloValue != 0) {
+                Log.i(TAG, "Skipped vehicle speed measurement");
+            } else {
+                Log.i(TAG, "Received Vehicle Speed Measurement");
+                listSpeed.add(speed.getValue().doubleValue());
+            }
+
 			// In order to modify the UI, we have to make sure the code is
 			// running on the "UI thread" - Google around for this, it's an
 			// important concept in Android.
@@ -266,24 +284,32 @@ public class StarterActivity extends Activity {
 		}
 	};
 
+    int fuelLevelListenerCount = 0;
 	FuelLevel.Listener mFuelListener = new FuelLevel.Listener() {
 		public void receive(Measurement measurement) {
 			// When we receive a new FuelLevel value from the car, we want to
 			// update the UI to display the new value. First we cast the generic
 			// Measurement back to the type we know it to be, an FuelLevel.
 			final FuelLevel fuel = (FuelLevel) measurement;
-			Log.i(TAG, "received measurement");
+
+            //add every 25th data point to the ArrayList
+            if(++fuelLevelListenerCount % moduloValue != 0) {
+                Log.i(TAG, "Skipped fuel level measurement");
+            } else {
+                Log.i(TAG, "Received Fuel Measurement");
+            }
+
 
 			// In order to modify the UI, we have to make sure the code is
 			// running on the "UI thread" - Google around for this, it's an
 			// important concept in Android.
 			StarterActivity.this.runOnUiThread(new Runnable() {
-				public void run() {
-					// Finally, we've got a new value and we're running on the
-					// UI thread - we set the text of the EngineSpeed view to
-					// the latest value
-				}
-			});
+                public void run() {
+                    // Finally, we've got a new value and we're running on the
+                    // UI thread - we set the text of the EngineSpeed view to
+                    // the latest value
+                }
+            });
 		}
 	};
 
@@ -292,6 +318,7 @@ public class StarterActivity extends Activity {
 	 * Later in the file, we'll ask the VehicleManager to call the receive()
 	 * function here whenever a new EngineSpeed value arrives.
 	 */
+    int acCompressorPowerListenerCount = 0;
 	AcCompressorPower.Listener mAcCompressorPowerListener = new AcCompressorPower.Listener() { 
 		public void receive(Measurement measurement) {
 			// When we receive a new EngineSpeed value from the car, we want to
@@ -302,14 +329,21 @@ public class StarterActivity extends Activity {
 			// running on the "UI thread" - Google around for this, it's an
 			// important concept in Android.
 
-			listAcCompressorPower.add(power.getValue().doubleValue());
-			StarterActivity.this.runOnUiThread(new Runnable() {
-				public void run() {
-					// Finally, we've got a new value and we're running on the
-					// UI thread - we set the text of the EngineSpeed view to
-					// the latest value
+            //add every 25th data point to the ArrayList
+            if(++acCompressorPowerListenerCount % moduloValue != 0) {
+                Log.i(TAG, "Skipped ac compressor power measurement");
+            } else {
+                Log.i(TAG, "Received AC Compressor Power Measurement");
+                listAcCompressorPower.add(power.getValue().doubleValue());
+            }
 
-					// Toasting if criteria is met
+            StarterActivity.this.runOnUiThread(new Runnable() {
+                public void run() {
+                    // Finally, we've got a new value and we're running on the
+                    // UI thread - we set the text of the EngineSpeed view to
+                    // the latest value
+
+                    // Toasting if criteria is met
 				/*	if(count > 0){
 						count++;
 					}
@@ -332,17 +366,23 @@ public class StarterActivity extends Activity {
 			});
 		}
 	};
-
+    int batteryStateListenerCount = 0;
 	BatteryStateOfCharge.Listener mBatteryStateOfChargeListener = new BatteryStateOfCharge.Listener() {
 		public void receive(Measurement measurement) {
 			// When we receive a new EngineSpeed value from the car, we want to
 			// update the UI to display the new value. First we cast the generic
 			// Measurement back to the type we know it to be, an EngineSpeed.
 			final BatteryStateOfCharge charge = (BatteryStateOfCharge) measurement;
-			Log.i(TAG, "received measurement");
-			listBatStateCharge.add(charge.getValue().doubleValue());
 
-			// In order to modify the UI, we have to make sure the code is
+            //add every 25th data point to the ArrayList
+            if(++batteryStateListenerCount % moduloValue != 0) {
+                Log.i(TAG, "Skipped battery charge measurement");
+            } else {
+                Log.i(TAG, "Received Battery Charge Measurement");
+                listBatStateCharge.add(charge.getValue().doubleValue());
+            }
+
+            // In order to modify the UI, we have to make sure the code is
 			// running on the "UI thread" - Google around for this, it's an
 			// important concept in Android.
 			StarterActivity.this.runOnUiThread(new Runnable() {
@@ -375,14 +415,23 @@ public class StarterActivity extends Activity {
 		}
 	};
 
+    int batteryCurrentListenerCount = 0;
 	HvBatteryCurrent.Listener mHvBatteryCurrentListener = new HvBatteryCurrent.Listener() {
 		public void receive(Measurement measurement) {
 			// When we receive a new EngineSpeed value from the car, we want to
 			// update the UI to display the new value. First we cast the generic
 			// Measurement back to the type we know it to be, an EngineSpeed.
 			final HvBatteryCurrent current = (HvBatteryCurrent) measurement;
-			Log.i(TAG, "received measurement");
-			listHVBatCurr.add(current.getValue().doubleValue());
+
+
+            //add every 25th data point to the ArrayList
+            if(++batteryCurrentListenerCount % moduloValue != 0) {
+                Log.i(TAG, "Skipped battery current measurement");
+            } else {
+                Log.i(TAG, "Received Battery Current Measurement");
+                listHVBatCurr.add(current.getValue().doubleValue());
+            }
+
 
 			// In order to modify the UI, we have to make sure the code is
 			// running on the "UI thread" - Google around for this, it's an
@@ -416,14 +465,22 @@ public class StarterActivity extends Activity {
 		}
 	};
 
+    int regenListenerCount = 0;
 	LastRegenEventScore.Listener mLastRegenEventScoreListener = new LastRegenEventScore.Listener() {
 		public void receive(Measurement measurement) {
 			// When we receive a new EngineSpeed value from the car, we want to
 			// update the UI to display the new value. First we cast the generic
 			// Measurement back to the type we know it to be, an EngineSpeed.
 			final LastRegenEventScore score = (LastRegenEventScore) measurement;
-			Log.i(TAG, "received measurement");
-			listLastRegEventScore.add(score.getValue().doubleValue());
+
+            //add every 25th data point to the ArrayList
+            if(++regenListenerCount % moduloValue != 0) {
+                Log.i(TAG, "Skipped regen event measurement");
+            } else {
+                Log.i(TAG, "Received Regen Event Measurement");
+                listLastRegEventScore.add(score.getValue().doubleValue());
+            }
+
 
 			// In order to modify the UI, we have to make sure the code is
 			// running on the "UI thread" - Google around for this, it's an
@@ -456,14 +513,21 @@ public class StarterActivity extends Activity {
 		}
 	};
 
+    int drivePowerListenerCount = 0;
 	RelativeDrivePower.Listener mRelativeDrivePowerListener = new RelativeDrivePower.Listener() {
 		public void receive(Measurement measurement) {
 			// When we receive a new EngineSpeed value from the car, we want to
 			// update the UI to display the new value. First we cast the generic
 			// Measurement back to the type we know it to be, an EngineSpeed.
 			final RelativeDrivePower power = (RelativeDrivePower) measurement;
-			Log.i(TAG, "received measurement");
-			listRelDrivePower.add(power.getValue().doubleValue());
+
+            //add every 25th data point to the ArrayList
+            if(++drivePowerListenerCount % moduloValue != 0) {
+                Log.i(TAG, "Skipped drive power measurement");
+            } else {
+                Log.i(TAG, "Receieved Relative Drive Power Measurement");
+                listRelDrivePower.add(power.getValue().doubleValue());
+            }
 
 			// In order to modify the UI, we have to make sure the code is
 			// running on the "UI thread" - Google around for this, it's an
