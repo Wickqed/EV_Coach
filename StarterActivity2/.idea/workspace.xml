@@ -9,268 +9,8 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f76d8037-d25e-4a51-a6d0-2a4c749363db" name="Default" comment="Takes a one-in-X amount of measurements as defined by moduloValue.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxc/sinks/AbstractQueuedCallbackSink.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxc/sinks/AbstractQueuedCallbackSink.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/sinks/AbstractQueuedCallbackSink.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/sinks/AbstractQueuedCallbackSink.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxc/measurements/BaseMeasurement.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxc/measurements/BaseMeasurement.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/measurements/BaseMeasurement.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/measurements/BaseMeasurement.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxc/sources/BaseVehicleDataSource.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxc/sources/BaseVehicleDataSource.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/sources/BaseVehicleDataSource.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/sources/BaseVehicleDataSource.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxc/interfaces/bluetooth/BluetoothVehicleInterface$SocketAccepter.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxc/interfaces/bluetooth/BluetoothVehicleInterface$SocketAccepter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/interfaces/bluetooth/BluetoothVehicleInterface$SocketAccepter.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/interfaces/bluetooth/BluetoothVehicleInterface$SocketAccepter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxc/interfaces/bluetooth/BluetoothVehicleInterface.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxc/interfaces/bluetooth/BluetoothVehicleInterface.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/interfaces/bluetooth/BluetoothVehicleInterface.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/interfaces/bluetooth/BluetoothVehicleInterface.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxc/sources/BytestreamDataSource.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxc/sources/BytestreamDataSource.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/sources/BytestreamDataSource.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/sources/BytestreamDataSource.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxc/interfaces/bluetooth/DeviceManager.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxc/interfaces/bluetooth/DeviceManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/interfaces/bluetooth/DeviceManager.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/interfaces/bluetooth/DeviceManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxc/messages/DiagnosticMessage.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxc/messages/DiagnosticMessage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/messages/DiagnosticMessage.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/messages/DiagnosticMessage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxc/messages/DiagnosticRequest.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxc/messages/DiagnosticRequest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/messages/DiagnosticRequest.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/messages/DiagnosticRequest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/GraphingActivity.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/GraphingActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxc/messages/formatters/JsonFormatter.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxc/messages/formatters/JsonFormatter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/messages/formatters/JsonFormatter.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/messages/formatters/JsonFormatter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxc/sinks/MessageListenerSink.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxc/sinks/MessageListenerSink.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/sinks/MessageListenerSink.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/sinks/MessageListenerSink.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxc/interfaces/network/NetworkVehicleInterface.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxc/interfaces/network/NetworkVehicleInterface.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/interfaces/network/NetworkVehicleInterface.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/interfaces/network/NetworkVehicleInterface.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxcplatform/R.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxcplatform/R.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxcplatform/R.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxcplatform/R.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/android/support/v7/appcompat/R.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/android/support/v7/appcompat/R.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/getpebble/android/kit/R.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/getpebble/android/kit/R.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/jjoe64/graphview/R.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/jjoe64/graphview/R.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/R.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/R.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/openxcstarter/R.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/openxcstarter/R.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$1.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$10$1.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$10$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$10.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$10.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$11.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$11.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$2$1.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$2$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$2.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$3.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$4$1.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$4$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$4.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$5$1.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$5$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$5.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$6$1.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$6$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$6.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$7$1.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$7$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$7.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$8$1.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$8$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$8.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$9$1.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$9$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$9.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$9.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxc/sources/TestSource.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxc/sources/TestSource.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/sources/TestSource.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/sources/TestSource.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxc/sources/trace/TraceVehicleDataSource.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxc/sources/trace/TraceVehicleDataSource.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/sources/trace/TraceVehicleDataSource.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/sources/trace/TraceVehicleDataSource.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxc/interfaces/usb/UsbDeviceUtilities.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxc/interfaces/usb/UsbDeviceUtilities.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/interfaces/usb/UsbDeviceUtilities.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/interfaces/usb/UsbDeviceUtilities.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxc/interfaces/VehicleInterfaceFactory.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxc/interfaces/VehicleInterfaceFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/interfaces/VehicleInterfaceFactory.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/interfaces/VehicleInterfaceFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxc/VehicleLocationProvider.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxc/VehicleLocationProvider.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/VehicleLocationProvider.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/VehicleLocationProvider.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxc/VehicleManager$BlockingMessageListener.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxc/VehicleManager$BlockingMessageListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/VehicleManager$BlockingMessageListener.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/VehicleManager$BlockingMessageListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxc/VehicleManager.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxc/VehicleManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/VehicleManager.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/VehicleManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxc/remote/VehicleService.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxc/remote/VehicleService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/remote/VehicleService.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/remote/VehicleService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxc/remote/VehicleServiceInterface$Stub$Proxy.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxc/remote/VehicleServiceInterface$Stub$Proxy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/remote/VehicleServiceInterface$Stub$Proxy.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/remote/VehicleServiceInterface$Stub$Proxy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxc/remote/VehicleServiceInterface$Stub.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxc/remote/VehicleServiceInterface$Stub.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/remote/VehicleServiceInterface$Stub.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/remote/VehicleServiceInterface$Stub.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxc/remote/VehicleServiceListener$Stub.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxc/remote/VehicleServiceListener$Stub.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/remote/VehicleServiceListener$Stub.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/remote/VehicleServiceListener$Stub.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxc/remote/ViConnectionListener$Stub.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/debug/com/openxc/remote/ViConnectionListener$Stub.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/remote/ViConnectionListener$Stub.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/remote/ViConnectionListener$Stub.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/multi-dex/debug/allclasses.jar" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/multi-dex/debug/allclasses.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/bundles/debug/classes.jar" afterPath="$PROJECT_DIR$/openxc/build/intermediates/bundles/debug/classes.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/bundles/release/classes.jar" afterPath="$PROJECT_DIR$/openxc/build/intermediates/bundles/release/classes.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/exploded-aar/StarterActivity2/openxc/unspecified/jars/classes.jar" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/exploded-aar/StarterActivity2/openxc/unspecified/jars/classes.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/incremental/aidl/debug/dependency.store" afterPath="$PROJECT_DIR$/openxc/build/intermediates/incremental/aidl/debug/dependency.store" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/incremental/aidl/release/dependency.store" afterPath="$PROJECT_DIR$/openxc/build/intermediates/incremental/aidl/release/dependency.store" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/outputs/aar/openxc-debug.aar" afterPath="$PROJECT_DIR$/openxc/build/outputs/aar/openxc-debug.aar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/outputs/aar/openxc-release.aar" afterPath="$PROJECT_DIR$/openxc/build/outputs/aar/openxc-release.aar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/openxc/build/intermediates/res/resources-debug-androidTest.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/resources-debug-androidTest.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/resources-debug.ap_" />
+    <list default="true" id="f76d8037-d25e-4a51-a6d0-2a4c749363db" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/GraphingActivity.java" afterPath="$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/GraphingActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/StarterActivity.java" afterPath="$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/StarterActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/generated/source/aidl/debug/com/openxc/remote/VehicleServiceInterface.java" afterPath="$PROJECT_DIR$/openxc/build/generated/source/aidl/debug/com/openxc/remote/VehicleServiceInterface.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/generated/source/aidl/release/com/openxc/remote/VehicleServiceInterface.java" afterPath="$PROJECT_DIR$/openxc/build/generated/source/aidl/release/com/openxc/remote/VehicleServiceInterface.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/generated/source/aidl/debug/com/openxc/remote/VehicleServiceListener.java" afterPath="$PROJECT_DIR$/openxc/build/generated/source/aidl/debug/com/openxc/remote/VehicleServiceListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/generated/source/aidl/release/com/openxc/remote/VehicleServiceListener.java" afterPath="$PROJECT_DIR$/openxc/build/generated/source/aidl/release/com/openxc/remote/VehicleServiceListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/generated/source/aidl/debug/com/openxc/remote/ViConnectionListener.java" afterPath="$PROJECT_DIR$/openxc/build/generated/source/aidl/debug/com/openxc/remote/ViConnectionListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/generated/source/aidl/release/com/openxc/remote/ViConnectionListener.java" afterPath="$PROJECT_DIR$/openxc/build/generated/source/aidl/release/com/openxc/remote/ViConnectionListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/abc_action_bar_up_container.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/abc_action_bar_up_container.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/abc_action_bar_view_list_nav_layout.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/abc_action_bar_view_list_nav_layout.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/abc_action_mode_bar.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/abc_action_mode_bar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item_material.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item_material.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_list_item.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_list_item.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/color/abc_background_cache_hint_selector_material_dark.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/color/abc_background_cache_hint_selector_material_dark.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/color/abc_background_cache_hint_selector_material_light.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/color/abc_background_cache_hint_selector_material_light.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/drawable/abc_btn_check_material.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/drawable/abc_btn_check_material.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/drawable/abc_btn_default_mtrl_shape.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/drawable/abc_btn_default_mtrl_shape.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/drawable/abc_btn_radio_material.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/drawable/abc_btn_radio_material.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/drawable/abc_cab_background_internal_bg.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/drawable/abc_cab_background_internal_bg.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/drawable/abc_cab_background_top_material.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/drawable/abc_cab_background_top_material.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/drawable/abc_edit_text_material.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/drawable/abc_edit_text_material.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/abc_expanded_menu_layout.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/abc_expanded_menu_layout.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/anim/abc_fade_in.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/anim/abc_fade_in.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/anim/abc_fade_out.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/anim/abc_fade_out.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/anim/abc_grow_fade_in_from_bottom.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/anim/abc_grow_fade_in_from_bottom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_dark.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_dark.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_light.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_light.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/abc_list_menu_item_checkbox.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/abc_list_menu_item_checkbox.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/abc_list_menu_item_icon.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/abc_list_menu_item_icon.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/abc_list_menu_item_radio.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/abc_list_menu_item_radio.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_dark.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_dark.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_light.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_light.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_dark.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_dark.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_light.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_light.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/abc_popup_menu_item_layout.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/abc_popup_menu_item_layout.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_dark.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_dark.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_light.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_light.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/color/abc_primary_text_material_dark.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/color/abc_primary_text_material_dark.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/color/abc_primary_text_material_light.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/color/abc_primary_text_material_light.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/drawable/abc_ratingbar_full_material.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/drawable/abc_ratingbar_full_material.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/abc_screen_content_include.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/abc_screen_content_include.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/abc_screen_simple.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/abc_screen_simple.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/abc_screen_simple_overlay_action_mode.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/abc_screen_simple_overlay_action_mode.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/abc_search_dropdown_item_icons_2line.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/abc_search_dropdown_item_icons_2line.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/color/abc_search_url_text.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/color/abc_search_url_text.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/abc_search_view.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/abc_search_view.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/color/abc_secondary_text_material_dark.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/color/abc_secondary_text_material_dark.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/color/abc_secondary_text_material_light.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/color/abc_secondary_text_material_light.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/anim/abc_shrink_fade_out_from_bottom.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/anim/abc_shrink_fade_out_from_bottom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/anim/abc_slide_in_bottom.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/anim/abc_slide_in_bottom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/anim/abc_slide_in_top.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/anim/abc_slide_in_top.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/anim/abc_slide_out_bottom.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/anim/abc_slide_out_bottom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/anim/abc_slide_out_top.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/anim/abc_slide_out_top.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/drawable/abc_spinner_textfield_background_material.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/drawable/abc_spinner_textfield_background_material.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/drawable/abc_switch_thumb_material.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/drawable/abc_switch_thumb_material.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/drawable/abc_textfield_search_material.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/drawable/abc_textfield_search_material.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/activity_starter.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/activity_starter.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_23_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_23_0_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/drawable-hdpi/customborder.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/drawable-hdpi/customborder.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/graphview_4_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/graphview_4_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/graphviewlayout.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/graphviewlayout.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/main.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/starterActivity/build/outputs/logs/manifest-merger-debug-report.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/incremental/mergeAssets/androidTest/debug/merger.xml" afterPath="$PROJECT_DIR$/openxc/build/intermediates/incremental/mergeAssets/androidTest/debug/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/incremental/mergeAssets/debug/merger.xml" afterPath="$PROJECT_DIR$/openxc/build/intermediates/incremental/mergeAssets/debug/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/incremental/mergeAssets/release/merger.xml" afterPath="$PROJECT_DIR$/openxc/build/intermediates/incremental/mergeAssets/release/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/incremental/mergeResourcesandroidTest/debug/merger.xml" afterPath="$PROJECT_DIR$/openxc/build/intermediates/incremental/mergeResourcesandroidTest/debug/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/incremental/packageResourcesdebug/merger.xml" afterPath="$PROJECT_DIR$/openxc/build/intermediates/incremental/packageResourcesdebug/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/incremental/packageResourcesrelease/merger.xml" afterPath="$PROJECT_DIR$/openxc/build/intermediates/incremental/packageResourcesrelease/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/incremental/mergeAssets/androidTest/debug/merger.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/incremental/mergeAssets/androidTest/debug/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/incremental/mergeAssets/debug/merger.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/incremental/mergeAssets/debug/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/incremental/mergeResourcesandroidTest/debug/merger.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/incremental/mergeResourcesandroidTest/debug/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/incremental/mergeResourcesdebug/merger.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/incremental/mergeResourcesdebug/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/multidex_1_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/multidex_1_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/openxc.iml" afterPath="$PROJECT_DIR$/openxc/openxc.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/splash_screen.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/splash_screen.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/menu/starter.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/menu/starter.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/starterActivity.iml" afterPath="$PROJECT_DIR$/starterActivity/starterActivity.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/summaryviewlayout.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/summaryviewlayout.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/support_simple_spinner_dropdown_item.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/support_simple_spinner_dropdown_item.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-af/values-af.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-af/values-af.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-am/values-am.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-am/values-am.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-ar/values-ar.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-ar/values-ar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-bg/values-bg.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-bg/values-bg.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-bn-rBD/values-bn-rBD.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-bn-rBD/values-bn-rBD.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-ca/values-ca.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-ca/values-ca.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-cs/values-cs.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-cs/values-cs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-da/values-da.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-da/values-da.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-de/values-de.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-de/values-de.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-el/values-el.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-el/values-el.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-en-rGB/values-en-rGB.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-en-rGB/values-en-rGB.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-en-rIN/values-en-rIN.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-en-rIN/values-en-rIN.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-es-rUS/values-es-rUS.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-es-rUS/values-es-rUS.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-es/values-es.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-es/values-es.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-et-rEE/values-et-rEE.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-et-rEE/values-et-rEE.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-eu-rES/values-eu-rES.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-eu-rES/values-eu-rES.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-fa/values-fa.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-fa/values-fa.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-fi/values-fi.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-fi/values-fi.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-fr-rCA/values-fr-rCA.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-fr-rCA/values-fr-rCA.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-fr/values-fr.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-fr/values-fr.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-gl-rES/values-gl-rES.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-gl-rES/values-gl-rES.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-hi/values-hi.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-hi/values-hi.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-hr/values-hr.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-hr/values-hr.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-hu/values-hu.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-hu/values-hu.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-hy-rAM/values-hy-rAM.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-hy-rAM/values-hy-rAM.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-in/values-in.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-in/values-in.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-is-rIS/values-is-rIS.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-is-rIS/values-is-rIS.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-it/values-it.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-it/values-it.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-iw/values-iw.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-iw/values-iw.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-ja/values-ja.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-ja/values-ja.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-ka-rGE/values-ka-rGE.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-ka-rGE/values-ka-rGE.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-kk-rKZ/values-kk-rKZ.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-kk-rKZ/values-kk-rKZ.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-km-rKH/values-km-rKH.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-km-rKH/values-km-rKH.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-kn-rIN/values-kn-rIN.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-kn-rIN/values-kn-rIN.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-ko/values-ko.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-ko/values-ko.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-ky-rKG/values-ky-rKG.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-ky-rKG/values-ky-rKG.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-land/values-land.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-land/values-land.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-lo-rLA/values-lo-rLA.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-lo-rLA/values-lo-rLA.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-lt/values-lt.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-lt/values-lt.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-lv/values-lv.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-lv/values-lv.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-mk-rMK/values-mk-rMK.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-mk-rMK/values-mk-rMK.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-ml-rIN/values-ml-rIN.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-ml-rIN/values-ml-rIN.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-mn-rMN/values-mn-rMN.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-mn-rMN/values-mn-rMN.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-mr-rIN/values-mr-rIN.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-mr-rIN/values-mr-rIN.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-ms-rMY/values-ms-rMY.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-ms-rMY/values-ms-rMY.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-my-rMM/values-my-rMM.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-my-rMM/values-my-rMM.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-nb/values-nb.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-nb/values-nb.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-ne-rNP/values-ne-rNP.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-ne-rNP/values-ne-rNP.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-nl/values-nl.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-nl/values-nl.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-pl/values-pl.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-pl/values-pl.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-port/values-port.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-port/values-port.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-pt-rPT/values-pt-rPT.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-pt-rPT/values-pt-rPT.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-pt/values-pt.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-pt/values-pt.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-ro/values-ro.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-ro/values-ro.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-ru/values-ru.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-ru/values-ru.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-si-rLK/values-si-rLK.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-si-rLK/values-si-rLK.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-sk/values-sk.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-sk/values-sk.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-sl/values-sl.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-sl/values-sl.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-sr/values-sr.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-sr/values-sr.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-sv/values-sv.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-sv/values-sv.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-sw/values-sw.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-sw/values-sw.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-sw720dp-land/values-sw720dp-land.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-sw720dp-land/values-sw720dp-land.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-ta-rIN/values-ta-rIN.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-ta-rIN/values-ta-rIN.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-te-rIN/values-te-rIN.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-te-rIN/values-te-rIN.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-th/values-th.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-th/values-th.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-tl/values-tl.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-tl/values-tl.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-tr/values-tr.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-tr/values-tr.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-uk/values-uk.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-uk/values-uk.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-ur-rPK/values-ur-rPK.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-ur-rPK/values-ur-rPK.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-uz-rUZ/values-uz-rUZ.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-uz-rUZ/values-uz-rUZ.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-v11/values-v11.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-v11/values-v11.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-v14/values-v14.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-v14/values-v14.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-v17/values-v17.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-v17/values-v17.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-v21/values-v21.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-v21/values-v21.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-vi/values-vi.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-vi/values-vi.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-zh-rCN/values-zh-rCN.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-zh-rCN/values-zh-rCN.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-zh-rHK/values-zh-rHK.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-zh-rHK/values-zh-rHK.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-zh-rTW/values-zh-rTW.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-zh-rTW/values-zh-rTW.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-zu/values-zu.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-zu/values-zu.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/bundles/debug/res/values/values.xml" afterPath="$PROJECT_DIR$/openxc/build/intermediates/bundles/debug/res/values/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/bundles/release/res/values/values.xml" afterPath="$PROJECT_DIR$/openxc/build/intermediates/bundles/release/res/values/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/res/merged/androidTest/debug/values/values.xml" afterPath="$PROJECT_DIR$/openxc/build/intermediates/res/merged/androidTest/debug/values/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/exploded-aar/StarterActivity2/openxc/unspecified/res/values/values.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/exploded-aar/StarterActivity2/openxc/unspecified/res/values/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values/values.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values/values.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="StarterActivity2.iws" />
@@ -292,15 +32,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="GraphingActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GraphingActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/GraphingActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.6666667">
-              <caret line="64" column="52" selection-start-line="64" selection-start-column="52" selection-end-line="64" selection-end-column="52" />
+            <state vertical-scroll-proportion="0.28481013">
+              <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
               <folding>
-                <element signature="e#1351#1362#0" expanded="true" />
-                <element signature="e#1427#1438#0" expanded="true" />
-                <element signature="e#1501#1512#0" expanded="true" />
+                <element signature="e#1388#1399#0" expanded="true" />
+                <element signature="e#1464#1475#0" expanded="true" />
+                <element signature="e#1538#1549#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -316,20 +56,6 @@
           </provider>
           <provider editor-type-id="android-designer">
             <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StarterActivity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/StarterActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33236152">
-              <caret line="75" column="43" selection-start-line="75" selection-start-column="43" selection-end-line="75" selection-end-column="43" />
-              <folding>
-                <element signature="e#2368#2376#0" expanded="true" />
-                <element signature="e#11179#12999#0" expanded="true" />
-                <element signature="e#12998#12999#0" expanded="true" />
-              </folding>
-            </state>
           </provider>
         </entry>
       </file>
@@ -2406,9 +2132,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/starterActivity/src/main/res/layout/graphviewlayout.xml" />
-        <option value="$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/GraphingActivity.java" />
         <option value="$PROJECT_DIR$/openxc/src/main/java/com/openxc/VehicleManager.java" />
         <option value="$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/StarterActivity.java" />
+        <option value="$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/GraphingActivity.java" />
       </list>
     </option>
   </component>
@@ -2686,14 +2412,21 @@
       <option name="number" value="Default" />
       <updated>1454435649635</updated>
     </task>
+    <task id="LOCAL-00001" summary="Takes a one-in-X amount of measurements as defined by moduloValue.">
+      <created>1454524001309</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1454524001309</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="709" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3288364" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3288364" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2741,9 +2474,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="53" column="29" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
           <folding>
-            <element signature="e#1351#1362#0" expanded="true" />
-            <element signature="e#1427#1438#0" expanded="true" />
-            <element signature="e#1501#1512#0" expanded="true" />
+            <element signature="e#1388#1399#0" expanded="true" />
+            <element signature="e#1464#1475#0" expanded="true" />
+            <element signature="e#1538#1549#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2771,6 +2504,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/openxc/src/main/java/com/openxc/VehicleManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30029154">
+          <caret line="252" column="29" selection-start-line="252" selection-start-column="29" selection-end-line="252" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/StarterActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.68221575">
+          <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+          <folding>
+            <element signature="e#2368#2376#0" expanded="true" />
+            <element signature="e#11179#12999#0" expanded="true" />
+            <element signature="e#12998#12999#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/starterActivity/src/main/res/layout/graphviewlayout.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.8965517">
@@ -2782,34 +2535,14 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/openxc/src/main/java/com/openxc/VehicleManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30029154">
-          <caret line="252" column="29" selection-start-line="252" selection-start-column="29" selection-end-line="252" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/GraphingActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.6666667">
-          <caret line="64" column="52" selection-start-line="64" selection-start-column="52" selection-end-line="64" selection-end-column="52" />
+        <state vertical-scroll-proportion="0.28481013">
+          <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
           <folding>
-            <element signature="e#1351#1362#0" expanded="true" />
-            <element signature="e#1427#1438#0" expanded="true" />
-            <element signature="e#1501#1512#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/StarterActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33236152">
-          <caret line="75" column="43" selection-start-line="75" selection-start-column="43" selection-end-line="75" selection-end-column="43" />
-          <folding>
-            <element signature="e#2368#2376#0" expanded="true" />
-            <element signature="e#11179#12999#0" expanded="true" />
-            <element signature="e#12998#12999#0" expanded="true" />
+            <element signature="e#1388#1399#0" expanded="true" />
+            <element signature="e#1464#1475#0" expanded="true" />
+            <element signature="e#1538#1549#0" expanded="true" />
           </folding>
         </state>
       </provider>

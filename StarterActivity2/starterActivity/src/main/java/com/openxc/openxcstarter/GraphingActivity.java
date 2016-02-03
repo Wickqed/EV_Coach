@@ -29,6 +29,7 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 	private TextView mFuelLevelView;
 	private String name = "name";
 	private String value = "value";
+	private final int maxPoints = 1000;
 
 	boolean EngineSpeed;
 	boolean VehicleSpeed;
@@ -88,40 +89,40 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 		
 		if (listRPM != null){
 			for (int i = 0; i < listRPM.size(); i++){
-				rpmSeries.appendData(new DataPoint(i,listRPM.get(i)), true,1000);
+				rpmSeries.appendData(new DataPoint(i,listRPM.get(i)), true, maxPoints);
 			}
 		}
 
 		if (listSpeed != null){
 			for (int i = 0; i < listSpeed.size(); i++){
-				speedSeries.appendData(new DataPoint(i,listSpeed.get(i)), true,1000);
+				speedSeries.appendData(new DataPoint(i,listSpeed.get(i)), true, maxPoints);
 			}
 		}	
 		if (listBatStateCharge != null){
 			for (int i = 0; i < listBatStateCharge.size(); i++){
-				bSCSeries.appendData(new DataPoint(i,listBatStateCharge.get(i)), true,1000);
+				bSCSeries.appendData(new DataPoint(i,listBatStateCharge.get(i)), true, maxPoints);
 			}
 		}
 
 		if (listHVBatCurr != null){
 			for (int i = 0; i < listHVBatCurr.size(); i++){
-				HVBatCurSeries.appendData(new DataPoint(i,listHVBatCurr.get(i)), true,1000);
+				HVBatCurSeries.appendData(new DataPoint(i,listHVBatCurr.get(i)), true, maxPoints);
 			}
 		}
 		if (listLastRegEventScore != null){
 			for (int i = 0; i < listLastRegEventScore.size(); i++){
-				lstRegSeries.appendData(new DataPoint(i,listLastRegEventScore.get(i)), true,1000);
+				lstRegSeries.appendData(new DataPoint(i,listLastRegEventScore.get(i)), true, maxPoints);
 			}
 		}
 
 		if (listRelDrivePower != null){
 			for (int i = 0; i < listRelDrivePower.size(); i++){
-				RelDrPowSeries.appendData(new DataPoint(i,listRelDrivePower.get(i)), true,1000);
+				RelDrPowSeries.appendData(new DataPoint(i,listRelDrivePower.get(i)), true, maxPoints);
 			}
 		}
 		if (listAcCompressorPower != null){
 			for (int i = 0; i < listAcCompressorPower.size(); i++){
-				AcCompPowSeries.appendData(new DataPoint(i,listAcCompressorPower.get(i)), true,1000);
+				AcCompPowSeries.appendData(new DataPoint(i,listAcCompressorPower.get(i)), true, maxPoints);
 			}
 		}
 		
