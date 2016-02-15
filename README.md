@@ -1,3 +1,3 @@
 # EV_Coach
 EV_Coach Repo
-This will be were we keep stuff
+This will be where we keep stuff
