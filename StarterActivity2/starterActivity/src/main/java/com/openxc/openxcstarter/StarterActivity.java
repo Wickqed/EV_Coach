@@ -15,11 +15,9 @@ import android.os.IBinder;
 import android.speech.tts.TextToSpeech;
 import android.util.Log;
 import android.view.Menu;
-import android.view.View;
+import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import com.getpebble.android.kit.PebbleKit;
 import com.getpebble.android.kit.util.PebbleDictionary;
 import com.openxcplatform.openxcstarter.R;
@@ -34,8 +32,6 @@ import com.openxc.measurements.Measurement;
 import com.openxc.measurements.EngineSpeed;
 import com.openxc.measurements.RelativeDrivePower;
 import com.openxc.measurements.VehicleSpeed;
-
-import java.util.TimerTask;
 import java.util.Timer;
 
 public class StarterActivity extends Activity {
@@ -43,7 +39,7 @@ public class StarterActivity extends Activity {
 
 	private VehicleManager mVehicleManager;
 	private TextView mEngineSpeedView;
-    private final int moduloValue = 25;
+    private final int moduloValue = 15;
 	TextToSpeech ttobj;
 	String status = "";
 
@@ -611,6 +607,17 @@ public class StarterActivity extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.starter, menu);
 		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+
+		int id = item.getItemId();
+		if(id == R.id.action_settings) {
+			startActivity(new Intent(this, SettingsActivity.class));
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
 	}
 
 	public boolean isPebbleConnected() {

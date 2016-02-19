@@ -7,6 +7,7 @@
 -keep class com.openxc.openxcstarter.StarterActivity { <init>(); }
 -keep class com.openxc.openxcstarter.GraphingActivity { <init>(); }
 -keep class com.openxc.VehicleManager { <init>(); }
+-keep class com.openxc.openxcstarter.SettingsActivity { <init>(); }
 -keep public class * extends android.app.backup.BackupAgent {
     <init>();
 }

@@ -1,16 +1,11 @@
 package com.openxc.openxcstarter;
 
-import java.io.IOException;
-import java.io.InputStream;
+
 import java.util.ArrayList;
-
-import org.json.JSONObject;
-
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 import com.openxcplatform.openxcstarter.R;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
@@ -60,6 +55,11 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 	LineGraphSeries<DataPoint> AcCompPowSeries = new LineGraphSeries<DataPoint>();
 
 
+	/**
+	 * Sets up the Arrays passed over from the starter activity in order to use them to graph.
+	 *
+	 * @param savedInstanceState - the saved instance state of the application
+	 */
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.graphviewlayout);
@@ -134,6 +134,14 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 
 	}
 
+	/**
+	 * Selects the correct graph based on a selection of tiles by the user.
+	 *
+	 * @param parentView
+	 * @param v
+	 * @param position
+	 * @param id
+	 */
 	@Override
 	public void onItemSelected(AdapterView<?> parentView, View v, int position,
 			long id) {
