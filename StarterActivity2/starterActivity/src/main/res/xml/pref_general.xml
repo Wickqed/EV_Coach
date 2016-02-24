@@ -24,7 +24,7 @@
             android:negativeButtonText="@null"
             android:positiveButtonText="@null"
             android:title="@string/pref_road_info"
-            android:summary="City, Rural, Highway"/>
+            android:summary="City, Highway"/>
     </PreferenceCategory>
 
 </PreferenceScreen>
