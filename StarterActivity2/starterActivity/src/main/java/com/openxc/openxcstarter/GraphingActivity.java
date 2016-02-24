@@ -12,19 +12,13 @@ import com.jjoe64.graphview.series.LineGraphSeries;
 import com.openxcplatform.openxcstarter.R;
 
 import android.app.Activity;
-import android.app.Dialog;
-import android.graphics.Color;
-import android.nfc.Tag;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.AdapterView.OnItemSelectedListener;
-import android.widget.Toast;
 
 public class GraphingActivity extends Activity implements OnItemSelectedListener  {
 
@@ -67,9 +61,6 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		final Dialog dialog = new Dialog(GraphingActivity.this);
-		double totalScore = 0; double RPMscore = 0; double speedScore = 0;
-
 		setContentView(R.layout.graphviewlayout);
 		graph = (GraphView) findViewById(R.id.graph);
 		ArrayList<Double> listRPM = (ArrayList<Double>) getIntent().getSerializableExtra("listRPM");
@@ -82,76 +73,8 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 		ArrayList<Double> listRelDrivePower = (ArrayList<Double>) getIntent().getSerializableExtra("listRelDrivePower");
 		ArrayList<Double> listAcCompressorPower = (ArrayList<Double>) getIntent().getSerializableExtra("listAcCompressorPower");
 
-		//Calculate score here and put it into the text box
-		RPMscore = calcScore (2500, listRPM, .50);
-		speedScore = totalScore + calcScore (73, listSpeed, .50);
-
-		//totalScore = totalScore + calcScore (1000, 2500, 4000, listBatStateCharge, .15);
-		//totalScore = totalScore + calcScore (1000, 2500, 4000, listHVBatCurr, .15);
-		//totalScore = totalScore + calcScore (1000, 2500, 4000, listLastRegEventScore, .15);
-		//totalScore = totalScore + calcScore (1000, 2500, 4000, listRelDrivePower, .15);
-		//totalScore = totalScore + calcScore (1000, 2500, 4000, listAcCompressorPower, .15);
-
-
-		totalScore = RPMscore + speedScore;
-		dialog.setTitle("Score Screen");
-
-		dialog.setContentView(R.layout.userinterface);
-
-		dialog.show();
-
-		TextView textView = (TextView) dialog.findViewById(R.id.Score_Field);
-		TextView gradeView = (TextView) dialog.findViewById(R.id.Grade);
-		textView.setText(String.valueOf( (int) totalScore));
-
-		Button graphButton = (Button) dialog.findViewById(R.id.Graph_Button);
-		Button breakDownButton = (Button) dialog.findViewById(R.id.Break_button);
-
-		if(totalScore >= 900) {
-			if(totalScore > 975) { gradeView.setText("A+"); gradeView.setTextColor(Color.GREEN);}
-			else if (totalScore <= 975 && totalScore >= 925){ gradeView.setText("A"); gradeView.setTextColor(Color.GREEN);}
-			else { gradeView.setText("A-"); gradeView.setTextColor(Color.GREEN);}
-		}
-		else if(totalScore <= 899 && totalScore >= 800) {
-			if(totalScore > 875) { gradeView.setText("B+"); gradeView.setTextColor(Color.GREEN);}
-			else if (totalScore <= 875 && totalScore >= 825){ gradeView.setText("B"); gradeView.setTextColor(Color.GREEN);}
-			else { gradeView.setText("B-"); gradeView.setTextColor(Color.GREEN);}
-		}
-		else if(totalScore <= 799 && totalScore >= 700){
-			if(totalScore > 775) { gradeView.setText("C+"); gradeView.setTextColor(Color.YELLOW); }
-			else if (totalScore <= 775 && totalScore >= 725){ gradeView.setText("C"); gradeView.setTextColor(Color.YELLOW); }
-			else { gradeView.setText("C-"); gradeView.setTextColor(Color.YELLOW); }
-		}
-		else if (totalScore <= 699 && totalScore >= 600) {
-			if(totalScore > 675) { gradeView.setText("D+"); gradeView.setTextColor(Color.YELLOW);}
-			else if (totalScore <= 675 && totalScore >= 625){ gradeView.setText("D"); gradeView.setTextColor(Color.YELLOW); }
-			else { gradeView.setText("D-"); gradeView.setTextColor(Color.YELLOW); }
-		}
-		else if(totalScore <= 599 && totalScore >= 500) {
-			gradeView.setText("E");
-			gradeView.setTextColor(Color.RED);
-		}
-		else {
-			gradeView.setText("F");
-			gradeView.setTextColor(Color.RED);
-		}
-
-		graphButton.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View view) {
-				dialog.cancel();
-			}
-		});
-
-		breakDownButton.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View view) {
-				Toast.makeText(getApplicationContext(), "BreakDown", Toast.LENGTH_SHORT).show();
-				dialog.cancel();
-
-			}
-		});
-
+		
+		
 		canSelect = (Spinner) findViewById(R.id.canSelect);
 		//JSONObject obj = new JSONObject(loadJSONFromAssets());
 		
@@ -208,39 +131,6 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 
 
 
-	}
-
-	//int lowerBase, int midBase,
-	private static double calcScore (int upperBase, ArrayList<Double> parameters, double weight){
-		double calcScore = 0;
-		// normBaseCount = 0 , easyBaseCount = 0, normPct, easyPct,
-		int hardBaseCount = 0, zeroCount = 0;
-		double zeroPct, acceptPct;
-
-		for ( int i = 0; i < parameters.size(); i++ ) {
-			if ( parameters.get(i) > upperBase ) {
-				hardBaseCount++;
-			}
-			//else if (parameters.get(i) > midBase){
-			//	normBaseCount++;
-			//}
-			//else if (parameters.get(i) > lowerBase) {
-			//	easyBaseCount++;
-			//}
-			else {
-				zeroCount++;
-			}
-		}
-
-		//normPct = (double) normBaseCount / (double) parameters.size();
-		//easyPct = (double) easyBaseCount / (double) parameters.size();
-
-		Log.i("TAG", "Number over:" + hardBaseCount + " Number below: " + zeroCount);
-		//acceptPct = normPct + easyPct + zeroPct;
-		acceptPct = zeroCount / parameters.size();
-		calcScore = acceptPct * weight * 1000;
-
-		return calcScore;
 	}
 
 	@Override

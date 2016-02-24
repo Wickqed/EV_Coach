@@ -437,11 +437,6 @@ int drawable mtu_logo 0x7f020042
 int drawable notification_template_icon_bg 0x7f020045
 int drawable openxc_logo 0x7f020043
 int drawable openxc_notification_icon_small_white 0x7f020044
-int id Break_button 0x7f0c006f
-int id Coach_button 0x7f0c006e
-int id Grade 0x7f0c006d
-int id Graph_Button 0x7f0c0070
-int id Score_Field 0x7f0c006b
 int id action0 0x7f0c0055
 int id action_bar 0x7f0c003e
 int id action_bar_activity_content 0x7f0c0000
@@ -457,7 +452,7 @@ int id action_menu_presenter 0x7f0c0003
 int id action_mode_bar 0x7f0c003b
 int id action_mode_bar_stub 0x7f0c003a
 int id action_mode_close_button 0x7f0c0023
-int id action_settings 0x7f0c0071
+int id action_settings 0x7f0c006a
 int id activity_chooser_view_content 0x7f0c0024
 int id alertTitle 0x7f0c002e
 int id always 0x7f0c001b
@@ -488,7 +483,6 @@ int id ford_logo 0x7f0c0062
 int id fuel_level 0x7f0c0051
 int id gear_position 0x7f0c0050
 int id grade 0x7f0c0068
-int id gradeTextView 0x7f0c006c
 int id graph 0x7f0c0053
 int id home 0x7f0c0004
 int id homeAsUp 0x7f0c000d
@@ -539,7 +533,6 @@ int id tabMode 0x7f0c000b
 int id text 0x7f0c005f
 int id text2 0x7f0c005d
 int id textSpacerNoButtons 0x7f0c0031
-int id textView 0x7f0c006a
 int id textView1 0x7f0c004d
 int id time 0x7f0c005b
 int id title 0x7f0c002a
@@ -597,7 +590,6 @@ int layout select_dialog_singlechoice_material 0x7f030025
 int layout splash_screen 0x7f030026
 int layout summaryviewlayout 0x7f030027
 int layout support_simple_spinner_dropdown_item 0x7f030028
-int layout userinterface 0x7f030029
 int menu starter 0x7f0d0000
 int string abc_action_bar_home_description 0x7f050000
 int string abc_action_bar_home_description_format 0x7f050001
