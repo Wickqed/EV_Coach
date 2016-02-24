@@ -17,45 +17,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="104763cc-1221-4ca5-9f04-55fad9f6f9c7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/starterActivity/src/main/res/layout/userinterface.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/GraphingActivity.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/GraphingActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/openxcstarter/R$id.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/openxcstarter/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/openxcstarter/R$integer.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/openxcstarter/R$integer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/openxcstarter/R$layout.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/openxcstarter/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/openxcstarter/R$menu.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/openxcstarter/R$menu.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/openxcstarter/R$string.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/openxcstarter/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/openxcstarter/R$style.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/openxcstarter/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/openxcstarter/R$styleable.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/openxcstarter/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/openxcstarter/R.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/openxcstarter/R.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$1.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$10$1.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$10$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$10.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$10.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$11.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$11.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$2$1.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$2$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$2.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$3.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$4$1.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$4$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$4.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$5$1.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$5$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$5.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$6$1.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$6$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$6.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$7$1.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$7$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$7.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$8$1.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$8$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$8.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$9$1.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$9$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$9.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$9.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/multi-dex/debug/allclasses.jar" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/multi-dex/debug/allclasses.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/resources-debug.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/GraphingActivity.java" afterPath="$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/GraphingActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/generated/source/r/debug/com/openxcplatform/openxcstarter/R.java" afterPath="$PROJECT_DIR$/starterActivity/build/generated/source/r/debug/com/openxcplatform/openxcstarter/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/symbols/debug/R.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/StarterActivity.java" afterPath="$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/StarterActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/incremental/mergeResourcesdebug/merger.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/incremental/mergeResourcesdebug/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/splash_screen.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/splash_screen.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/src/main/res/layout/splash_screen.xml" afterPath="$PROJECT_DIR$/starterActivity/src/main/res/layout/splash_screen.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="StarterActivity2.iws" />
@@ -2675,7 +2636,13 @@
       <option name="project" value="LOCAL" />
       <updated>1453579954404</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Scores calculated and displayed">
+      <created>1456337198581</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1456337198581</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView">
@@ -2689,7 +2656,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2737,7 +2704,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Testing the commit stuffs" />
     <MESSAGE value="Fixed Duplicate things" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed Duplicate things" />
+    <MESSAGE value="Scores calculated and displayed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Scores calculated and displayed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
