@@ -84,7 +84,11 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 
 		//Calculate score here and put it into the text box
 		RPMscore = calcScore (2500, listRPM, .50);
-		speedScore = totalScore + calcScore (73, listSpeed, .50);
+		Log.i("TAG", "RPMscore is: " + RPMscore);
+
+		speedScore = calcScore(73, listSpeed, .50);
+		Log.i("TAG", "speedScore is: " + speedScore);
+
 
 		//totalScore = totalScore + calcScore (1000, 2500, 4000, listBatStateCharge, .15);
 		//totalScore = totalScore + calcScore (1000, 2500, 4000, listHVBatCurr, .15);
@@ -234,7 +238,7 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 
 		Log.i("TAG", "Number over:" + hardBaseCount + " Number below: " + zeroCount);
 		//acceptPct = normPct + easyPct + zeroPct;
-		acceptPct = zeroCount / parameters.size();
+		acceptPct = (double) zeroCount / parameters.size();
 		calcScore = acceptPct * weight * 1000;
 
 		return calcScore;
