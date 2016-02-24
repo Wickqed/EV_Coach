@@ -44,19 +44,19 @@
          android:layout_height="wrap_content"
          android:layout_above="@+id/ford_logo"
          android:layout_centerHorizontal="true" />
-     
-     <!--
-     <TextView
-         android:id="@+id/rpm_status"
-         android:text="@string/engine_rpm"
-         android:textColor="#ffffff"
-         android:textSize="36dp"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_above="@+id/connection_status"
-         android:layout_centerHorizontal="true" />
-         
-         -->
+
+    <!--
+    <TextView
+        android:id="@+id/rpm_status"
+        android:text="@string/engine_rpm"
+        android:textColor="#ffffff"
+        android:textSize="36dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/connection_status"
+        android:layout_centerHorizontal="true" />
+
+        -->
     
 </RelativeLayout>
 <!-- From: file:/Users/ZachsComputer/Desktop/EV_Coach/EV_Coach/StarterActivity2/starterActivity/src/main/res/layout/splash_screen.xml -->
