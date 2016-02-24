@@ -5,6 +5,7 @@ import java.util.UUID;
 import java.util.ArrayList;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -16,6 +17,7 @@ import android.speech.tts.TextToSpeech;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -92,6 +94,7 @@ public class StarterActivity extends Activity {
 		connection_status = (TextView) findViewById(R.id.connection_status);
 		connection_status.setTextColor(Color.RED);
 		connection_status.setText("Not connected");
+
 
 		ttobj=new TextToSpeech(getApplicationContext(), 
 				new TextToSpeech.OnInitListener() {
@@ -199,18 +202,18 @@ public class StarterActivity extends Activity {
 		@Override
 		public void receive(Measurement measurement) {
 			final IgnitionStatus status = (IgnitionStatus) measurement;
+			double totalScore = 0;
 			Log.i(TAG, "received measurement IgnitionStatus");
-			if(status.getValue().toString() == "OFF"){
+			if(status.getValue().toString().toUpperCase().equals("OFF")) {
 				Log.i(TAG, "IS RUNNING");
-				Intent i = new Intent(getApplicationContext(),GraphingActivity.class);
-				i.putExtra("listRPM",listRPM);
+				Intent i = new Intent(getApplicationContext(), GraphingActivity.class);
+				i.putExtra("listRPM", listRPM);
 				i.putExtra("listSpeed", listSpeed);
-				i.putExtra("listBatStateCharge",listBatStateCharge);
+				i.putExtra("listBatStateCharge", listBatStateCharge);
 				i.putExtra("listHVBatCurr", listHVBatCurr);
-				i.putExtra("listLastRegEventScore",listLastRegEventScore);
+				i.putExtra("listLastRegEventScore", listLastRegEventScore);
 				i.putExtra("listRelDrivePower", listRelDrivePower);
 				i.putExtra("listAcCompressorPower", listAcCompressorPower);
-
 
 				startActivity(i);
 			}
