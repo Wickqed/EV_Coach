@@ -20,8 +20,8 @@
     <string name="pref_unit_key">unit</string>
     <string name="pref_unit_info">Units</string>
     <string-array name="pref_unit_titles">
-        <item>Miles Per Hour (Default)</item>
-        <item>Kilometers Per Hour</item>
+        <item>Empirical</item>
+        <item>Metric</item>
     </string-array>
     <string-array name="pref_unit_values">
         <item>0</item>
@@ -32,12 +32,14 @@
     <string name="pref_road_key">road</string>
     <string name="pref_road_info">Road Type</string>
     <string-array name="pref_road_titles">
-        <item>City (Default)</item>
+        <item>City</item>
+        <item>Rural</item>
         <item>Highway</item>
     </string-array>
     <string-array name="pref_road_values">
         <item>0</item>
         <item>1</item>
+        <item>2</item>
     </string-array>
 
 
