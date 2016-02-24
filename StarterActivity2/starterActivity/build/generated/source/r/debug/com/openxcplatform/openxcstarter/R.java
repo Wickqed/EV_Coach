@@ -1640,6 +1640,11 @@ containing a value of this type.
         public static final int openxc_notification_icon_small_white=0x7f02004b;
     }
     public static final class id {
+        public static final int Break_button=0x7f0d0073;
+        public static final int Coach_button=0x7f0d0072;
+        public static final int Grade=0x7f0d0071;
+        public static final int Graph_Button=0x7f0d0074;
+        public static final int Score_Field=0x7f0d006f;
         public static final int action0=0x7f0d0059;
         public static final int action_bar=0x7f0d0041;
         public static final int action_bar_activity_content=0x7f0d0000;
@@ -1655,7 +1660,7 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f0d003e;
         public static final int action_mode_bar_stub=0x7f0d003d;
         public static final int action_mode_close_button=0x7f0d0023;
-        public static final int action_settings=0x7f0d006e;
+        public static final int action_settings=0x7f0d0075;
         public static final int activity_chooser_view_content=0x7f0d0024;
         public static final int activity_settings=0x7f0d0050;
         public static final int alertTitle=0x7f0d0030;
@@ -1687,6 +1692,7 @@ containing a value of this type.
         public static final int fuel_level=0x7f0d0055;
         public static final int gear_position=0x7f0d0054;
         public static final int grade=0x7f0d006c;
+        public static final int gradeTextView=0x7f0d0070;
         public static final int graph=0x7f0d0057;
         public static final int home=0x7f0d0004;
         public static final int homeAsUp=0x7f0d000d;
@@ -1740,6 +1746,7 @@ containing a value of this type.
         public static final int text=0x7f0d0063;
         public static final int text2=0x7f0d0061;
         public static final int textSpacerNoButtons=0x7f0d0034;
+        public static final int textView=0x7f0d006e;
         public static final int textView1=0x7f0d0051;
         public static final int time=0x7f0d005f;
         public static final int title=0x7f0d002a;
@@ -1804,6 +1811,7 @@ containing a value of this type.
         public static final int splash_screen=0x7f030029;
         public static final int summaryviewlayout=0x7f03002a;
         public static final int support_simple_spinner_dropdown_item=0x7f03002b;
+        public static final int userinterface=0x7f03002c;
     }
     public static final class menu {
         public static final int starter=0x7f0e0000;

@@ -9,82 +9,59 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f76d8037-d25e-4a51-a6d0-2a4c749363db" name="Default" comment="Added settings page.  Removed obsolete imports">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/SettingsActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/SettingsFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/starterActivity/src/main/res/layout/activity_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/starterActivity/src/main/res/values-w820dp/dimens.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/starterActivity/src/main/res/layout/fragment_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/starterActivity/src/main/res/xml/pref_general.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_23_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_23_1_1.xml" />
+    <list default="true" id="6b21e300-623f-4da7-8a6b-df665e6d8f8a" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/starterActivity/src/main/res/layout/userinterface.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/sinks/AbstractQueuedCallbackSink.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/sinks/AbstractQueuedCallbackSink.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/measurements/BaseMeasurement.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/measurements/BaseMeasurement.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/sources/BaseVehicleDataSource.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/sources/BaseVehicleDataSource.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/interfaces/bluetooth/BluetoothVehicleInterface$SocketAccepter.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/interfaces/bluetooth/BluetoothVehicleInterface$SocketAccepter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/interfaces/bluetooth/BluetoothVehicleInterface.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/interfaces/bluetooth/BluetoothVehicleInterface.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/sources/BytestreamDataSource.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/sources/BytestreamDataSource.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/interfaces/bluetooth/DeviceManager.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/interfaces/bluetooth/DeviceManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/messages/DiagnosticMessage.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/messages/DiagnosticMessage.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/messages/DiagnosticRequest.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/messages/DiagnosticRequest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/GraphingActivity.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/GraphingActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/openxcstarter/R$array.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/openxcstarter/R$array.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/android/support/v7/appcompat/R$attr.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/android/support/v7/appcompat/R$attr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/jjoe64/graphview/R$attr.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/jjoe64/graphview/R$attr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/openxcstarter/R$attr.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/openxcstarter/R$attr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/android/support/v7/appcompat/R$bool.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/android/support/v7/appcompat/R$bool.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/openxcstarter/R$bool.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/openxcstarter/R$bool.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/android/support/v7/appcompat/R$color.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/android/support/v7/appcompat/R$color.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/openxcstarter/R$color.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/openxcstarter/R$color.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/android/support/v7/appcompat/R$dimen.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/android/support/v7/appcompat/R$dimen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/openxcstarter/R$dimen.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/openxcstarter/R$dimen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/android/support/v7/appcompat/R$drawable.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/android/support/v7/appcompat/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/R$drawable.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/openxcstarter/R$drawable.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/openxcstarter/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/messages/formatters/JsonFormatter.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/messages/formatters/JsonFormatter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/sinks/MessageListenerSink.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/sinks/MessageListenerSink.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/interfaces/network/NetworkVehicleInterface.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/interfaces/network/NetworkVehicleInterface.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/openxcstarter/R$id.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/openxcstarter/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/android/support/v7/appcompat/R$integer.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/android/support/v7/appcompat/R$integer.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/openxcstarter/R$integer.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/openxcstarter/R$integer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/android/support/v7/appcompat/R$layout.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/android/support/v7/appcompat/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/getpebble/android/kit/R$layout.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/getpebble/android/kit/R$layout.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/openxcstarter/R$layout.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/openxcstarter/R$layout.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/openxcstarter/R$menu.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/openxcstarter/R$menu.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/android/support/v7/appcompat/R$string.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/android/support/v7/appcompat/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/getpebble/android/kit/R$string.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/getpebble/android/kit/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/R$string.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/R$string.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/openxcstarter/R$string.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/openxcstarter/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/android/support/v7/appcompat/R$style.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/android/support/v7/appcompat/R$style.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/openxcstarter/R$style.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/openxcstarter/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/android/support/v7/appcompat/R$styleable.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/android/support/v7/appcompat/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/jjoe64/graphview/R$styleable.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/jjoe64/graphview/R$styleable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/openxcstarter/R$styleable.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/openxcstarter/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/androidTest/debug/com/openxcplatform/R.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/androidTest/debug/com/openxcplatform/R.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/androidTest/debug/com/openxcplatform/test/R.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/androidTest/debug/com/openxcplatform/test/R.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxcplatform/R.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxcplatform/R.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/android/support/v7/appcompat/R.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/android/support/v7/appcompat/R.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/getpebble/android/kit/R.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/getpebble/android/kit/R.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/jjoe64/graphview/R.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/jjoe64/graphview/R.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/R.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/R.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/openxcstarter/R.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxcplatform/openxcstarter/R.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$1.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$10$1.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$10$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$10.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$10.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$11.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$11.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$2$1.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$2$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$2.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$3.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$4$1.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$4$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$4.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$5$1.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$5$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$5.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$6$1.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$6$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$6.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$7$1.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$7$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$7.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$8$1.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$8$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$8.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$9$1.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$9$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$9.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity$9.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity.class" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/classes/debug/com/openxc/openxcstarter/StarterActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/sources/TestSource.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/sources/TestSource.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/sources/trace/TraceVehicleDataSource.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/sources/trace/TraceVehicleDataSource.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/interfaces/usb/UsbDeviceUtilities.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/interfaces/usb/UsbDeviceUtilities.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/interfaces/VehicleInterfaceFactory.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/interfaces/VehicleInterfaceFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/VehicleLocationProvider.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/VehicleLocationProvider.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/VehicleManager$BlockingMessageListener.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/VehicleManager$BlockingMessageListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/VehicleManager.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/VehicleManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/remote/VehicleService.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/remote/VehicleService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/remote/VehicleServiceInterface$Stub$Proxy.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/remote/VehicleServiceInterface$Stub$Proxy.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/remote/VehicleServiceInterface$Stub.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/remote/VehicleServiceInterface$Stub.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/remote/VehicleServiceListener$Stub.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/remote/VehicleServiceListener$Stub.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/remote/ViConnectionListener$Stub.class" afterPath="$PROJECT_DIR$/openxc/build/intermediates/classes/release/com/openxc/remote/ViConnectionListener$Stub.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/multi-dex/debug/allclasses.jar" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/multi-dex/debug/allclasses.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/resources-debug-androidTest.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/bundles/release/classes.jar" afterPath="$PROJECT_DIR$/openxc/build/intermediates/bundles/release/classes.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/exploded-aar/StarterActivity2/openxc/unspecified/jars/classes.jar" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/exploded-aar/StarterActivity2/openxc/unspecified/jars/classes.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/incremental/aidl/release/dependency.store" afterPath="$PROJECT_DIR$/openxc/build/intermediates/incremental/aidl/release/dependency.store" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/outputs/aar/openxc-release.aar" afterPath="$PROJECT_DIR$/openxc/build/outputs/aar/openxc-release.aar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/resources-debug.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/manifest/androidTest/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/manifest/androidTest/debug/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/starterActivity/src/main/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/GraphingActivity.java" afterPath="$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/GraphingActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/starterActivity/build/generated/source/r/debug/android/support/v7/appcompat/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/generated/source/r/debug/com/getpebble/android/kit/R.java" afterPath="$PROJECT_DIR$/starterActivity/build/generated/source/r/debug/com/getpebble/android/kit/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/generated/source/r/debug/com/jjoe64/graphview/R.java" afterPath="$PROJECT_DIR$/starterActivity/build/generated/source/r/debug/com/jjoe64/graphview/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/generated/source/r/debug/com/openxcplatform/R.java" afterPath="$PROJECT_DIR$/starterActivity/build/generated/source/r/debug/com/openxcplatform/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/generated/source/r/debug/com/openxcplatform/openxcstarter/R.java" afterPath="$PROJECT_DIR$/starterActivity/build/generated/source/r/debug/com/openxcplatform/openxcstarter/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/symbols/debug/R.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/StarterActivity.java" afterPath="$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/StarterActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/generated/source/aidl/release/com/openxc/remote/VehicleServiceInterface.java" afterPath="$PROJECT_DIR$/openxc/build/generated/source/aidl/release/com/openxc/remote/VehicleServiceInterface.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/generated/source/aidl/release/com/openxc/remote/VehicleServiceListener.java" afterPath="$PROJECT_DIR$/openxc/build/generated/source/aidl/release/com/openxc/remote/VehicleServiceListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/generated/source/aidl/release/com/openxc/remote/ViConnectionListener.java" afterPath="$PROJECT_DIR$/openxc/build/generated/source/aidl/release/com/openxc/remote/ViConnectionListener.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/abc_action_bar_up_container.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/abc_action_bar_up_container.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/abc_action_bar_view_list_nav_layout.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/abc_action_bar_view_list_nav_layout.xml" />
@@ -140,15 +117,25 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/drawable/abc_switch_thumb_material.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/drawable/abc_switch_thumb_material.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/drawable/abc_textfield_search_material.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/drawable/abc_textfield_search_material.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build.gradle" afterPath="$PROJECT_DIR$/starterActivity/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/activity_starter.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/activity_starter.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/drawable-hdpi/customborder.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/drawable-hdpi/customborder.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/graphview_4_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/graphview_4_0_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/graphviewlayout.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/graphviewlayout.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/main.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/main.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/starterActivity/build/outputs/logs/manifest-merger-debug-report.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/multi-dex/debug/manifest_keep.txt" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/multi-dex/debug/manifest_keep.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/incremental/mergeAssets/release/merger.xml" afterPath="$PROJECT_DIR$/openxc/build/intermediates/incremental/mergeAssets/release/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/incremental/packageResourcesrelease/merger.xml" afterPath="$PROJECT_DIR$/openxc/build/intermediates/incremental/packageResourcesrelease/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/incremental/mergeAssets/debug/merger.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/incremental/mergeAssets/debug/merger.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/incremental/mergeResourcesdebug/merger.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/incremental/mergeResourcesdebug/merger.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/multidex_1_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/multidex_1_0_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/openxc.iml" afterPath="$PROJECT_DIR$/openxc/openxc.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/splash_screen.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/splash_screen.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/menu/starter.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/menu/starter.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/src/main/res/menu/starter.xml" afterPath="$PROJECT_DIR$/starterActivity/src/main/res/menu/starter.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/starterActivity.iml" afterPath="$PROJECT_DIR$/starterActivity/starterActivity.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/starterActivity/src/main/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/summaryviewlayout.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/summaryviewlayout.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/support_simple_spinner_dropdown_item.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/layout/support_simple_spinner_dropdown_item.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-af/values-af.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-af/values-af.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-am/values-am.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-am/values-am.xml" />
@@ -211,6 +198,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-sr/values-sr.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-sr/values-sr.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-sv/values-sv.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-sv/values-sv.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-sw/values-sw.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-sw/values-sw.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-sw720dp-land/values-sw720dp-land.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-sw720dp-land/values-sw720dp-land.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-ta-rIN/values-ta-rIN.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-ta-rIN/values-ta-rIN.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-te-rIN/values-te-rIN.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-te-rIN/values-te-rIN.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-th/values-th.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-th/values-th.xml" />
@@ -228,6 +216,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-zh-rHK/values-zh-rHK.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-zh-rHK/values-zh-rHK.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-zh-rTW/values-zh-rTW.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-zh-rTW/values-zh-rTW.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-zu/values-zu.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values-zu/values-zu.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openxc/build/intermediates/bundles/release/res/values/values.xml" afterPath="$PROJECT_DIR$/openxc/build/intermediates/bundles/release/res/values/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/exploded-aar/StarterActivity2/openxc/unspecified/res/values/values.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/exploded-aar/StarterActivity2/openxc/unspecified/res/values/values.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values/values.xml" afterPath="$PROJECT_DIR$/starterActivity/build/intermediates/res/merged/debug/values/values.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -250,103 +240,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="starter.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/starterActivity/src/main/res/menu/starter.xml">
+      <file leaf-file-name="GraphingActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/GraphingActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StarterActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/StarterActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="37" column="42" selection-start-line="37" selection-start-column="42" selection-end-line="37" selection-end-column="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/starterActivity/src/main/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5660377">
-              <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_settings.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/starterActivity/src/main/res/layout/activity_settings.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SettingsActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/SettingsActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fragment_settings.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/starterActivity/src/main/res/layout/fragment_settings.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SettingsFragment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/SettingsFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pref_general.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/starterActivity/src/main/res/xml/pref_general.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/starterActivity/src/main/res/values/strings.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="23" column="20" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="20" />
+            <state vertical-scroll-proportion="1.2840466">
+              <caret line="93" column="8" selection-start-line="93" selection-start-column="8" selection-end-line="93" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -357,7 +255,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="resourceFile" />
+        <option value="layoutResourceFile_vertical" />
       </list>
     </option>
   </component>
@@ -2028,7 +1926,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="5819213330000" />
+        <entry key="$PROJECT_DIR$" value="5825366440000" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -2431,35 +2329,17 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/starterActivity/src/main/res/layout/graphviewlayout.xml" />
-        <option value="$PROJECT_DIR$/openxc/src/main/java/com/openxc/VehicleManager.java" />
-        <option value="$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/SettingsActivity.java" />
-        <option value="$PROJECT_DIR$/starterActivity/src/main/res/layout/activity_settings.xml" />
-        <option value="$PROJECT_DIR$/starterActivity/build.gradle" />
-        <option value="$PROJECT_DIR$/starterActivity/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/starterActivity/src/main/res/xml/pref_general.xml" />
-        <option value="$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/SettingsFragment.java" />
+        <option value="$PROJECT_DIR$/starterActivity/src/main/res/layout/userinterface.xml" />
         <option value="$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/GraphingActivity.java" />
-        <option value="$PROJECT_DIR$/starterActivity/src/main/res/menu/starter.xml" />
-        <option value="$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/StarterActivity.java" />
-        <option value="$PROJECT_DIR$/starterActivity/src/main/AndroidManifest.xml" />
       </list>
-    </option>
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="Bundled (Maven 3)" />
-      </MavenGeneralSettings>
     </option>
   </component>
   <component name="NamedScopeManager">
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
     <option name="width" value="1280" />
-    <option name="height" value="709" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -2472,7 +2352,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator currentView="AndroidView" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -2484,181 +2364,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StarterActivity2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StarterActivity2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StarterActivity2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StarterActivity2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StarterActivity2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="starterActivity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StarterActivity2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StarterActivity2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="starterActivity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StarterActivity2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StarterActivity2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="starterActivity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xml" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StarterActivity2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StarterActivity2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="starterActivity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StarterActivity2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StarterActivity2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="starterActivity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="values" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StarterActivity2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StarterActivity2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="starterActivity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="openxcstarter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2666,10 +2373,6 @@
               <option name="myItemId" value="StarterActivity2" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Gradle Scripts" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -2679,28 +2382,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="starterActivity" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StarterActivity2" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="starterActivity" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -2721,36 +2402,19 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StarterActivity2" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="starterActivity" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StarterActivity2" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="ProjectPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../.." />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="FA554SV01567" />
-  </component>
-  <component name="RecentsManager">
-    <key name="android.template.packageName">
-      <recent name="com.openxc.openxcstarter" />
-    </key>
+    <property name="FullScreen" value="true" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="c56b4e9" />
   </component>
   <component name="RunManager" selected="Android Application.starterActivity">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -2930,123 +2594,69 @@
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration">
     <configuration />
-    <supportedVersion>125</supportedVersion>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f76d8037-d25e-4a51-a6d0-2a4c749363db" name="Default" comment="" />
-      <created>1454435649635</created>
+      <changelist id="6b21e300-623f-4da7-8a6b-df665e6d8f8a" name="Default" comment="" />
+      <created>1456341656581</created>
       <option name="number" value="Default" />
-      <updated>1454435649635</updated>
+      <updated>1456341656581</updated>
     </task>
-    <task id="LOCAL-00001" summary="Takes a one-in-X amount of measurements as defined by moduloValue.">
-      <created>1454524001309</created>
-      <option name="number" value="00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1454524001309</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Can now specify the maximum number of points on the graph through the maxPoints variable.">
-      <created>1454524798450</created>
-      <option name="number" value="00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1454524798450</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="709" extended-state="6" />
-    <editor active="false" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32715008" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31871837" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32715008" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.11973018" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23229462" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286119" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32715008" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Takes a one-in-X amount of measurements as defined by moduloValue." />
-    <MESSAGE value="Can now specify the maximum number of points on the graph through the maxPoints variable." />
-    <MESSAGE value="Added settings page.  Removed obsolete imports" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added settings page.  Removed obsolete imports" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/starterActivity/src/main/res/menu/starter.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/StarterActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/starterActivity/src/main/res/layout/activity_settings.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/SettingsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/starterActivity/src/main/res/layout/fragment_settings.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/GraphingActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -3054,344 +2664,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/SettingsFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
+    <entry file="file://$PROJECT_DIR$/starterActivity/src/main/res/layout/userinterface.xml">
+      <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/starterActivity/src/main/res/xml/pref_general.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+          <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/starterActivity/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="20" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="20" />
-          <folding />
-        </state>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/GraphingActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/StarterActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/starterActivity/src/main/res/menu/starter.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/starterActivity/src/main/res/layout/activity_settings.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/SettingsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/starterActivity/src/main/res/layout/fragment_settings.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/SettingsFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/starterActivity/src/main/res/xml/pref_general.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/starterActivity/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="20" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/GraphingActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/StarterActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/GraphingActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="210" column="0" selection-start-line="210" selection-start-column="0" selection-end-line="210" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/StarterActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/GraphingActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/starterActivity/src/main/res/layout/graphviewlayout.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="7" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/StarterActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/GraphingActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="53" column="29" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/starterActivity/src/main/res/layout/graphviewlayout.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="16" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/StarterActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="52" column="25" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/openxc/src/main/java/com/openxc/VehicleManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30029154">
-          <caret line="252" column="29" selection-start-line="252" selection-start-column="29" selection-end-line="252" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/starterActivity/src/main/res/layout/graphviewlayout.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="7" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/openxc/src/main/java/com/openxc/measurements/EngineSpeed.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23893805">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/starterActivity/src/main/res/layout/activity_starter.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.2413793">
-          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-          <folding>
-            <element signature="e#643#664#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/starterActivity/src/main/res/layout/fragment_settings.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/starterActivity/src/main/res/layout/activity_settings.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/starterActivity/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="20" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/starterActivity/src/main/res/xml/pref_general.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/SettingsFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/starterActivity/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34285715">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/SettingsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/GraphingActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24291497">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/starterActivity/src/main/res/menu/starter.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/starterActivity/src/main/java/com/openxc/openxcstarter/StarterActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="42" selection-start-line="37" selection-start-column="42" selection-end-line="37" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/starterActivity/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5660377">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        <state vertical-scroll-proportion="1.2840466">
+          <caret line="93" column="8" selection-start-line="93" selection-start-column="8" selection-end-line="93" selection-end-column="8" />
           <folding />
         </state>
       </provider>
