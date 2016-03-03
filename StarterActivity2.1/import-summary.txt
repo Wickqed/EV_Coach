@@ -1,0 +1,166 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Manifest Merging:
+-----------------
+Your project uses libraries that provide manifests, and your Eclipse
+project did not explicitly turn on manifest merging. In Android Gradle
+projects, manifests are always merged (meaning that contents from your
+libraries' manifests will be merged into the app manifest. If you had
+manually copied contents from library manifests into your app manifest
+you may need to remove these for the app to build correctly.
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+From StarterActivity:
+* .gitignore
+* LICENSE
+* README.mkd
+* ic_launcher-web.png
+* pom.xml
+* proguard-project.txt
+From openxc:
+* javadoc/
+* javadoc/overview.html
+* pom.xml
+* proguard.cfg
+* tests/
+* tests/com/
+* tests/com/openxc/
+* tests/com/openxc/BaseMeasurementTest.java
+* tests/com/openxc/DataPipelineTest.java
+* tests/com/openxc/MeasurementTest.java
+* tests/com/openxc/MeasurementsTest.java
+* tests/com/openxc/NoRangeMeasurementTest.java
+* tests/com/openxc/TestUtils.java
+* tests/com/openxc/UnitsTest.java
+* tests/com/openxc/VehicleManagerJvmTest.java
+* tests/com/openxc/interfaces/
+* tests/com/openxc/interfaces/network/
+* tests/com/openxc/interfaces/network/NetworkVehicleInterfaceTest.java
+* tests/com/openxc/interfaces/usb/
+* tests/com/openxc/interfaces/usb/UsbVehicleInterfaceTest.java
+* tests/com/openxc/measurements/
+* tests/com/openxc/measurements/AcceleratorPedalPositionTest.java
+* tests/com/openxc/measurements/BrakePedalStatusTest.java
+* tests/com/openxc/measurements/EngineSpeedTest.java
+* tests/com/openxc/measurements/FuelConsumedTest.java
+* tests/com/openxc/measurements/FuelLevelTest.java
+* tests/com/openxc/measurements/HeadlampStatusTest.java
+* tests/com/openxc/measurements/HighBeamStatusTest.java
+* tests/com/openxc/measurements/LatitudeTest.java
+* tests/com/openxc/measurements/LongitudeTest.java
+* tests/com/openxc/measurements/OdometerTest.java
+* tests/com/openxc/measurements/ParkingBrakeStatusTest.java
+* tests/com/openxc/measurements/SteeringWheelAngleTest.java
+* tests/com/openxc/measurements/TorqueAtTransmissionTest.java
+* tests/com/openxc/measurements/TransmissionGearPositionTest.java
+* tests/com/openxc/measurements/TurnSignalStatusTest.java
+* tests/com/openxc/measurements/VehicleSpeedTest.java
+* tests/com/openxc/measurements/WindshieldWiperStatusTest.java
+* tests/com/openxc/messages/
+* tests/com/openxc/messages/CanMessageTest.java
+* tests/com/openxc/messages/CommandResponseTest.java
+* tests/com/openxc/messages/CommandTest.java
+* tests/com/openxc/messages/DiagnosticRequestTest.java
+* tests/com/openxc/messages/DiagnosticResponseTest.java
+* tests/com/openxc/messages/EventedSimpleVehicleMessageTest.java
+* tests/com/openxc/messages/KeyMatcherTest.java
+* tests/com/openxc/messages/MessageKeyTest.java
+* tests/com/openxc/messages/NamedVehicleMessageTest.java
+* tests/com/openxc/messages/SimpleVehicleMessageTest.java
+* tests/com/openxc/messages/VehicleMessageTest.java
+* tests/com/openxc/messages/formatters/
+* tests/com/openxc/messages/formatters/AbstractFormatterTest.java
+* tests/com/openxc/messages/formatters/BinaryFormatterTest.java
+* tests/com/openxc/messages/formatters/ByteAdapterTest.java
+* tests/com/openxc/messages/formatters/JsonFormatterTest.java
+* tests/com/openxc/messages/streamers/
+* tests/com/openxc/messages/streamers/BinaryStreamerTest.java
+* tests/com/openxc/messages/streamers/JsonStreamerTest.java
+* tests/com/openxc/sinks/
+* tests/com/openxc/sinks/ContextualVehicleDataSinkTest.java
+* tests/com/openxc/sinks/FileRecorderSinkTest.java
+* tests/com/openxc/sinks/MessageListenerSinkTest.java
+* tests/com/openxc/sinks/RemoteCallbackSinkTest.java
+* tests/com/openxc/sinks/UploaderSinkTest.java
+* tests/com/openxc/sources/
+* tests/com/openxc/sources/BaseVehicleDataSourceTest.java
+* tests/com/openxc/sources/BytestreamDataSourceTest.java
+* tests/com/openxc/units/
+* tests/com/openxc/units/BooleanTest.java
+* tests/com/openxc/units/QuantityTest.java
+* tests/com/openxc/units/StateTest.java
+* tests/com/openxc/util/
+* tests/com/openxc/util/AgingDataTest.java
+* tests/com/openxc/util/RangeTest.java
+
+Replaced Jars with Dependencies:
+--------------------------------
+The importer recognized the following .jar files as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the .jar file in your project was of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the jar replacement in the import wizard and try again:
+
+gson-2.3.jar => com.google.code.gson:gson:2.3
+guava-18.0.jar => com.google.guava:guava:18.0
+protobuf-java-2.6.1.jar => com.google.protobuf:protobuf-java:2.6.1
+
+Potentially Missing Dependency:
+-------------------------------
+When we replaced the following .jar files with a Gradle dependency, we
+inferred the dependency version number from the filename. This
+specific version may not actually be available from the repository.
+If you get a build error stating that the dependency is missing, edit
+the version number to for example "+" to pick up the latest version
+instead. (This may require you to update your code if the library APIs
+have changed.)
+
+gson-2.3.jar => version 2.3 in com.google.code.gson:gson:2.3
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+In openxc:
+* AndroidManifest.xml => openxc/src/main/AndroidManifest.xml
+* assets/ => openxc/src/main/assets
+* libs/commons-io-2.4.jar => openxc/libs/commons-io-2.4.jar
+* libs/junit-4.12-beta-2.jar => openxc/libs/junit-4.12-beta-2.jar
+* libs/support-v4-19.1.0.jar => openxc/libs/support-v4-19.1.0.jar
+* res/ => openxc/src/main/res/
+* src/ => openxc/src/main/java/
+* src/com/openxc/interfaces/VehicleInterfaceDescriptor.aidl => openxc/src/main/aidl/com/openxc/interfaces/VehicleInterfaceDescriptor.aidl
+* src/com/openxc/messages/MessageKey.aidl => openxc/src/main/aidl/com/openxc/messages/MessageKey.aidl
+* src/com/openxc/messages/VehicleMessage.aidl => openxc/src/main/aidl/com/openxc/messages/VehicleMessage.aidl
+* src/com/openxc/remote/VehicleServiceInterface.aidl => openxc/src/main/aidl/com/openxc/remote/VehicleServiceInterface.aidl
+* src/com/openxc/remote/VehicleServiceListener.aidl => openxc/src/main/aidl/com/openxc/remote/VehicleServiceListener.aidl
+* src/com/openxc/remote/ViConnectionListener.aidl => openxc/src/main/aidl/com/openxc/remote/ViConnectionListener.aidl
+In StarterActivity:
+* AndroidManifest.xml => starterActivity/src/main/AndroidManifest.xml
+* assets/ => starterActivity/src/main/assets
+* res/ => starterActivity/src/main/res/
+* src/ => starterActivity/src/main/java/
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)
