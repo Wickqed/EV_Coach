@@ -1,6 +1,6 @@
 /*
  * This file is auto-generated.  DO NOT MODIFY.
- * Original file: /Users/ZachsComputer/Desktop/EV_Coach/EV_Coach/StarterActivity2/openxc/src/main/aidl/com/openxc/remote/VehicleServiceInterface.aidl
+ * Original file: /home/michael/Downloads/EV_Coach-master (2)/StarterActivity2/openxc/src/main/aidl/com/openxc/remote/VehicleServiceInterface.aidl
  */
 package com.openxc.remote;
 /**
