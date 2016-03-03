@@ -33,11 +33,8 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 
 	boolean EngineSpeed;
 	boolean VehicleSpeed;
-	boolean AcCompPowBool;
 	boolean BSChargeBool;
-	boolean HVBatCurBool;
-	boolean LstRegBool;
-	boolean RelDrPowBool;
+	boolean AccBool;
 
 	//GraphView 
 
@@ -54,10 +51,7 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 	LineGraphSeries<DataPoint> rpmSeries = new LineGraphSeries<DataPoint>();
 	LineGraphSeries<DataPoint> speedSeries = new LineGraphSeries<DataPoint>();
 	LineGraphSeries<DataPoint> bSCSeries = new LineGraphSeries<DataPoint>();
-	LineGraphSeries<DataPoint> HVBatCurSeries = new LineGraphSeries<DataPoint>();
-	LineGraphSeries<DataPoint> lstRegSeries = new LineGraphSeries<DataPoint>();
-	LineGraphSeries<DataPoint> RelDrPowSeries = new LineGraphSeries<DataPoint>();
-	LineGraphSeries<DataPoint> AcCompPowSeries = new LineGraphSeries<DataPoint>();
+	LineGraphSeries<DataPoint> accSeries = new LineGraphSeries<DataPoint>();
 
 
 	/**
@@ -76,11 +70,7 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 		ArrayList<Double> listSpeed = (ArrayList<Double>) getIntent().getSerializableExtra("listSpeed");
 		
 		ArrayList<Double> listBatStateCharge = (ArrayList<Double>) getIntent().getSerializableExtra("listBatStateCharge");
-		ArrayList<Double> listHVBatCurr = (ArrayList<Double>) getIntent().getSerializableExtra("listHVBatCurr");
-		
-		ArrayList<Double> listLastRegEventScore= (ArrayList<Double>) getIntent().getSerializableExtra("listLastRegEventScore");
-		ArrayList<Double> listRelDrivePower = (ArrayList<Double>) getIntent().getSerializableExtra("listRelDrivePower");
-		ArrayList<Double> listAcCompressorPower = (ArrayList<Double>) getIntent().getSerializableExtra("listAcCompressorPower");
+		ArrayList<Double> listAcc = (ArrayList<Double>) getIntent().getSerializableExtra("listAcc");
 
 		//Calculate score here and put it into the text box
 		RPMscore = calcScore (2500, listRPM, .50);
@@ -184,25 +174,9 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 			}
 		}
 
-		if (listHVBatCurr != null){
-			for (int i = 0; i < listHVBatCurr.size(); i++){
-				HVBatCurSeries.appendData(new DataPoint(i,listHVBatCurr.get(i)), true, maxPoints);
-			}
-		}
-		if (listLastRegEventScore != null){
-			for (int i = 0; i < listLastRegEventScore.size(); i++){
-				lstRegSeries.appendData(new DataPoint(i,listLastRegEventScore.get(i)), true, maxPoints);
-			}
-		}
-
-		if (listRelDrivePower != null){
-			for (int i = 0; i < listRelDrivePower.size(); i++){
-				RelDrPowSeries.appendData(new DataPoint(i,listRelDrivePower.get(i)), true, maxPoints);
-			}
-		}
-		if (listAcCompressorPower != null){
-			for (int i = 0; i < listAcCompressorPower.size(); i++){
-				AcCompPowSeries.appendData(new DataPoint(i,listAcCompressorPower.get(i)), true, maxPoints);
+		if (listAcc != null){
+			for (int i = 0; i < listAcc.size(); i++){
+				accSeries.appendData(new DataPoint(i,listAcc.get(i)), true, maxPoints);
 			}
 		}
 		
@@ -260,11 +234,8 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 		graph.removeAllSeries();
 		EngineSpeed = false;
 		VehicleSpeed = false;
-		AcCompPowBool = false;
 		BSChargeBool = false;
-		HVBatCurBool = false;
-		LstRegBool = false;
-		RelDrPowBool = false;
+		AccBool = false;
 		
 		if(canSelect.getSelectedItem().toString().equals("Vehicle Speed")){
 			graph.addSeries(speedSeries);
@@ -278,13 +249,6 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 			EngineSpeed = true;
 			//Toast.makeText(getApplicationContext(), "engine speed selected", Toast.LENGTH_SHORT).show();
 		}
-		else if(canSelect.getSelectedItem().toString().equals("AC Commpressor Power")){
-			graph.addSeries(AcCompPowSeries);
-			graph.setTitle("AC Commpressor Power");
-			AcCompPowBool = true;
-			//Toast.makeText(getApplicationContext(), "AC Commpressor Power selected", Toast.LENGTH_SHORT).show();
-
-		}
 		else if(canSelect.getSelectedItem().toString().equals("Battery State of Charge")){
 			graph.addSeries(bSCSeries);
 			graph.setTitle("Battery Charge");
@@ -292,25 +256,11 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 			//Toast.makeText(getApplicationContext(), "Battery State of Charge", Toast.LENGTH_SHORT).show();
 
 		}
-		else if(canSelect.getSelectedItem().toString().equals("HV Battery Currrent")){
-			graph.addSeries(HVBatCurSeries);
-			graph.setTitle("HV Battery Currrent");
-			HVBatCurBool = true;
-			//Toast.makeText(getApplicationContext(), "HV Battery Currrent", Toast.LENGTH_SHORT).show();
-
-		}
-		else if(canSelect.getSelectedItem().toString().equals("Last Regen. Event")){
-			graph.addSeries(lstRegSeries);
-			graph.setTitle("Last Regen. Event");
-			LstRegBool = true;
-			//Toast.makeText(getApplicationContext(), "Last Regen. Event", Toast.LENGTH_SHORT).show();
-
-		}
-		else if(canSelect.getSelectedItem().toString().equals("Relative Drive Power")){
-			graph.addSeries(RelDrPowSeries);
-			graph.setTitle("Relative Drive Power");
-			RelDrPowBool = true;
-			//Toast.makeText(getApplicationContext(), "Relative Drive Power", Toast.LENGTH_SHORT).show();
+		else if(canSelect.getSelectedItem().toString().equals("Acceleration")){
+			graph.addSeries(accSeries);
+			graph.setTitle("Accelerator Pedal Position");
+			AccBool = true;
+			//Toast.makeText(getApplicationContext(), "Acceleration", Toast.LENGTH_SHORT).show();
 
 		}
 	}

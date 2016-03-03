@@ -12,7 +12,7 @@ import com.openxc.util.Range;
 public class BatteryStateOfCharge extends BaseMeasurement<Percentage> {
     private final static Range<Percentage> RANGE =
         new Range<Percentage>(new Percentage(0), new Percentage(100));
-    public final static String ID = "battery_state_of_charge";
+    public final static String ID = "battery_level";
 
     public BatteryStateOfCharge(Number value) {
         super(new Percentage(value), RANGE);

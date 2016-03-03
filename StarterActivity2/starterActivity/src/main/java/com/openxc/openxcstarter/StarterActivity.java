@@ -20,6 +20,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import com.getpebble.android.kit.PebbleKit;
 import com.getpebble.android.kit.util.PebbleDictionary;
+import com.openxc.measurements.AcceleratorPedalPosition;
 import com.openxcplatform.openxcstarter.R;
 import com.openxc.VehicleManager;
 import com.openxc.measurements.AcCompressorPower;
@@ -72,10 +73,7 @@ public class StarterActivity extends Activity {
 	ArrayList<Double> listRPM = new ArrayList<Double>();
 	ArrayList<Double> listSpeed = new ArrayList<Double>();
 	ArrayList<Double> listBatStateCharge = new ArrayList<Double>();
-	ArrayList<Double> listHVBatCurr = new ArrayList<Double>();
-	ArrayList<Double> listLastRegEventScore = new ArrayList<Double>();
-	ArrayList<Double> listRelDrivePower = new ArrayList<Double>();
-	ArrayList<Double> listAcCompressorPower = new ArrayList<Double>();
+	ArrayList<Double> listAcc = new ArrayList<Double>();
 
 
 	@Override
@@ -117,11 +115,8 @@ public class StarterActivity extends Activity {
 					mIgnitionListener);
 			mVehicleManager.removeListener(FuelLevel.class, mFuelListener);
 			mVehicleManager.removeListener(VehicleSpeed.class, mSpeedVehicleListener);
-			mVehicleManager.removeListener(AcCompressorPower.class, mAcCompressorPowerListener);
 			mVehicleManager.removeListener(BatteryStateOfCharge.class, mBatteryStateOfChargeListener);
-			mVehicleManager.removeListener(HvBatteryCurrent.class, mHvBatteryCurrentListener);
-			mVehicleManager.removeListener(LastRegenEventScore.class, mLastRegenEventScoreListener);
-			mVehicleManager.removeListener(RelativeDrivePower.class, mRelativeDrivePowerListener);
+			mVehicleManager.removeListener(AcceleratorPedalPosition.class, mAccListener);
 			unbindService(mConnection);
 			mVehicleManager = null;
 		}
@@ -212,10 +207,7 @@ public class StarterActivity extends Activity {
 				i.putExtra("listRPM",listRPM);
 				i.putExtra("listSpeed", listSpeed);
 				i.putExtra("listBatStateCharge",listBatStateCharge);
-				i.putExtra("listHVBatCurr", listHVBatCurr);
-				i.putExtra("listLastRegEventScore",listLastRegEventScore);
-				i.putExtra("listRelDrivePower", listRelDrivePower);
-				i.putExtra("listAcCompressorPower", listAcCompressorPower);
+				i.putExtra("listAcc", listAcc);
 
 
 				startActivity(i);
@@ -314,54 +306,7 @@ public class StarterActivity extends Activity {
 	 * Later in the file, we'll ask the VehicleManager to call the receive()
 	 * function here whenever a new EngineSpeed value arrives.
 	 */
-    int acCompressorPowerListenerCount = 0;
-	AcCompressorPower.Listener mAcCompressorPowerListener = new AcCompressorPower.Listener() { 
-		public void receive(Measurement measurement) {
-			// When we receive a new EngineSpeed value from the car, we want to
-			// update the UI to display the new value. First we cast the generic
-			// Measurement back to the type we know it to be, an EngineSpeed.
-			final AcCompressorPower power = (AcCompressorPower) measurement;
-			// In order to modify the UI, we have to make sure the code is
-			// running on the "UI thread" - Google around for this, it's an
-			// important concept in Android.
 
-            //add every 25th data point to the ArrayList
-            if(++acCompressorPowerListenerCount % moduloValue != 0) {
-                Log.i(TAG, "Skipped ac compressor power measurement");
-            } else {
-                Log.i(TAG, "Received AC Compressor Power Measurement");
-                listAcCompressorPower.add(power.getValue().doubleValue());
-            }
-
-            StarterActivity.this.runOnUiThread(new Runnable() {
-                public void run() {
-                    // Finally, we've got a new value and we're running on the
-                    // UI thread - we set the text of the EngineSpeed view to
-                    // the latest value
-
-                    // Toasting if criteria is met
-				/*	if(count > 0){
-						count++;
-					}
-					if(count == 100){
-						count = 0;
-					}
-					if(count == 0){
-						if(power.getValue().doubleValue() > 1000){
-							count = 0;
-							//Toast.makeText(getApplicationContext(), "Turn down AC to conserve battery", Toast.LENGTH_SHORT).show();
-							ttobj.speak("Turn down AC to conserve battery", TextToSpeech.QUEUE_FLUSH, null);
-							boolean connected = isPebbleConnected();
-							if(connected == true){
-								tempVibeVar = 0;
-								sendDataToWatch();
-							}
-						}
-					}*/
-				}
-			});
-		}
-	};
     int batteryStateListenerCount = 0;
 	BatteryStateOfCharge.Listener mBatteryStateOfChargeListener = new BatteryStateOfCharge.Listener() {
 		public void receive(Measurement measurement) {
@@ -411,119 +356,21 @@ public class StarterActivity extends Activity {
 		}
 	};
 
-    int batteryCurrentListenerCount = 0;
-	HvBatteryCurrent.Listener mHvBatteryCurrentListener = new HvBatteryCurrent.Listener() {
+	int AccListenerCount = 0;
+	AcceleratorPedalPosition.Listener mAccListener = new AcceleratorPedalPosition.Listener() {
 		public void receive(Measurement measurement) {
-			// When we receive a new EngineSpeed value from the car, we want to
+			// When we receive a new Acceleration value from the car, we want to
 			// update the UI to display the new value. First we cast the generic
 			// Measurement back to the type we know it to be, an EngineSpeed.
-			final HvBatteryCurrent current = (HvBatteryCurrent) measurement;
+			final AcceleratorPedalPosition acc = (AcceleratorPedalPosition) measurement;
 
-
-            //add every 25th data point to the ArrayList
-            if(++batteryCurrentListenerCount % moduloValue != 0) {
-                Log.i(TAG, "Skipped battery current measurement");
-            } else {
-                Log.i(TAG, "Received Battery Current Measurement");
-                listHVBatCurr.add(current.getValue().doubleValue());
-            }
-
-
-			// In order to modify the UI, we have to make sure the code is
-			// running on the "UI thread" - Google around for this, it's an
-			// important concept in Android.
-			StarterActivity.this.runOnUiThread(new Runnable() {
-				public void run() {
-					// Finally, we've got a new value and we're running on the
-					// UI thread - we set the text of the EngineSpeed view to
-					// the latest value
-					// Toasting if criteria is met
-				/*	if(count > 0){
-						count++;
-					}
-					if(count == 100){
-						count = 0;
-					}
-					if(count == 0){
-						if(current.getValue().doubleValue() > 50){
-							ttobj.speak("Turn off AC", TextToSpeech.QUEUE_FLUSH, null);
-							boolean connected = isPebbleConnected();
-							if(connected == true){
-								tempVibeVar = 0;
-								sendDataToWatch();
-							}
-
-							//Toast.makeText(getApplicationContext(), "Don't go above 2000RPM to improve battery range", Toast.LENGTH_SHORT).show();
-						}
-					}*/
-				}
-			});
-		}
-	};
-
-    int regenListenerCount = 0;
-	LastRegenEventScore.Listener mLastRegenEventScoreListener = new LastRegenEventScore.Listener() {
-		public void receive(Measurement measurement) {
-			// When we receive a new EngineSpeed value from the car, we want to
-			// update the UI to display the new value. First we cast the generic
-			// Measurement back to the type we know it to be, an EngineSpeed.
-			final LastRegenEventScore score = (LastRegenEventScore) measurement;
-
-            //add every 25th data point to the ArrayList
-            if(++regenListenerCount % moduloValue != 0) {
-                Log.i(TAG, "Skipped regen event measurement");
-            } else {
-                Log.i(TAG, "Received Regen Event Measurement");
-                listLastRegEventScore.add(score.getValue().doubleValue());
-            }
-
-
-			// In order to modify the UI, we have to make sure the code is
-			// running on the "UI thread" - Google around for this, it's an
-			// important concept in Android.
-			StarterActivity.this.runOnUiThread(new Runnable() {
-				public void run() {
-					// Finally, we've got a new value and we're running on the
-					// UI thread - we set the text of the EngineSpeed view to
-					// the latest value
-					// Toasting if criteria is met
-				/*	if(count > 0){
-						count++;
-					}
-					if(count == 100){
-						count = 0;
-					}
-					if(count == 0){
-						if(score.getValue().doubleValue() < 75){
-							//Toast.makeText(getApplicationContext(), "Brake sooner to better use your regenerative brake", Toast.LENGTH_SHORT).show();
-							ttobj.speak("Brake sooner to conserve battery", TextToSpeech.QUEUE_FLUSH, null);
-							boolean connected = isPebbleConnected();
-							if(connected == true){
-								tempVibeVar = 0;
-								sendDataToWatch();
-							}
-						}
-					}*/
-				}
-			});
-		}
-	};
-
-    int drivePowerListenerCount = 0;
-	RelativeDrivePower.Listener mRelativeDrivePowerListener = new RelativeDrivePower.Listener() {
-		public void receive(Measurement measurement) {
-			// When we receive a new EngineSpeed value from the car, we want to
-			// update the UI to display the new value. First we cast the generic
-			// Measurement back to the type we know it to be, an EngineSpeed.
-			final RelativeDrivePower power = (RelativeDrivePower) measurement;
-
-            //add every 25th data point to the ArrayList
-            if(++drivePowerListenerCount % moduloValue != 0) {
-                Log.i(TAG, "Skipped drive power measurement");
-            } else {
-                Log.i(TAG, "Receieved Relative Drive Power Measurement");
-                listRelDrivePower.add(power.getValue().doubleValue());
-            }
+			//add every 25th data point to the ArrayList
+			if(++AccListenerCount % moduloValue != 0) {
+				Log.i(TAG, "Skipped acceleration measurement");
+			} else {
+				Log.i(TAG, "Received Acceleration Measurement");
+				listAcc.add(acc.getValue().doubleValue());
+			}
 
 			// In order to modify the UI, we have to make sure the code is
 			// running on the "UI thread" - Google around for this, it's an
@@ -542,9 +389,10 @@ public class StarterActivity extends Activity {
 						count = 0;
 					}
 					if(count == 0){
-						if(power.getValue().doubleValue() > 2000){
-							//Toast.makeText(getApplicationContext(), "Don't go above 2000RPM to improve battery range", Toast.LENGTH_SHORT).show();
-							ttobj.speak("Turn down relative drive power", TextToSpeech.QUEUE_FLUSH, null);
+						if(charge.getValue().doubleValue() < 10){
+							//Toast.makeText(getApplicationContext(), "Low battery find charging station", Toast.LENGTH_SHORT).show();
+							ttobj.speak("Low battery find charging station", TextToSpeech.QUEUE_FLUSH, null);
+							//batteryWarning = true;
 							boolean connected = isPebbleConnected();
 							if(connected == true){
 								tempVibeVar = 0;
@@ -552,14 +400,10 @@ public class StarterActivity extends Activity {
 							}
 						}
 					}*/
-
-
 				}
 			});
 		}
 	};
-
-
 
 	private ServiceConnection mConnection = new ServiceConnection() {
 		// Called when the connection with the VehicleManager service is
@@ -587,11 +431,8 @@ public class StarterActivity extends Activity {
 			mVehicleManager.addListener(IgnitionStatus.class, mIgnitionListener);
 			mVehicleManager.addListener(VehicleSpeed.class, mSpeedVehicleListener);
 			mVehicleManager.addListener(FuelLevel.class, mFuelListener);
-			mVehicleManager.addListener(AcCompressorPower.class, mAcCompressorPowerListener);
 			mVehicleManager.addListener(BatteryStateOfCharge.class, mBatteryStateOfChargeListener);
-			mVehicleManager.addListener(HvBatteryCurrent.class, mHvBatteryCurrentListener);
-			mVehicleManager.addListener(LastRegenEventScore.class, mLastRegenEventScoreListener);
-			mVehicleManager.addListener(RelativeDrivePower.class, mRelativeDrivePowerListener);
+			mVehicleManager.addListener(AcceleratorPedalPosition.class, mAccListener);
 		}
 
 
