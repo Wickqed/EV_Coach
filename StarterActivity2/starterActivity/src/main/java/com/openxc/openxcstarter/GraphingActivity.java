@@ -8,8 +8,10 @@ import com.jjoe64.graphview.series.LineGraphSeries;
 import com.openxcplatform.openxcstarter.R;
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -29,7 +31,8 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 	private TextView mFuelLevelView;
 	private String name = "name";
 	private String value = "value";
-	private final int maxPoints = 1000;
+	private final int maxPoints = 10000;
+	private SharedPreferences sharedPreferences;
 
 	boolean EngineSpeed;
 	boolean VehicleSpeed;
@@ -48,10 +51,10 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 	private Spinner canSelect;
 
 	GraphView graph; 
-	LineGraphSeries<DataPoint> rpmSeries = new LineGraphSeries<DataPoint>();
-	LineGraphSeries<DataPoint> speedSeries = new LineGraphSeries<DataPoint>();
-	LineGraphSeries<DataPoint> bSCSeries = new LineGraphSeries<DataPoint>();
-	LineGraphSeries<DataPoint> accSeries = new LineGraphSeries<DataPoint>();
+	LineGraphSeries<DataPoint> rpmSeries = new LineGraphSeries<>();
+	LineGraphSeries<DataPoint> speedSeries = new LineGraphSeries<>();
+	LineGraphSeries<DataPoint> bSCSeries = new LineGraphSeries<>();
+	LineGraphSeries<DataPoint> accSeries = new LineGraphSeries<>();
 
 
 	/**
@@ -63,6 +66,7 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 		super.onCreate(savedInstanceState);
 		final Dialog dialog = new Dialog(GraphingActivity.this);
 		double totalScore = 0; double RPMscore = 0; double speedScore = 0;
+		sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 
 		setContentView(R.layout.graphviewlayout);
 		graph = (GraphView) findViewById(R.id.graph);
@@ -72,12 +76,32 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 		ArrayList<Double> listBatStateCharge = (ArrayList<Double>) getIntent().getSerializableExtra("listBatStateCharge");
 		ArrayList<Double> listAcc = (ArrayList<Double>) getIntent().getSerializableExtra("listAcc");
 
+		//Determine which type of driving we are doing
+		String dType = sharedPreferences.getString("unit", "0");
+		int driveType = Integer.parseInt(dType);
+
+		//city driving
+		if(driveType == 0) {
+			RPMscore = calcScore (500, listRPM, .50);
+			speedScore = calcScore(73, listSpeed, .50);
+
+		} else if(driveType == 1) {
+			//rural driving
+			//TODO: Not yet implemented - rural driving
+			RPMscore = calcScore(1500, listRPM, 0.5);
+			speedScore = calcScore(100, listSpeed, 0.5);
+
+		} else {
+			//highway driving
+			RPMscore = calcScore(2000, listRPM, 0.5);
+			speedScore = calcScore(117, listSpeed, 0.5);
+
+		}
+
 		//Calculate score here and put it into the text box
-		RPMscore = calcScore (2500, listRPM, .50);
+		Log.i("TAG", "speedScore is: " + speedScore);
 		Log.i("TAG", "RPMscore is: " + RPMscore);
 
-		speedScore = calcScore(73, listSpeed, .50);
-		Log.i("TAG", "speedScore is: " + speedScore);
 
 
 		//totalScore = totalScore + calcScore (1000, 2500, 4000, listBatStateCharge, .15);
@@ -100,6 +124,7 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 		Button graphButton = (Button) dialog.findViewById(R.id.Graph_Button);
 		Button breakDownButton = (Button) dialog.findViewById(R.id.Break_button);
 
+		//Calculates the letter grade associated with the user's score
 		if(totalScore >= 900) {
 			if(totalScore > 975) { gradeView.setText("A+"); gradeView.setTextColor(Color.GREEN);}
 			else if (totalScore <= 975 && totalScore >= 925){ gradeView.setText("A"); gradeView.setTextColor(Color.GREEN);}
@@ -185,8 +210,17 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 		//ArrayList<HashMap<String,String>>
 	}
 
-	//int lowerBase, int midBase,
-	private static double calcScore (int upperBase, ArrayList<Double> parameters, double weight){
+
+	/**
+	 * Calculates a portion of the score given an upper threshold, and arraylist of parameters, and
+	 * how much weight is provided to this portion of the score.
+	 *
+	 * @param upperBase - an upper threshold
+	 * @param parameters - the arraylist of measurements
+	 * @param weight - the weight of the score to base this off of
+	 * @return a double with the weighted score of this category
+	 */
+	private static double calcScore(int upperBase, ArrayList<Double> parameters, double weight){
 		double calcScore = 0;
 		// normBaseCount = 0 , easyBaseCount = 0, normPct, easyPct,
 		int hardBaseCount = 0, zeroCount = 0;
@@ -222,10 +256,10 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 	/**
 	 * Selects the correct graph based on a selection of tiles by the user.
 	 *
-	 * @param parentView
-	 * @param v
-	 * @param position
-	 * @param id
+	 * @param parentView - the current view being seen
+	 * @param v - the view selected
+	 * @param position - which position the view selected is in
+	 * @param id - the id of the position selected
 	 */
 	@Override
 	public void onItemSelected(AdapterView<?> parentView, View v, int position,
@@ -268,6 +302,5 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 	@Override
 	public void onNothingSelected(AdapterView<?> parent) {
 		// TODO Auto-generated method stub
-
 	}
 }

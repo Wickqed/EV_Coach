@@ -1,5 +1,5 @@
 package com.openxc.openxcstarter;
-//Testing the commets
+//Testing the comments
 import java.util.Locale;
 import java.util.UUID;
 import java.util.ArrayList;
@@ -66,14 +66,10 @@ public class StarterActivity extends Activity {
 	//Temp variable to simulate all vibration types
 	int tempVibeVar = 0;
 
-	//Counter variable
-	int count = 0;
-	Timer t = new Timer();
-
-	ArrayList<Double> listRPM = new ArrayList<Double>();
-	ArrayList<Double> listSpeed = new ArrayList<Double>();
-	ArrayList<Double> listBatStateCharge = new ArrayList<Double>();
-	ArrayList<Double> listAcc = new ArrayList<Double>();
+	ArrayList<Double> listRPM = new ArrayList<>();
+	ArrayList<Double> listSpeed = new ArrayList<>();
+	ArrayList<Double> listBatStateCharge = new ArrayList<>();
+	ArrayList<Double> listAcc = new ArrayList<>();
 
 
 	@Override
@@ -121,7 +117,7 @@ public class StarterActivity extends Activity {
 			mVehicleManager = null;
 		}
 
-		if(ttobj !=null){
+		if(ttobj != null){
 			ttobj.stop();
 			ttobj.shutdown();
 		}
@@ -156,7 +152,7 @@ public class StarterActivity extends Activity {
 
             //add every 25th data point to the ArrayList
             if(++speedListenerCount % moduloValue != 0) {
-                Log.i(TAG, "Skipped Measurement Speed");
+                //Log.i(TAG, "Skipped Measurement Speed");
             } else {
 				Log.i(TAG, "Receieved Measurement Engine Speed");
                 listRPM.add(speed.getValue().doubleValue());
@@ -226,7 +222,7 @@ public class StarterActivity extends Activity {
 
             //add every 25th data point to the ArrayList
             if(++vehicleSpeedListenerCount % moduloValue != 0) {
-                Log.i(TAG, "Skipped vehicle speed measurement");
+                //Log.i(TAG, "Skipped vehicle speed measurement");
             } else {
                 Log.i(TAG, "Received Vehicle Speed Measurement");
                 listSpeed.add(speed.getValue().doubleValue());
@@ -282,7 +278,7 @@ public class StarterActivity extends Activity {
 
             //add every 25th data point to the ArrayList
             if(++fuelLevelListenerCount % moduloValue != 0) {
-                Log.i(TAG, "Skipped fuel level measurement");
+                //Log.i(TAG, "Skipped fuel level measurement");
             } else {
                 Log.i(TAG, "Received Fuel Measurement");
             }
@@ -317,7 +313,7 @@ public class StarterActivity extends Activity {
 
             //add every 25th data point to the ArrayList
             if(++batteryStateListenerCount % moduloValue != 0) {
-                Log.i(TAG, "Skipped battery charge measurement");
+                //Log.i(TAG, "Skipped battery charge measurement");
             } else {
                 Log.i(TAG, "Received Battery Charge Measurement");
                 listBatStateCharge.add(charge.getValue().doubleValue());
@@ -366,7 +362,7 @@ public class StarterActivity extends Activity {
 
 			//add every 25th data point to the ArrayList
 			if(++AccListenerCount % moduloValue != 0) {
-				Log.i(TAG, "Skipped acceleration measurement");
+				//Log.i(TAG, "Skipped acceleration measurement");
 			} else {
 				Log.i(TAG, "Received Acceleration Measurement");
 				listAcc.add(acc.getValue().doubleValue());

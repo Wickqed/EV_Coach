@@ -1,14 +1,14 @@
--injars '/home/michael/Downloads/EV_Coach-master (2)/StarterActivity2/starterActivity/build/intermediates/multi-dex/debug/allclasses.jar'
--outjars '/home/michael/Downloads/EV_Coach-master (2)/StarterActivity2/starterActivity/build/intermediates/multi-dex/debug/componentClasses.jar'
+-injars 'D:\Android\StudioProjects\EV_Coach\StarterActivity2\starterActivity\build\intermediates\multi-dex\debug\allclasses.jar'
+-outjars 'D:\Android\StudioProjects\EV_Coach\StarterActivity2\starterActivity\build\intermediates\multi-dex\debug\componentClasses.jar'
 
--libraryjars /home/michael/Downloads/adt-bundle-linux-x86_64-20140702/sdk/build-tools/23.0.1/lib/shrinkedAndroid.jar
+-libraryjars 'D:\Android\sdk\build-tools\23.0.1\lib\shrinkedAndroid.jar'
 
 -forceprocessing
 -dontoptimize
 -dontobfuscate
 -dontpreverify
 -dontwarn
--printconfiguration '/home/michael/Downloads/EV_Coach-master (2)/StarterActivity2/starterActivity/build/intermediates/multi-dex/debug/components.flags'
+-printconfiguration 'D:\Android\StudioProjects\EV_Coach\StarterActivity2\starterActivity\build\intermediates\multi-dex\debug\components.flags'
 
 
 -keep class com.openxc.VehicleManager {
