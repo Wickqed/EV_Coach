@@ -7,13 +7,18 @@ import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 import com.openxcplatform.openxcstarter.R;
 import android.app.Activity;
+import android.app.Dialog;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.Toast;
 
 public class GraphingActivity extends Activity implements OnItemSelectedListener  {
 
@@ -28,11 +33,8 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 
 	boolean EngineSpeed;
 	boolean VehicleSpeed;
-	boolean AcCompPowBool;
 	boolean BSChargeBool;
-	boolean HVBatCurBool;
-	boolean LstRegBool;
-	boolean RelDrPowBool;
+	boolean AccBool;
 
 	//GraphView 
 
@@ -49,10 +51,7 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 	LineGraphSeries<DataPoint> rpmSeries = new LineGraphSeries<DataPoint>();
 	LineGraphSeries<DataPoint> speedSeries = new LineGraphSeries<DataPoint>();
 	LineGraphSeries<DataPoint> bSCSeries = new LineGraphSeries<DataPoint>();
-	LineGraphSeries<DataPoint> HVBatCurSeries = new LineGraphSeries<DataPoint>();
-	LineGraphSeries<DataPoint> lstRegSeries = new LineGraphSeries<DataPoint>();
-	LineGraphSeries<DataPoint> RelDrPowSeries = new LineGraphSeries<DataPoint>();
-	LineGraphSeries<DataPoint> AcCompPowSeries = new LineGraphSeries<DataPoint>();
+	LineGraphSeries<DataPoint> accSeries = new LineGraphSeries<DataPoint>();
 
 
 	/**
@@ -62,18 +61,89 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 	 */
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		final Dialog dialog = new Dialog(GraphingActivity.this);
+		double totalScore = 0; double RPMscore = 0; double speedScore = 0;
+
 		setContentView(R.layout.graphviewlayout);
 		graph = (GraphView) findViewById(R.id.graph);
 		ArrayList<Double> listRPM = (ArrayList<Double>) getIntent().getSerializableExtra("listRPM");
 		ArrayList<Double> listSpeed = (ArrayList<Double>) getIntent().getSerializableExtra("listSpeed");
 		
 		ArrayList<Double> listBatStateCharge = (ArrayList<Double>) getIntent().getSerializableExtra("listBatStateCharge");
-		ArrayList<Double> listHVBatCurr = (ArrayList<Double>) getIntent().getSerializableExtra("listHVBatCurr");
-		
-		ArrayList<Double> listLastRegEventScore= (ArrayList<Double>) getIntent().getSerializableExtra("listLastRegEventScore");
-		ArrayList<Double> listRelDrivePower = (ArrayList<Double>) getIntent().getSerializableExtra("listRelDrivePower");
-		ArrayList<Double> listAcCompressorPower = (ArrayList<Double>) getIntent().getSerializableExtra("listAcCompressorPower");
+		ArrayList<Double> listAcc = (ArrayList<Double>) getIntent().getSerializableExtra("listAcc");
 
+		//Calculate score here and put it into the text box
+		RPMscore = calcScore (2500, listRPM, .50);
+		Log.i("TAG", "RPMscore is: " + RPMscore);
+
+		speedScore = calcScore(73, listSpeed, .50);
+		Log.i("TAG", "speedScore is: " + speedScore);
+
+
+		//totalScore = totalScore + calcScore (1000, 2500, 4000, listBatStateCharge, .15);
+		//totalScore = totalScore + calcScore (1000, 2500, 4000, listHVBatCurr, .15);
+		//totalScore = totalScore + calcScore (1000, 2500, 4000, listLastRegEventScore, .15);
+		//totalScore = totalScore + calcScore (1000, 2500, 4000, listRelDrivePower, .15);
+		//totalScore = totalScore + calcScore (1000, 2500, 4000, listAcCompressorPower, .15);
+		
+		totalScore = RPMscore + speedScore;
+		dialog.setTitle("Score Screen");
+
+		dialog.setContentView(R.layout.userinterface);
+
+		dialog.show();
+
+		TextView textView = (TextView) dialog.findViewById(R.id.Score_Field);
+		TextView gradeView = (TextView) dialog.findViewById(R.id.Grade);
+		textView.setText(String.valueOf( (int) totalScore));
+
+		Button graphButton = (Button) dialog.findViewById(R.id.Graph_Button);
+		Button breakDownButton = (Button) dialog.findViewById(R.id.Break_button);
+
+		if(totalScore >= 900) {
+			if(totalScore > 975) { gradeView.setText("A+"); gradeView.setTextColor(Color.GREEN);}
+			else if (totalScore <= 975 && totalScore >= 925){ gradeView.setText("A"); gradeView.setTextColor(Color.GREEN);}
+			else { gradeView.setText("A-"); gradeView.setTextColor(Color.GREEN);}
+		}
+		else if(totalScore <= 899 && totalScore >= 800) {
+			if(totalScore > 875) { gradeView.setText("B+"); gradeView.setTextColor(Color.GREEN);}
+			else if (totalScore <= 875 && totalScore >= 825){ gradeView.setText("B"); gradeView.setTextColor(Color.GREEN);}
+			else { gradeView.setText("B-"); gradeView.setTextColor(Color.GREEN);}
+		}
+		else if(totalScore <= 799 && totalScore >= 700){
+			if(totalScore > 775) { gradeView.setText("C+"); gradeView.setTextColor(Color.YELLOW); }
+			else if (totalScore <= 775 && totalScore >= 725){ gradeView.setText("C"); gradeView.setTextColor(Color.YELLOW); }
+			else { gradeView.setText("C-"); gradeView.setTextColor(Color.YELLOW); }
+		}
+		else if (totalScore <= 699 && totalScore >= 600) {
+			if(totalScore > 675) { gradeView.setText("D+"); gradeView.setTextColor(Color.YELLOW);}
+			else if (totalScore <= 675 && totalScore >= 625){ gradeView.setText("D"); gradeView.setTextColor(Color.YELLOW); }
+			else { gradeView.setText("D-"); gradeView.setTextColor(Color.YELLOW); }
+		}
+		else if(totalScore <= 599 && totalScore >= 500) {
+			gradeView.setText("E");
+			gradeView.setTextColor(Color.RED);
+		}
+		else {
+			gradeView.setText("F");
+			gradeView.setTextColor(Color.RED);
+		}
+
+		graphButton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				dialog.cancel();
+			}
+		});
+
+		breakDownButton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				Toast.makeText(getApplicationContext(), "BreakDown", Toast.LENGTH_SHORT).show();
+				dialog.cancel();
+
+			}
+		});
 		
 		
 		canSelect = (Spinner) findViewById(R.id.canSelect);
@@ -104,35 +174,50 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 			}
 		}
 
-		if (listHVBatCurr != null){
-			for (int i = 0; i < listHVBatCurr.size(); i++){
-				HVBatCurSeries.appendData(new DataPoint(i,listHVBatCurr.get(i)), true, maxPoints);
-			}
-		}
-		if (listLastRegEventScore != null){
-			for (int i = 0; i < listLastRegEventScore.size(); i++){
-				lstRegSeries.appendData(new DataPoint(i,listLastRegEventScore.get(i)), true, maxPoints);
-			}
-		}
-
-		if (listRelDrivePower != null){
-			for (int i = 0; i < listRelDrivePower.size(); i++){
-				RelDrPowSeries.appendData(new DataPoint(i,listRelDrivePower.get(i)), true, maxPoints);
-			}
-		}
-		if (listAcCompressorPower != null){
-			for (int i = 0; i < listAcCompressorPower.size(); i++){
-				AcCompPowSeries.appendData(new DataPoint(i,listAcCompressorPower.get(i)), true, maxPoints);
+		if (listAcc != null){
+			for (int i = 0; i < listAcc.size(); i++){
+				accSeries.appendData(new DataPoint(i,listAcc.get(i)), true, maxPoints);
 			}
 		}
 		
 
 		//JSONArray m_jArry = obj.getJSONgoogle.rray("name");
 		//ArrayList<HashMap<String,String>>
-
-
-
 	}
+
+	//int lowerBase, int midBase,
+	private static double calcScore (int upperBase, ArrayList<Double> parameters, double weight){
+		double calcScore = 0;
+		// normBaseCount = 0 , easyBaseCount = 0, normPct, easyPct,
+		int hardBaseCount = 0, zeroCount = 0;
+		double zeroPct, acceptPct;
+
+		for ( int i = 0; i < parameters.size(); i++ ) {
+			if ( parameters.get(i) > upperBase ) {
+				hardBaseCount++;
+			}
+			//else if (parameters.get(i) > midBase){
+			//	normBaseCount++;
+			//}
+			//else if (parameters.get(i) > lowerBase) {
+			//	easyBaseCount++;
+			//}
+			else {
+				zeroCount++;
+			}
+		}
+
+		//normPct = (double) normBaseCount / (double) parameters.size();
+		//easyPct = (double) easyBaseCount / (double) parameters.size();
+
+		Log.i("TAG", "Number over:" + hardBaseCount + " Number below: " + zeroCount);
+		//acceptPct = normPct + easyPct + zeroPct;
+		acceptPct = (double) zeroCount / parameters.size();
+		calcScore = acceptPct * weight * 1000;
+
+		return calcScore;
+	}
+
 
 	/**
 	 * Selects the correct graph based on a selection of tiles by the user.
@@ -149,11 +234,8 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 		graph.removeAllSeries();
 		EngineSpeed = false;
 		VehicleSpeed = false;
-		AcCompPowBool = false;
 		BSChargeBool = false;
-		HVBatCurBool = false;
-		LstRegBool = false;
-		RelDrPowBool = false;
+		AccBool = false;
 		
 		if(canSelect.getSelectedItem().toString().equals("Vehicle Speed")){
 			graph.addSeries(speedSeries);
@@ -167,13 +249,6 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 			EngineSpeed = true;
 			//Toast.makeText(getApplicationContext(), "engine speed selected", Toast.LENGTH_SHORT).show();
 		}
-		else if(canSelect.getSelectedItem().toString().equals("AC Commpressor Power")){
-			graph.addSeries(AcCompPowSeries);
-			graph.setTitle("AC Commpressor Power");
-			AcCompPowBool = true;
-			//Toast.makeText(getApplicationContext(), "AC Commpressor Power selected", Toast.LENGTH_SHORT).show();
-
-		}
 		else if(canSelect.getSelectedItem().toString().equals("Battery State of Charge")){
 			graph.addSeries(bSCSeries);
 			graph.setTitle("Battery Charge");
@@ -181,25 +256,11 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 			//Toast.makeText(getApplicationContext(), "Battery State of Charge", Toast.LENGTH_SHORT).show();
 
 		}
-		else if(canSelect.getSelectedItem().toString().equals("HV Battery Currrent")){
-			graph.addSeries(HVBatCurSeries);
-			graph.setTitle("HV Battery Currrent");
-			HVBatCurBool = true;
-			//Toast.makeText(getApplicationContext(), "HV Battery Currrent", Toast.LENGTH_SHORT).show();
-
-		}
-		else if(canSelect.getSelectedItem().toString().equals("Last Regen. Event")){
-			graph.addSeries(lstRegSeries);
-			graph.setTitle("Last Regen. Event");
-			LstRegBool = true;
-			//Toast.makeText(getApplicationContext(), "Last Regen. Event", Toast.LENGTH_SHORT).show();
-
-		}
-		else if(canSelect.getSelectedItem().toString().equals("Relative Drive Power")){
-			graph.addSeries(RelDrPowSeries);
-			graph.setTitle("Relative Drive Power");
-			RelDrPowBool = true;
-			//Toast.makeText(getApplicationContext(), "Relative Drive Power", Toast.LENGTH_SHORT).show();
+		else if(canSelect.getSelectedItem().toString().equals("Acceleration")){
+			graph.addSeries(accSeries);
+			graph.setTitle("Accelerator Pedal Position");
+			AccBool = true;
+			//Toast.makeText(getApplicationContext(), "Acceleration", Toast.LENGTH_SHORT).show();
 
 		}
 	}

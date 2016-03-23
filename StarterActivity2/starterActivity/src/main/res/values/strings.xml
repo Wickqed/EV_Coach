@@ -8,11 +8,8 @@
     <string-array name="can_signals">
         <item>Engine Speed</item>
         <item>Vehicle Speed</item>
-        <item>AC Commpressor Power</item>
         <item>Battery State of Charge</item>
-        <item>HV Battery Currrent</item>
-        <item>Last Regen. Event</item>
-        <item>Relative Drive Power</item>
+        <item>Acceleration</item>
     </string-array>
 
 
