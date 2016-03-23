@@ -8,6 +8,7 @@ import com.jjoe64.graphview.series.LineGraphSeries;
 import com.openxcplatform.openxcstarter.R;
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
@@ -30,6 +31,10 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 	private String name = "name";
 	private String value = "value";
 	private final int maxPoints = 1000;
+
+	private double speedScore = 0;
+	private double RPMScore = 0;
+	private double totalScore = 0;
 
 	boolean EngineSpeed;
 	boolean VehicleSpeed;
@@ -62,7 +67,7 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		final Dialog dialog = new Dialog(GraphingActivity.this);
-		double totalScore = 0; double RPMscore = 0; double speedScore = 0;
+
 
 		setContentView(R.layout.graphviewlayout);
 		graph = (GraphView) findViewById(R.id.graph);
@@ -73,8 +78,8 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 		ArrayList<Double> listAcc = (ArrayList<Double>) getIntent().getSerializableExtra("listAcc");
 
 		//Calculate score here and put it into the text box
-		RPMscore = calcScore (2500, listRPM, .50);
-		Log.i("TAG", "RPMscore is: " + RPMscore);
+		RPMScore = calcScore (2500, listRPM, .50);
+		Log.i("TAG", "RPMscore is: " + RPMScore);
 
 		speedScore = calcScore(73, listSpeed, .50);
 		Log.i("TAG", "speedScore is: " + speedScore);
@@ -86,7 +91,7 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 		//totalScore = totalScore + calcScore (1000, 2500, 4000, listRelDrivePower, .15);
 		//totalScore = totalScore + calcScore (1000, 2500, 4000, listAcCompressorPower, .15);
 		
-		totalScore = RPMscore + speedScore;
+		totalScore = RPMScore + speedScore;
 		dialog.setTitle("Score Screen");
 
 		dialog.setContentView(R.layout.userinterface);
@@ -94,7 +99,7 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 		dialog.show();
 
 		TextView textView = (TextView) dialog.findViewById(R.id.Score_Field);
-		TextView gradeView = (TextView) dialog.findViewById(R.id.Grade);
+		final TextView gradeView = (TextView) dialog.findViewById(R.id.Grade);
 		textView.setText(String.valueOf( (int) totalScore));
 
 		Button graphButton = (Button) dialog.findViewById(R.id.Graph_Button);
@@ -139,7 +144,13 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 		breakDownButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				Toast.makeText(getApplicationContext(), "BreakDown", Toast.LENGTH_SHORT).show();
+				Intent startNewActivityOpen = new Intent(GraphingActivity.this, BreakdownActivity.class);
+				startNewActivityOpen.putExtra("AccScore", speedScore);
+				startNewActivityOpen.putExtra("RPMScore", RPMScore);
+				startNewActivityOpen.putExtra("totalScore", totalScore);
+				startNewActivityOpen.putExtra("grade", gradeView.getText());
+
+				startActivityForResult(startNewActivityOpen, 0);
 				dialog.cancel();
 
 			}
