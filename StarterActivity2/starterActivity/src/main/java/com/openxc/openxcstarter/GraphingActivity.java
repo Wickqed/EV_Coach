@@ -34,6 +34,7 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 
 	private double speedScore = 0;
 	private double RPMScore = 0;
+	private double accelScore = 0;
 	private double totalScore = 0;
 
 	boolean EngineSpeed;
@@ -78,10 +79,12 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 		ArrayList<Double> listAcc = (ArrayList<Double>) getIntent().getSerializableExtra("listAcc");
 
 		//Calculate score here and put it into the text box
-		RPMScore = calcScore (2500, listRPM, .50);
+		RPMScore = calcScore (500, listRPM, .33);
 		Log.i("TAG", "RPMscore is: " + RPMScore);
 
-		speedScore = calcScore(73, listSpeed, .50);
+		accelScore = calcScore (15, listAcc, .33);
+
+		speedScore = calcScore(73, listSpeed, .34);
 		Log.i("TAG", "speedScore is: " + speedScore);
 
 
@@ -91,7 +94,7 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 		//totalScore = totalScore + calcScore (1000, 2500, 4000, listRelDrivePower, .15);
 		//totalScore = totalScore + calcScore (1000, 2500, 4000, listAcCompressorPower, .15);
 		
-		totalScore = RPMScore + speedScore;
+		totalScore = RPMScore + speedScore + accelScore;
 		dialog.setTitle("Score Screen");
 
 		dialog.setContentView(R.layout.userinterface);
@@ -106,32 +109,34 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 		Button breakDownButton = (Button) dialog.findViewById(R.id.Break_button);
 
 		if(totalScore >= 900) {
-			if(totalScore > 975) { gradeView.setText("A+"); gradeView.setTextColor(Color.GREEN);}
-			else if (totalScore <= 975 && totalScore >= 925){ gradeView.setText("A"); gradeView.setTextColor(Color.GREEN);}
-			else { gradeView.setText("A-"); gradeView.setTextColor(Color.GREEN);}
+			if(totalScore > 975) { gradeView.setText("A+"); gradeView.setTextColor(Color.GREEN); textView.setTextColor(Color.GREEN);}
+			else if (totalScore <= 975 && totalScore >= 925){ gradeView.setText("A"); gradeView.setTextColor(Color.GREEN); textView.setTextColor(Color.GREEN);}
+			else { gradeView.setText("A-"); gradeView.setTextColor(Color.GREEN); textView.setTextColor(Color.GREEN); }
 		}
 		else if(totalScore <= 899 && totalScore >= 800) {
-			if(totalScore > 875) { gradeView.setText("B+"); gradeView.setTextColor(Color.GREEN);}
-			else if (totalScore <= 875 && totalScore >= 825){ gradeView.setText("B"); gradeView.setTextColor(Color.GREEN);}
-			else { gradeView.setText("B-"); gradeView.setTextColor(Color.GREEN);}
+			if(totalScore > 875) { gradeView.setText("B+"); gradeView.setTextColor(Color.GREEN); textView.setTextColor(Color.GREEN);}
+			else if (totalScore <= 875 && totalScore >= 825){ gradeView.setText("B"); gradeView.setTextColor(Color.GREEN); textView.setTextColor(Color.GREEN);}
+			else { gradeView.setText("B-"); gradeView.setTextColor(Color.GREEN); textView.setTextColor(Color.GREEN);}
 		}
 		else if(totalScore <= 799 && totalScore >= 700){
-			if(totalScore > 775) { gradeView.setText("C+"); gradeView.setTextColor(Color.YELLOW); }
-			else if (totalScore <= 775 && totalScore >= 725){ gradeView.setText("C"); gradeView.setTextColor(Color.YELLOW); }
-			else { gradeView.setText("C-"); gradeView.setTextColor(Color.YELLOW); }
+			if(totalScore > 775) { gradeView.setText("C+"); gradeView.setTextColor(Color.YELLOW); textView.setTextColor(Color.YELLOW); }
+			else if (totalScore <= 775 && totalScore >= 725){ gradeView.setText("C"); gradeView.setTextColor(Color.YELLOW); textView.setTextColor(Color.YELLOW);}
+			else { gradeView.setText("C-"); gradeView.setTextColor(Color.YELLOW); textView.setTextColor(Color.YELLOW);}
 		}
 		else if (totalScore <= 699 && totalScore >= 600) {
-			if(totalScore > 675) { gradeView.setText("D+"); gradeView.setTextColor(Color.YELLOW);}
-			else if (totalScore <= 675 && totalScore >= 625){ gradeView.setText("D"); gradeView.setTextColor(Color.YELLOW); }
-			else { gradeView.setText("D-"); gradeView.setTextColor(Color.YELLOW); }
+			if(totalScore > 675) { gradeView.setText("D+"); gradeView.setTextColor(Color.YELLOW); textView.setTextColor(Color.YELLOW);}
+			else if (totalScore <= 675 && totalScore >= 625){ gradeView.setText("D"); gradeView.setTextColor(Color.YELLOW); textView.setTextColor(Color.YELLOW);}
+			else { gradeView.setText("D-"); gradeView.setTextColor(Color.YELLOW); textView.setTextColor(Color.YELLOW);}
 		}
 		else if(totalScore <= 599 && totalScore >= 500) {
 			gradeView.setText("E");
 			gradeView.setTextColor(Color.RED);
+			textView.setTextColor(Color.RED);
 		}
 		else {
 			gradeView.setText("F");
 			gradeView.setTextColor(Color.RED);
+			textView.setTextColor(Color.RED);
 		}
 
 		graphButton.setOnClickListener(new View.OnClickListener() {

@@ -20,10 +20,10 @@ public class BreakdownActivity extends Activity {
         //rest of the code
 
         TextView accelScore = (TextView) findViewById(R.id.acceleration);
-        accelScore.setText(speedScore + " / 500");
+        accelScore.setText(speedScore + " / 333");
 
         TextView RPMScore = (TextView) findViewById(R.id.rpm);
-        RPMScore.setText(RPMscore + " / 500");
+        RPMScore.setText(RPMscore + " / 334");
 
         TextView grade = (TextView) findViewById(R.id.Grade);
         grade.setText(Grade);
