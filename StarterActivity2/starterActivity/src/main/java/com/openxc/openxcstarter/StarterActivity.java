@@ -21,17 +21,14 @@ import android.widget.TextView;
 import com.getpebble.android.kit.PebbleKit;
 import com.getpebble.android.kit.util.PebbleDictionary;
 import com.openxc.measurements.AcceleratorPedalPosition;
+import com.openxc.measurements.Odometer;
 import com.openxcplatform.openxcstarter.R;
 import com.openxc.VehicleManager;
-import com.openxc.measurements.AcCompressorPower;
 import com.openxc.measurements.BatteryStateOfCharge;
-import com.openxc.measurements.FuelLevel;
-import com.openxc.measurements.HvBatteryCurrent;
+import com.openxc.measurements.FuelConsumed;
 import com.openxc.measurements.IgnitionStatus;
-import com.openxc.measurements.LastRegenEventScore;
 import com.openxc.measurements.Measurement;
 import com.openxc.measurements.EngineSpeed;
-import com.openxc.measurements.RelativeDrivePower;
 import com.openxc.measurements.VehicleSpeed;
 import java.util.Timer;
 
@@ -66,10 +63,20 @@ public class StarterActivity extends Activity {
 	//Temp variable to simulate all vibration types
 	int tempVibeVar = 0;
 
-	ArrayList<Double> listRPM = new ArrayList<>();
-	ArrayList<Double> listSpeed = new ArrayList<>();
-	ArrayList<Double> listBatStateCharge = new ArrayList<>();
-	ArrayList<Double> listAcc = new ArrayList<>();
+	//Counter variable
+	int count = 0;
+	Timer t = new Timer();
+
+	ArrayList<Double> listRPM = new ArrayList<Double>();
+	ArrayList<Double> listSpeed = new ArrayList<Double>();
+	ArrayList<Double> listBatStateCharge = new ArrayList<Double>();
+	ArrayList<Double> listAcc = new ArrayList<Double>();
+	double fuelCon = 0.0;
+	double startFuel = 0.0;
+	boolean firstFuel = true;
+	double startDist = 0.0;
+	double dist = 0.0;
+	boolean firstDist = true;
 
 
 	@Override
@@ -109,10 +116,11 @@ public class StarterActivity extends Activity {
 					mSpeedListener);
 			mVehicleManager.removeListener(IgnitionStatus.class,
 					mIgnitionListener);
-			mVehicleManager.removeListener(FuelLevel.class, mFuelListener);
+			mVehicleManager.removeListener(FuelConsumed.class, mFuelListener);
 			mVehicleManager.removeListener(VehicleSpeed.class, mSpeedVehicleListener);
 			mVehicleManager.removeListener(BatteryStateOfCharge.class, mBatteryStateOfChargeListener);
 			mVehicleManager.removeListener(AcceleratorPedalPosition.class, mAccListener);
+			mVehicleManager.removeListener(Odometer.class, mDistListener);
 			unbindService(mConnection);
 			mVehicleManager = null;
 		}
@@ -204,7 +212,8 @@ public class StarterActivity extends Activity {
 				i.putExtra("listSpeed", listSpeed);
 				i.putExtra("listBatStateCharge",listBatStateCharge);
 				i.putExtra("listAcc", listAcc);
-
+				i.putExtra("fuelCon", fuelCon);
+				i.putExtra("dist", dist);
 
 				startActivity(i);
 			}
@@ -215,7 +224,7 @@ public class StarterActivity extends Activity {
     int vehicleSpeedListenerCount = 0;
 	VehicleSpeed.Listener mSpeedVehicleListener = new VehicleSpeed.Listener() {
 		public void receive(Measurement measurement) {
-			// When we receive a new EngineSpeed value from the car, we want to
+			// When we receive a new VehicleSpeed value from the car, we want to
 			// update the UI to display the new value. First we cast the generic
 			// Measurement back to the type we know it to be, an EngineSpeed.
 			final VehicleSpeed speed = (VehicleSpeed) measurement;
@@ -268,19 +277,25 @@ public class StarterActivity extends Activity {
 		}
 	};
 
-    int fuelLevelListenerCount = 0;
-	FuelLevel.Listener mFuelListener = new FuelLevel.Listener() {
+    int fuelConsumedListenerCount = 0;
+	FuelConsumed.Listener mFuelListener = new FuelConsumed.Listener() {
 		public void receive(Measurement measurement) {
 			// When we receive a new FuelLevel value from the car, we want to
 			// update the UI to display the new value. First we cast the generic
 			// Measurement back to the type we know it to be, an FuelLevel.
-			final FuelLevel fuel = (FuelLevel) measurement;
+			final FuelConsumed fuel = (FuelConsumed) measurement;
 
-            //add every 25th data point to the ArrayList
-            if(++fuelLevelListenerCount % moduloValue != 0) {
-                //Log.i(TAG, "Skipped fuel level measurement");
+            if(++fuelConsumedListenerCount % moduloValue != 0) {
+                Log.i(TAG, "Skipped fuel level measurement");
             } else {
                 Log.i(TAG, "Received Fuel Measurement");
+				if(firstFuel == true){
+					firstFuel = false;
+					startFuel = fuel.getValue().doubleValue();
+				}
+				else{
+					fuelCon = fuel.getValue().doubleValue() - startFuel;
+				}
             }
 
 
@@ -306,7 +321,7 @@ public class StarterActivity extends Activity {
     int batteryStateListenerCount = 0;
 	BatteryStateOfCharge.Listener mBatteryStateOfChargeListener = new BatteryStateOfCharge.Listener() {
 		public void receive(Measurement measurement) {
-			// When we receive a new EngineSpeed value from the car, we want to
+			// When we receive a new BatteryLevel value from the car, we want to
 			// update the UI to display the new value. First we cast the generic
 			// Measurement back to the type we know it to be, an EngineSpeed.
 			final BatteryStateOfCharge charge = (BatteryStateOfCharge) measurement;
@@ -401,6 +416,61 @@ public class StarterActivity extends Activity {
 		}
 	};
 
+	int DistCount = 0;
+	Odometer.Listener mDistListener = new Odometer.Listener() {
+		public void receive(Measurement measurement) {
+			// When we receive a new Odometer value from the car, we want to
+			// update the UI to display the new value. First we cast the generic
+			// Measurement back to the type we know it to be, an EngineSpeed.
+			final Odometer odo = (Odometer) measurement;
+
+			//add every 25th data point to the ArrayList
+			if(++DistCount % moduloValue != 0) {
+				Log.i(TAG, "Skipped odometer measurement");
+			} else {
+				Log.i(TAG, "Received Odometer Measurement");
+				if(firstDist == true){
+					firstDist = false;
+					startDist = odo.getValue().doubleValue();
+				}
+				else{
+					dist = odo.getValue().doubleValue() - startDist;
+				}
+			}
+
+			// In order to modify the UI, we have to make sure the code is
+			// running on the "UI thread" - Google around for this, it's an
+			// important concept in Android.
+			StarterActivity.this.runOnUiThread(new Runnable() {
+				public void run() {
+					// Finally, we've got a new value and we're running on the
+					// UI thread - we set the text of the EngineSpeed view to
+					// the latest value
+
+					// Toasting if criteria is met
+				/*	if(count > 0){
+						count++;
+					}
+					if(count == 100){
+						count = 0;
+					}
+					if(count == 0){
+						if(charge.getValue().doubleValue() < 10){
+							//Toast.makeText(getApplicationContext(), "Low battery find charging station", Toast.LENGTH_SHORT).show();
+							ttobj.speak("Low battery find charging station", TextToSpeech.QUEUE_FLUSH, null);
+							//batteryWarning = true;
+							boolean connected = isPebbleConnected();
+							if(connected == true){
+								tempVibeVar = 0;
+								sendDataToWatch();
+							}
+						}
+					}*/
+				}
+			});
+		}
+	};
+
 	private ServiceConnection mConnection = new ServiceConnection() {
 		// Called when the connection with the VehicleManager service is
 		// established, i.e. bound.
@@ -426,9 +496,10 @@ public class StarterActivity extends Activity {
 			mVehicleManager.addListener(EngineSpeed.class, mSpeedListener);
 			mVehicleManager.addListener(IgnitionStatus.class, mIgnitionListener);
 			mVehicleManager.addListener(VehicleSpeed.class, mSpeedVehicleListener);
-			mVehicleManager.addListener(FuelLevel.class, mFuelListener);
+			mVehicleManager.addListener(FuelConsumed.class, mFuelListener);
 			mVehicleManager.addListener(BatteryStateOfCharge.class, mBatteryStateOfChargeListener);
 			mVehicleManager.addListener(AcceleratorPedalPosition.class, mAccListener);
+			mVehicleManager.addListener(Odometer.class, mDistListener);
 		}
 
 
