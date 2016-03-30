@@ -8,7 +8,7 @@ package com.openxcplatform;
 
 public final class R {
 	public static final class drawable {
-		public static final int openxc_notification_icon_small_white = 0x7f02004b;
+		public static final int openxc_notification_icon_small_white = 0x7f020051;
 	}
 	public static final class string {
 		public static final int accelerator_pedal_position_label = 0x7f060014;
