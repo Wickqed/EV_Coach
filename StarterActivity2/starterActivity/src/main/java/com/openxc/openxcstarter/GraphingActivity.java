@@ -126,23 +126,23 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 
 		//Calculates the letter grade associated with the user's score
 		if(totalScore >= 900) {
-			if(totalScore > 975) { gradeView.setText("A+"); gradeView.setTextColor(Color.GREEN);}
-			else if (totalScore <= 975 && totalScore >= 925){ gradeView.setText("A"); gradeView.setTextColor(Color.GREEN);}
+			if(totalScore >= 975) { gradeView.setText("A+"); gradeView.setTextColor(Color.GREEN);}
+			else if (totalScore < 975 && totalScore >= 925){ gradeView.setText("A"); gradeView.setTextColor(Color.GREEN);}
 			else { gradeView.setText("A-"); gradeView.setTextColor(Color.GREEN);}
 		}
 		else if(totalScore <= 899 && totalScore >= 800) {
-			if(totalScore > 875) { gradeView.setText("B+"); gradeView.setTextColor(Color.GREEN);}
-			else if (totalScore <= 875 && totalScore >= 825){ gradeView.setText("B"); gradeView.setTextColor(Color.GREEN);}
+			if(totalScore >= 875) { gradeView.setText("B+"); gradeView.setTextColor(Color.GREEN);}
+			else if (totalScore < 875 && totalScore >= 825){ gradeView.setText("B"); gradeView.setTextColor(Color.GREEN);}
 			else { gradeView.setText("B-"); gradeView.setTextColor(Color.GREEN);}
 		}
 		else if(totalScore <= 799 && totalScore >= 700){
-			if(totalScore > 775) { gradeView.setText("C+"); gradeView.setTextColor(Color.YELLOW); }
-			else if (totalScore <= 775 && totalScore >= 725){ gradeView.setText("C"); gradeView.setTextColor(Color.YELLOW); }
+			if(totalScore >= 775) { gradeView.setText("C+"); gradeView.setTextColor(Color.YELLOW); }
+			else if (totalScore < 775 && totalScore >= 725){ gradeView.setText("C"); gradeView.setTextColor(Color.YELLOW); }
 			else { gradeView.setText("C-"); gradeView.setTextColor(Color.YELLOW); }
 		}
 		else if (totalScore <= 699 && totalScore >= 600) {
-			if(totalScore > 675) { gradeView.setText("D+"); gradeView.setTextColor(Color.YELLOW);}
-			else if (totalScore <= 675 && totalScore >= 625){ gradeView.setText("D"); gradeView.setTextColor(Color.YELLOW); }
+			if(totalScore >= 675) { gradeView.setText("D+"); gradeView.setTextColor(Color.YELLOW);}
+			else if (totalScore < 675 && totalScore >= 625){ gradeView.setText("D"); gradeView.setTextColor(Color.YELLOW); }
 			else { gradeView.setText("D-"); gradeView.setTextColor(Color.YELLOW); }
 		}
 		else if(totalScore <= 599 && totalScore >= 500) {
@@ -174,23 +174,28 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 		canSelect = (Spinner) findViewById(R.id.canSelect);
 		//JSONObject obj = new JSONObject(loadJSONFromAssets());
 		
-		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.can_signals, android.R.layout.simple_spinner_item);
+		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.can_signals, android.R.layout.simple_spinner_item);
 		// Specify the layout to use when the list of choices appears
 		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		// Apply the adapter to the spinner
 		canSelect.setAdapter(adapter);
 		canSelect.setOnItemSelectedListener(this);
-		
-		
+
+		//Gets the units preference setting and applies the calculation to the graph
+		int units = Integer.parseInt(sharedPreferences.getString("unit", "0"));
 		if (listRPM != null){
 			for (int i = 0; i < listRPM.size(); i++){
-				rpmSeries.appendData(new DataPoint(i,listRPM.get(i)), true, maxPoints);
+				rpmSeries.appendData(new DataPoint(i, listRPM.get(i)), true, maxPoints);
 			}
 		}
 
 		if (listSpeed != null){
 			for (int i = 0; i < listSpeed.size(); i++){
-				speedSeries.appendData(new DataPoint(i,listSpeed.get(i)), true, maxPoints);
+				if(units == 0) {// Imperial units (mph)
+					speedSeries.appendData(new DataPoint(i, listSpeed.get(i) * 0.621371), true, maxPoints);
+				} else { //Metric units (km/hr)
+					speedSeries.appendData(new DataPoint(i, listSpeed.get(i)), true, maxPoints);
+				}
 			}
 		}	
 		if (listBatStateCharge != null){
@@ -244,7 +249,7 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 		//normPct = (double) normBaseCount / (double) parameters.size();
 		//easyPct = (double) easyBaseCount / (double) parameters.size();
 
-		Log.i("TAG", "Number over:" + hardBaseCount + " Number below: " + zeroCount);
+		Log.i("TAG", "Number over: " + hardBaseCount + " Number below: " + zeroCount);
 		//acceptPct = normPct + easyPct + zeroPct;
 		acceptPct = (double) zeroCount / parameters.size();
 		calcScore = acceptPct * weight * 1000;

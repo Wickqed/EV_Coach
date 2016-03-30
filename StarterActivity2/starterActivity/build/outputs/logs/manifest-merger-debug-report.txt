@@ -21,7 +21,10 @@ MERGED from [com.android.support:multidex:1.0.1] D:\Android\StudioProjects\EV_Co
 MERGED from [StarterActivity2:openxc:unspecified] D:\Android\StudioProjects\EV_Coach\StarterActivity2\starterActivity\build\intermediates\exploded-aar\StarterActivity2\openxc\unspecified\AndroidManifest.xml:7:5-9:41
 MERGED from [com.jjoe64:graphview:4.0.1] D:\Android\StudioProjects\EV_Coach\StarterActivity2\starterActivity\build\intermediates\exploded-aar\com.jjoe64\graphview\4.0.1\AndroidManifest.xml:7:5-9:41
 MERGED from [com.getpebble:pebblekit:3.0.0] D:\Android\StudioProjects\EV_Coach\StarterActivity2\starterActivity\build\intermediates\exploded-aar\com.getpebble\pebblekit\3.0.0\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:appcompat-v7:23.1.1] D:\Android\StudioProjects\EV_Coach\StarterActivity2\starterActivity\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:23.2.1] D:\Android\StudioProjects\EV_Coach\StarterActivity2\starterActivity\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.1\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:23.2.1] D:\Android\StudioProjects\EV_Coach\StarterActivity2\starterActivity\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.2.1\AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:support-vector-drawable:23.2.1] D:\Android\StudioProjects\EV_Coach\StarterActivity2\starterActivity\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.1\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-vector-drawable:23.2.1] D:\Android\StudioProjects\EV_Coach\StarterActivity2\starterActivity\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.1\AndroidManifest.xml:5:5-43
 	tools:overrideLibrary
 		ADDED from D:\Android\StudioProjects\EV_Coach\StarterActivity2\starterActivity\src\main\AndroidManifest.xml:11:9-58
 	android:targetSdkVersion
@@ -47,7 +50,10 @@ ADDED from D:\Android\StudioProjects\EV_Coach\StarterActivity2\starterActivity\s
 application
 ADDED from D:\Android\StudioProjects\EV_Coach\StarterActivity2\starterActivity\src\main\AndroidManifest.xml:17:5-40:19
 MERGED from [com.jjoe64:graphview:4.0.1] D:\Android\StudioProjects\EV_Coach\StarterActivity2\starterActivity\build\intermediates\exploded-aar\com.jjoe64\graphview\4.0.1\AndroidManifest.xml:11:5-12:19
-MERGED from [com.android.support:appcompat-v7:23.1.1] D:\Android\StudioProjects\EV_Coach\StarterActivity2\starterActivity\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:23.2.1] D:\Android\StudioProjects\EV_Coach\StarterActivity2\starterActivity\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:23.2.1] D:\Android\StudioProjects\EV_Coach\StarterActivity2\starterActivity\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.2.1\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-vector-drawable:23.2.1] D:\Android\StudioProjects\EV_Coach\StarterActivity2\starterActivity\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.1\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-vector-drawable:23.2.1] D:\Android\StudioProjects\EV_Coach\StarterActivity2\starterActivity\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.1\AndroidManifest.xml:7:5-20
 	android:label
 		ADDED from D:\Android\StudioProjects\EV_Coach\StarterActivity2\starterActivity\src\main\AndroidManifest.xml:20:9-41
 	android:allowBackup

@@ -17,8 +17,8 @@
     <string name="pref_unit_key">unit</string>
     <string name="pref_unit_info">Units</string>
     <string-array name="pref_unit_titles">
-        <item>Empirical</item>
-        <item>Metric</item>
+        <item>MPH</item>
+        <item>Km/Hr</item>
     </string-array>
     <string-array name="pref_unit_values">
         <item>0</item>
@@ -39,9 +39,5 @@
         <item>2</item>
     </string-array>
 
-
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
