@@ -35,4 +35,12 @@ captures/
 
 /.idea/workspace.xml
 /.idea/libraries
-.DS_Store
+/*/local.properties
+/*/out
+/*/*/build
+/*/*/production
+*.iml
+*iws
+*.ipr
+*~
+*.swp
