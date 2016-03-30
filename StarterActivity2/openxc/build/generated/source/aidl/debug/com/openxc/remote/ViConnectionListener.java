@@ -1,6 +1,6 @@
 /*
  * This file is auto-generated.  DO NOT MODIFY.
- * Original file: /Users/bennerv/StudioProjects/EV_Coach/StarterActivity2/openxc/src/main/aidl/com/openxc/remote/ViConnectionListener.aidl
+ * Original file: /home/michael/Downloads/EV_Coach-master (3)/StarterActivity2/openxc/src/main/aidl/com/openxc/remote/ViConnectionListener.aidl
  */
 package com.openxc.remote;
 public interface ViConnectionListener extends android.os.IInterface

@@ -20,4 +20,4 @@
         android:layout_below="@+id/textView1"
         android:id="@+id/vehicle_speed" />
     
-</RelativeLayout><!-- From: file:/home/michael/Downloads/EV_Coach-master%20(2)/StarterActivity2/starterActivity/src/main/res/layout/activity_starter.xml -->
+</RelativeLayout><!-- From: file:/home/michael/Downloads/EV_Coach-master%20(3)/StarterActivity2/starterActivity/src/main/res/layout/activity_starter.xml -->

@@ -23,6 +23,7 @@ org/junit/rules/RunRules.class
 com/google/common/reflect/package-info.class
 com/google/common/math/package-info.class
 com/google/common/collect/Iterables.class
+com/openxc/units/Liter.class
 android/support/v7/widget/LinearLayoutCompat$OrientationMode.class
 org/junit/validator/AnnotationsValidator$ClassValidator.class
 com/openxc/messages/NamedVehicleMessage.class
@@ -93,6 +94,7 @@ com/google/common/collect/ImmutableSortedSet.class
 com/google/common/annotations/GwtIncompatible.class
 android/support/v4/app/FragmentTabHost.class
 android/support/v7/widget/LinearLayoutCompat$LayoutParams.class
+com/openxc/units/Kilometer.class
 android/support/v4/widget/SlidingPaneLayout.class
 com/google/common/collect/TreeBasedTable$TreeRow.class
 com/google/common/collect/TreeMultiset$Reference.class
@@ -280,6 +282,7 @@ org/junit/runners/parameterized/BlockJUnit4ClassRunnerWithParameters.class
 org/junit/Ignore.class
 com/google/common/hash/package-info.class
 com/openxc/units/Unit.class
+com/openxc/openxcstarter/StarterActivity$9.class
 com/google/common/collect/AbstractMapBasedMultimap$1.class
 com/google/common/collect/Iterators.class
 com/google/common/collect/Maps.class
@@ -329,6 +332,7 @@ com/google/common/util/concurrent/CycleDetectingLockFactory$LockGraphNode.class
 com/openxc/messages/DiagnosticRequest.class
 org/junit/internal/JUnitSystem.class
 com/openxc/remote/ViConnectionListener.class
+com/openxc/measurements/FuelConsumed.class
 com/google/common/collect/AbstractMapBasedMultimap$AsMap.class
 com/openxc/openxcstarter/StarterActivity$5$1.class
 com/jjoe64/graphview/series/Series.class
@@ -350,8 +354,8 @@ com/google/common/base/package-info.class
 android/support/v7/app/ActionBar.class
 org/junit/internal/builders/AllDefaultPossibilitiesBuilder.class
 org/junit/internal/MethodSorter$2.class
-org/junit/runner/RunWith.class
 com/openxc/sinks/AbstractQueuedCallbackSink$1.class
+org/junit/runner/RunWith.class
 com/openxc/openxcstarter/StarterActivity$6.class
 org/junit/experimental/categories/CategoryValidator.class
 com/openxc/sinks/MessageListenerSink.class
@@ -369,6 +373,7 @@ android/support/v7/app/ActionBarActivity.class
 com/google/common/collect/Maps$EntryFunction$2.class
     <init>();
 com/jjoe64/graphview/series/LineGraphSeries.class
+com/openxc/measurements/Odometer.class
 android/support/v7/widget/LinearLayoutCompat$DividerMode.class
 com/google/common/collect/TreeRangeSet$SubRangeSetRangesByLowerBound.class
 org/junit/runners/BlockJUnit4ClassRunner.class
@@ -448,6 +453,7 @@ org/junit/ClassRule.class
 com/openxc/interfaces/VehicleInterface.class
 com/google/common/base/Absent.class
 org/junit/runners/ParentRunner$1.class
+com/openxc/openxcstarter/StarterActivity$8$1.class
 com/google/common/collect/ContiguousSet.class
 org/junit/runners/model/InitializationError.class
 com/google/common/eventbus/Subscribe.class
@@ -455,7 +461,6 @@ com/google/common/collect/Multisets$ImmutableEntry.class
 com/google/common/collect/HashBiMap$BiEntry.class
 org/junit/experimental/categories/Categories$IncludeCategory.class
 org/apache/commons/io/FileCleaner.class
-com/openxc/measurements/FuelLevel.class
 com/google/common/cache/Cache.class
 com/google/common/collect/AbstractMapBasedMultimap$WrappedNavigableSet.class
 android/support/v7/app/ActionBar$DisplayOptions.class
@@ -466,11 +471,11 @@ org/junit/rules/ExpectedException.class
 com/openxcplatform/R$string.class
 com/openxc/openxcstarter/StarterActivity$2.class
 com/google/common/io/CharSource.class
-com/jjoe64/graphview/series/DataPoint.class
 org/junit/validator/AnnotationsValidator$AnnotatableValidator.class
+com/jjoe64/graphview/series/DataPoint.class
 com/openxc/VehicleManager$BlockingMessageListener.class
-android/support/v7/view/menu/MenuItemImpl.class
 org/junit/internal/runners/InitializationError.class
+android/support/v7/view/menu/MenuItemImpl.class
 com/openxc/measurements/UnrecognizedMeasurementTypeException.class
 com/google/common/base/Equivalence$EquivalentToPredicate.class
 android/support/v4/app/FragmentManager.class

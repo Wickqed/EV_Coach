@@ -53,6 +53,9 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 	LineGraphSeries<DataPoint> bSCSeries = new LineGraphSeries<DataPoint>();
 	LineGraphSeries<DataPoint> accSeries = new LineGraphSeries<DataPoint>();
 
+	String text;
+
+	double mpg;
 
 	/**
 	 * Sets up the Arrays passed over from the starter activity in order to use them to graph.
@@ -71,6 +74,9 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 		
 		ArrayList<Double> listBatStateCharge = (ArrayList<Double>) getIntent().getSerializableExtra("listBatStateCharge");
 		ArrayList<Double> listAcc = (ArrayList<Double>) getIntent().getSerializableExtra("listAcc");
+
+		double fuelCon = (double) getIntent().getSerializableExtra("fuelCon");
+		double dist = (double) getIntent().getSerializableExtra("dist");
 
 		//Calculate score here and put it into the text box
 		RPMscore = calcScore (2500, listRPM, .50);
@@ -144,8 +150,14 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 
 			}
 		});
+
+		mpg = (dist * 0.621371) / (fuelCon * 0.264172);
 		
-		
+		text = "Start Charge: " + listBatStateCharge.get(0) + "%\nFuel Consumed: " + fuelCon + " gal\nEnd Charge: " + listBatStateCharge.get(listBatStateCharge.size() - 1) + "%\nMPGe: " + mpg + " mpg";
+		TextView battery;
+		battery = (TextView)findViewById(R.id.battery);
+		battery.setText(text);
+
 		canSelect = (Spinner) findViewById(R.id.canSelect);
 		//JSONObject obj = new JSONObject(loadJSONFromAssets());
 		
@@ -238,18 +250,27 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 		AccBool = false;
 		
 		if(canSelect.getSelectedItem().toString().equals("Vehicle Speed")){
+			graph.getViewport().setYAxisBoundsManual(true);
+			graph.getViewport().setMinY(0.0);
+			graph.getViewport().setMaxY(110.0);
 			graph.addSeries(speedSeries);
 			graph.setTitle("Vehicle Speed");
 			VehicleSpeed = true;
 			//Toast.makeText(getApplicationContext(), "vehicle speed selected", Toast.LENGTH_SHORT).show();
 		}
 		else if(canSelect.getSelectedItem().toString().equals("Engine Speed")){
+			graph.getViewport().setYAxisBoundsManual(true);
+			graph.getViewport().setMinY(0.0);
+			graph.getViewport().setMaxY(6000.0);
 			graph.addSeries(rpmSeries);
 			graph.setTitle("Engine Speed");
 			EngineSpeed = true;
 			//Toast.makeText(getApplicationContext(), "engine speed selected", Toast.LENGTH_SHORT).show();
 		}
 		else if(canSelect.getSelectedItem().toString().equals("Battery State of Charge")){
+			graph.getViewport().setYAxisBoundsManual(true);
+			graph.getViewport().setMinY(0.0);
+			graph.getViewport().setMaxY(100.0);
 			graph.addSeries(bSCSeries);
 			graph.setTitle("Battery Charge");
 			BSChargeBool = true;
@@ -257,6 +278,9 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 
 		}
 		else if(canSelect.getSelectedItem().toString().equals("Acceleration")){
+			graph.getViewport().setYAxisBoundsManual(true);
+			graph.getViewport().setMinY(0.0);
+			graph.getViewport().setMaxY(100.0);
 			graph.addSeries(accSeries);
 			graph.setTitle("Accelerator Pedal Position");
 			AccBool = true;

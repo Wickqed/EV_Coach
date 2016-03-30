@@ -32,7 +32,7 @@
        android:layout_height="wrap_content"
        android:layout_below="@+id/graph"
        android:paddingTop="20dp"
-       android:text="Start Charge:\nEnd Charge:\n"
+       android:text=""
        android:textColor="#A00000FF" />
 
     <!--
