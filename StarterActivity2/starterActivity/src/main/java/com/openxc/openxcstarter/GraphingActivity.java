@@ -149,15 +149,16 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 		breakDownButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				Intent startNewActivityOpen = new Intent(GraphingActivity.this, BreakdownActivity.class);
-				startNewActivityOpen.putExtra("AccScore", speedScore);
-				startNewActivityOpen.putExtra("RPMScore", RPMScore);
-				startNewActivityOpen.putExtra("totalScore", totalScore);
-				startNewActivityOpen.putExtra("grade", gradeView.getText());
+				Intent startNewActivityOpen = new Intent(getApplicationContext(), BreakdownActivity.class);
+				startNewActivityOpen.putExtra("SpeedScore", Double.toString(speedScore));
+				startNewActivityOpen.putExtra("AccScore", Double.toString(accelScore));
+				startNewActivityOpen.putExtra("RPMScore", Double.toString(RPMScore));
+				startNewActivityOpen.putExtra("totalScore", Double.toString(totalScore));
+				startNewActivityOpen.putExtra("grade", gradeView.getText().toString());
 
-				startActivityForResult(startNewActivityOpen, 0);
+
 				dialog.cancel();
-
+				startActivity(startNewActivityOpen);
 			}
 		});
 		

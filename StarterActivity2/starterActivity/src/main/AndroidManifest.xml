@@ -37,6 +37,7 @@
         <service android:name="com.openxc.VehicleManager" />
 
         <activity android:name="com.openxc.openxcstarter.SettingsActivity"></activity>
+        <activity android:name="com.openxc.openxcstarter.BreakdownActivity"></activity>
     </application>
 
 </manifest>
