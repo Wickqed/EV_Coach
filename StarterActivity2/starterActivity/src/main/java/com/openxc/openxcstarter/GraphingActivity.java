@@ -1,6 +1,7 @@
 package com.openxc.openxcstarter;
 
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.series.DataPoint;
@@ -8,6 +9,7 @@ import com.jjoe64.graphview.series.LineGraphSeries;
 import com.openxcplatform.openxcstarter.R;
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -20,43 +22,34 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.AdapterView.OnItemSelectedListener;
-import android.widget.Toast;
 
 public class GraphingActivity extends Activity implements OnItemSelectedListener  {
 
 	// TextViews on activity
-	private TextView connection_status;
-	private TextView graphView1TextView;
-	private TextView mGearPositionView;
-	private TextView mFuelLevelView;
-	private String name = "name";
-	private String value = "value";
 	private final int maxPoints = 10000;
 	private SharedPreferences sharedPreferences;
+	double totalScore = 0;
+	double RPMScore = 0;
+	double speedScore = 0;
+	double accelScore = 0;
+
+	private DecimalFormat formatter;
 
 	boolean EngineSpeed;
 	boolean VehicleSpeed;
 	boolean BSChargeBool;
 	boolean AccBool;
 
-	//GraphView 
-
-	// Variables needed for Speed Graph View
-	//private GraphViewData[] speedData;
-	//private GraphViewSeries speedSeries;
-
-
-
 	//Spinner Variable
 	private Spinner canSelect;
 
-	GraphView graph; 
-	LineGraphSeries<DataPoint> rpmSeries = new LineGraphSeries<>();
-	LineGraphSeries<DataPoint> speedSeries = new LineGraphSeries<>();
-	LineGraphSeries<DataPoint> bSCSeries = new LineGraphSeries<>();
-	LineGraphSeries<DataPoint> accSeries = new LineGraphSeries<>();
+	private GraphView graph;
+	private LineGraphSeries<DataPoint> rpmSeries = new LineGraphSeries<>();
+	private LineGraphSeries<DataPoint> speedSeries = new LineGraphSeries<>();
+	private LineGraphSeries<DataPoint> bSCSeries = new LineGraphSeries<>();
+	private LineGraphSeries<DataPoint> accSeries = new LineGraphSeries<>();
 
-	String text;
+	private String text;
 
 	double mpg;
 
@@ -68,7 +61,8 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		final Dialog dialog = new Dialog(GraphingActivity.this);
-		double totalScore = 0; double RPMscore = 0; double speedScore = 0;
+
+		formatter = new DecimalFormat("#0.00");
 		sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 
 		setContentView(R.layout.graphviewlayout);
@@ -85,19 +79,22 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 
 		//city driving
 		if(driveType == 0) {
-			RPMscore = calcScore (500, listRPM, .50);
-			speedScore = calcScore(73, listSpeed, .50);
+			RPMScore = calcScore (500, listRPM, .33);
+			speedScore = calcScore(73, listSpeed, .33);
+			accelScore = calcScore(15, listAcc, 0.34);
 
 		} else if(driveType == 1) {
 			//rural driving
 			//TODO: Not yet implemented - rural driving
-			RPMscore = calcScore(1500, listRPM, 0.5);
-			speedScore = calcScore(100, listSpeed, 0.5);
+			RPMScore = calcScore(1500, listRPM, .33);
+			speedScore = calcScore(100, listSpeed, .33);
+			accelScore = calcScore(15, listAcc, 0.34);
 
 		} else {
 			//highway driving
-			RPMscore = calcScore(2000, listRPM, 0.5);
-			speedScore = calcScore(117, listSpeed, 0.5);
+			RPMScore = calcScore(2000, listRPM, .33);
+			speedScore = calcScore(117, listSpeed, .33);
+			accelScore = calcScore(25, listAcc, 0.34);
 
 		}
 
@@ -105,59 +102,60 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 		double dist = (double) getIntent().getSerializableExtra("dist");
 
 		//Calculate score here and put it into the text box
-		Log.i("TAG", "speedScore is: " + speedScore);
-		Log.i("TAG", "RPMscore is: " + RPMscore);
+		Log.i("GraphingActivity", "Speed Score: " + speedScore);
+		Log.i("GraphingActivity", "RPM Score: " + RPMScore);
+		Log.i("GraphingActivity", "Accelerating Score: " + accelScore);
 
 
-
-		//totalScore = totalScore + calcScore (1000, 2500, 4000, listBatStateCharge, .15);
-		//totalScore = totalScore + calcScore (1000, 2500, 4000, listHVBatCurr, .15);
-		//totalScore = totalScore + calcScore (1000, 2500, 4000, listLastRegEventScore, .15);
-		//totalScore = totalScore + calcScore (1000, 2500, 4000, listRelDrivePower, .15);
-		//totalScore = totalScore + calcScore (1000, 2500, 4000, listAcCompressorPower, .15);
 		
-		totalScore = RPMscore + speedScore;
+		totalScore = RPMScore + speedScore + accelScore;
 		dialog.setTitle("Score Screen");
-
 		dialog.setContentView(R.layout.userinterface);
-
 		dialog.show();
 
-		TextView textView = (TextView) dialog.findViewById(R.id.Score_Field);
-		TextView gradeView = (TextView) dialog.findViewById(R.id.Grade);
+		final TextView textView = (TextView) dialog.findViewById(R.id.Score_Field);
+		final TextView gradeView = (TextView) dialog.findViewById(R.id.Grade);
 		textView.setText(String.valueOf( (int) totalScore));
 
 		Button graphButton = (Button) dialog.findViewById(R.id.Graph_Button);
 		Button breakDownButton = (Button) dialog.findViewById(R.id.Break_button);
+		Button coachButton = (Button) dialog.findViewById(R.id.Coach_button);
+		Button dialogButton = (Button) findViewById(R.id.dialog_button);
+
+
+		//TODO Make the dialog button do something
+
 
 		//Calculates the letter grade associated with the user's score
 		if(totalScore >= 900) {
-			if(totalScore >= 975) { gradeView.setText("A+"); gradeView.setTextColor(Color.GREEN);}
-			else if (totalScore < 975 && totalScore >= 925){ gradeView.setText("A"); gradeView.setTextColor(Color.GREEN);}
-			else { gradeView.setText("A-"); gradeView.setTextColor(Color.GREEN);}
+			if(totalScore >= 975) { gradeView.setText("A+"); gradeView.setTextColor(Color.GREEN);textView.setTextColor(Color.GREEN);}
+			else if (totalScore < 975 && totalScore >= 925){ gradeView.setText("A"); gradeView.setTextColor(Color.GREEN);textView.setTextColor(Color.GREEN);}
+			else { gradeView.setText("A-"); gradeView.setTextColor(Color.GREEN);textView.setTextColor(Color.GREEN);}
 		}
 		else if(totalScore <= 899 && totalScore >= 800) {
-			if(totalScore >= 875) { gradeView.setText("B+"); gradeView.setTextColor(Color.GREEN);}
-			else if (totalScore < 875 && totalScore >= 825){ gradeView.setText("B"); gradeView.setTextColor(Color.GREEN);}
-			else { gradeView.setText("B-"); gradeView.setTextColor(Color.GREEN);}
+			if(totalScore >= 875) { gradeView.setText("B+"); gradeView.setTextColor(Color.GREEN);textView.setTextColor(Color.GREEN);}
+			else if (totalScore < 875 && totalScore >= 825){ gradeView.setText("B"); gradeView.setTextColor(Color.GREEN);textView.setTextColor(Color.GREEN);}
+			else { gradeView.setText("B-"); gradeView.setTextColor(Color.GREEN);textView.setTextColor(Color.GREEN);}
 		}
 		else if(totalScore <= 799 && totalScore >= 700){
-			if(totalScore >= 775) { gradeView.setText("C+"); gradeView.setTextColor(Color.YELLOW); }
-			else if (totalScore < 775 && totalScore >= 725){ gradeView.setText("C"); gradeView.setTextColor(Color.YELLOW); }
-			else { gradeView.setText("C-"); gradeView.setTextColor(Color.YELLOW); }
+			if(totalScore >= 775) { gradeView.setText("C+"); gradeView.setTextColor(Color.YELLOW); textView.setTextColor(Color.YELLOW);}
+			else if (totalScore < 775 && totalScore >= 725){ gradeView.setText("C"); gradeView.setTextColor(Color.YELLOW); textView.setTextColor(Color.YELLOW);}
+			else { gradeView.setText("C-"); gradeView.setTextColor(Color.YELLOW);textView.setTextColor(Color.YELLOW); }
 		}
 		else if (totalScore <= 699 && totalScore >= 600) {
-			if(totalScore >= 675) { gradeView.setText("D+"); gradeView.setTextColor(Color.YELLOW);}
-			else if (totalScore < 675 && totalScore >= 625){ gradeView.setText("D"); gradeView.setTextColor(Color.YELLOW); }
-			else { gradeView.setText("D-"); gradeView.setTextColor(Color.YELLOW); }
+			if(totalScore >= 675) { gradeView.setText("D+"); gradeView.setTextColor(Color.YELLOW);textView.setTextColor(Color.YELLOW);}
+			else if (totalScore < 675 && totalScore >= 625){ gradeView.setText("D"); gradeView.setTextColor(Color.YELLOW); textView.setTextColor(Color.YELLOW);}
+			else { gradeView.setText("D-"); gradeView.setTextColor(Color.YELLOW); textView.setTextColor(Color.YELLOW);}
 		}
 		else if(totalScore <= 599 && totalScore >= 500) {
 			gradeView.setText("E");
 			gradeView.setTextColor(Color.RED);
+			textView.setTextColor(Color.RED);
 		}
 		else {
 			gradeView.setText("F");
 			gradeView.setTextColor(Color.RED);
+			textView.setTextColor(Color.RED);
 		}
 
 		graphButton.setOnClickListener(new View.OnClickListener() {
@@ -170,15 +168,36 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 		breakDownButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				Toast.makeText(getApplicationContext(), "BreakDown", Toast.LENGTH_SHORT).show();
+				Intent startNewActivityOpen = new Intent(getApplicationContext(), BreakdownActivity.class);
 				dialog.cancel();
+				//TODO FUEL SCORE
+				startNewActivityOpen.putExtra("SpeedScore", formatter.format(speedScore));
+				startNewActivityOpen.putExtra("AccScore", formatter.format(accelScore));
+				startNewActivityOpen.putExtra("RPMScore", formatter.format(RPMScore));
+				startNewActivityOpen.putExtra("totalScore", formatter.format(totalScore));
+				startNewActivityOpen.putExtra("grade", gradeView.getText().toString());
+				dialog.cancel();
+				startActivity(startNewActivityOpen);
+			}
+		});
 
+		coachButton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				Intent newActivity = new Intent(getApplicationContext(), CoachActivity.class);
+				dialog.cancel();
+				//TODO FUEL SCORE, ACCEL SCORE
+				newActivity.putExtra("rpmScore", RPMScore);
+				newActivity.putExtra("speedScore", speedScore);
+				newActivity.putExtra("fuelScore", 0.0);
+				//newActivity.putExtra("accelScore", accelScore));
+				startActivity(newActivity);
 			}
 		});
 
 		mpg = (dist * 0.621371) / (fuelCon * 0.264172);
 		
-		text = "Start Charge: " + listBatStateCharge.get(0) + "%\nFuel Consumed: " + fuelCon + " gal\nEnd Charge: " + listBatStateCharge.get(listBatStateCharge.size() - 1) + "%\nMPGe: " + mpg + " mpg";
+		text = "Start Charge: " + listBatStateCharge.get(0) + "%\nFuel Consumed: " + formatter.format(fuelCon) + " gal\nEnd Charge: " + listBatStateCharge.get(listBatStateCharge.size() - 1) + "%\nMPGe: " + formatter.format(mpg) + " mpg";
 		TextView battery;
 		battery = (TextView)findViewById(R.id.battery);
 		battery.setText(text);
@@ -216,15 +235,11 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 			}
 		}
 
-		if (listAcc != null){
-			for (int i = 0; i < listAcc.size(); i++){
-				accSeries.appendData(new DataPoint(i,listAcc.get(i)), true, maxPoints);
+		if (listAcc != null) {
+			for (int i = 0; i < listAcc.size(); i++) {
+				accSeries.appendData(new DataPoint(i, listAcc.get(i)), true, maxPoints);
 			}
 		}
-		
-
-		//JSONArray m_jArry = obj.getJSONgoogle.rray("name");
-		//ArrayList<HashMap<String,String>>
 	}
 
 
@@ -238,7 +253,7 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 	 * @return a double with the weighted score of this category
 	 */
 	private static double calcScore(int upperBase, ArrayList<Double> parameters, double weight){
-		double calcScore = 0;
+		double calcScore;
 		// normBaseCount = 0 , easyBaseCount = 0, normPct, easyPct,
 		int hardBaseCount = 0, zeroCount = 0;
 		double zeroPct, acceptPct;
@@ -287,7 +302,9 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 		VehicleSpeed = false;
 		BSChargeBool = false;
 		AccBool = false;
-		
+
+
+		//TODO Set the max x value by looking at the last point in each array list
 		if(canSelect.getSelectedItem().toString().equals("Vehicle Speed")){
 			graph.getViewport().setYAxisBoundsManual(true);
 			graph.getViewport().setMinY(0.0);
@@ -330,6 +347,5 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 
 	@Override
 	public void onNothingSelected(AdapterView<?> parent) {
-		// TODO Auto-generated method stub
 	}
 }

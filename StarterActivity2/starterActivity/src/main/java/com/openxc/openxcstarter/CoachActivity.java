@@ -1,37 +1,43 @@
 package com.openxc.openxcstarter;
 
+import android.app.Activity;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import android.util.Log;
 import android.widget.TextView;
 
 import com.openxcplatform.openxcstarter.R;
 
+import java.text.DecimalFormat;
 
-public class CoachFragment extends Fragment {
 
-    private int rpmScore;
-    private int speedScore;
-    private int fuelScore;
-    private int totalScore;
+public class CoachActivity extends Activity {
+
+    private double rpmScore;
+    private double speedScore;
+    private double fuelScore;
+    private double totalScore;
     private SharedPreferences sharedPreferences;
 
-    //TODO - Make sure the correct integers are bundled up before swapping fragments
-
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_coaching, container, false);
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.coach_activity);
+        DecimalFormat formatter = new DecimalFormat("#0.00");
 
-        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
-        Bundle bundle = getArguments();
-        rpmScore = bundle.getInt("rpmScore");
-        speedScore = bundle.getInt("speedScore");
-        fuelScore = bundle.getInt("fuelScore");
+        //TODO Add accel score - change hardcoded values
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        Bundle bundle = getIntent().getExtras();
+        rpmScore = bundle.getDouble("rpmScore");
+        speedScore = bundle.getDouble("speedScore");
+        fuelScore = bundle.getDouble("fuelScore");
         totalScore = rpmScore + speedScore + fuelScore;
+
+        Log.i("CoachActivity", "RPM Score " + rpmScore);
+        Log.i("CoachActivity", "Speed Score " + speedScore);
+        Log.i("CoachActivity", "Fuel Score " + fuelScore);
+
 
         String rpmGrade = calculateGrade(rpmScore * 3);
         String speedGrade = calculateGrade(speedScore * 3);
@@ -44,27 +50,27 @@ public class CoachFragment extends Fragment {
         double totalPercent = 100 * (totalScore / 1000.0);
 
         //Find the TextViews
-        TextView totalScoreView = (TextView) rootView.findViewById(R.id.coach_totalScore);
-        TextView totalGradeView = (TextView) rootView.findViewById(R.id.coach_grade);
-        TextView rpmScoreView = (TextView) rootView.findViewById(R.id.coach_rpmScore);
-        TextView rpmGradeView = (TextView) rootView.findViewById(R.id.coach_rpmGrade);
-        TextView rpmMessageView = (TextView) rootView.findViewById(R.id.coach_rpmContents);
-        TextView speedScoreView = (TextView) rootView.findViewById(R.id.coach_speedScore);
-        TextView speedGradeView = (TextView) rootView.findViewById(R.id.coach_speedGrade);
-        TextView speedMessageView = (TextView) rootView.findViewById(R.id.coach_speedContents);
-        TextView fuelScoreView = (TextView) rootView.findViewById(R.id.coach_gasScore);
-        TextView fuelGradeView = (TextView) rootView.findViewById(R.id.coach_gasGrade);
-        TextView fuelMessageView = (TextView) rootView.findViewById(R.id.coach_gasContents);
+        TextView totalScoreView = (TextView) findViewById(R.id.coach_totalScore);
+        TextView totalGradeView = (TextView) findViewById(R.id.coach_grade);
+        TextView rpmScoreView = (TextView) findViewById(R.id.coach_rpmScore);
+        TextView rpmGradeView = (TextView) findViewById(R.id.coach_rpmGrade);
+        TextView rpmMessageView = (TextView) findViewById(R.id.coach_rpmContents);
+        TextView speedScoreView = (TextView) findViewById(R.id.coach_speedScore);
+        TextView speedGradeView = (TextView) findViewById(R.id.coach_speedGrade);
+        TextView speedMessageView = (TextView) findViewById(R.id.coach_speedContents);
+        TextView fuelScoreView = (TextView) findViewById(R.id.coach_gasScore);
+        TextView fuelGradeView = (TextView) findViewById(R.id.coach_gasGrade);
+        TextView fuelMessageView = (TextView) findViewById(R.id.coach_gasContents);
 
         //Update the TextViews
         totalScoreView.append(totalGrade + " ");
-        totalGradeView.setText(Double.toString(totalPercent));
+        totalGradeView.setText(formatter.format(totalPercent) + "%");
         rpmScoreView.append(rpmGrade + " ");
-        rpmGradeView.setText(Double.toString(rpmPercent));
+        rpmGradeView.setText(formatter.format(rpmPercent) + "%");
         speedScoreView.append(speedGrade + " ");
-        speedGradeView.setText(Double.toString(speedPercent));
-        fuelScoreView.append(fuelGrade + " ");
-        fuelGradeView.setText(Double.toString(fuelPercent));
+        speedGradeView.setText(formatter.format(speedPercent) + "%");
+        fuelScoreView.append(fuelGrade + "");
+        fuelGradeView.setText(formatter.format(fuelPercent) + "%");
 
         //Display messages
         //TODO - Move these into the strings.xml file
@@ -98,13 +104,10 @@ public class CoachFragment extends Fragment {
         } else {
             speedMessageView.setText("Good job!");
         }
-
-
-        return rootView;
     }
 
 
-    private String calculateGrade(int score) {
+    private String calculateGrade(double score) {
 
         if(score < 500) {
             return "F";
