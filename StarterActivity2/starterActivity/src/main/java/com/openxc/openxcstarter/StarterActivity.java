@@ -65,10 +65,10 @@ public class StarterActivity extends Activity {
 	int count = 0;
 	Timer t = new Timer();
 
-	ArrayList<Double> listRPM = new ArrayList<Double>();
-	ArrayList<Double> listSpeed = new ArrayList<Double>();
-	ArrayList<Double> listBatStateCharge = new ArrayList<Double>();
-	ArrayList<Double> listAcc = new ArrayList<Double>();
+	ArrayList<Double> listRPM = new ArrayList<>();
+	ArrayList<Double> listSpeed = new ArrayList<>();
+	ArrayList<Double> listBatStateCharge = new ArrayList<>();
+	ArrayList<Double> listAcc = new ArrayList<>();
 	double fuelCon = 0.0;
 	double startFuel = 0.0;
 	boolean firstFuel = true;
@@ -157,10 +157,10 @@ public class StarterActivity extends Activity {
 
 
 			//add every 25th data point to the ArrayList
-			if (++speedListenerCount % moduloValue != 0) {
-				//Log.i(TAG, "Skipped Measurement Speed");
+			if(++speedListenerCount % moduloValue != 0) {
+				Log.i(TAG, "Skipped Measurement Speed");
 			} else {
-				Log.i(TAG, "Receieved Measurement Engine Speed");
+				Log.i(TAG, "Received Measurement Engine Speed");
 				listRPM.add(speed.getValue().doubleValue());
 			}
 
@@ -201,7 +201,7 @@ public class StarterActivity extends Activity {
 		@Override
 		public void receive(Measurement measurement) {
 			final IgnitionStatus status = (IgnitionStatus) measurement;
-			Log.i(TAG, "received measurement IgnitionStatus");
+			Log.i(TAG, "Received measurement IgnitionStatus");
 			if (status.getValue().toString().equals("OFF")) {
 				Log.i(TAG, "IS RUNNING");
 				Intent i = new Intent(getApplicationContext(), GraphingActivity.class);
@@ -228,7 +228,7 @@ public class StarterActivity extends Activity {
 
 			//add every 25th data point to the ArrayList
 			if (++vehicleSpeedListenerCount % moduloValue != 0) {
-				//Log.i(TAG, "Skipped vehicle speed measurement");
+				Log.i(TAG, "Skipped vehicle speed measurement");
 			} else {
 				Log.i(TAG, "Received Vehicle Speed Measurement");
 				listSpeed.add(speed.getValue().doubleValue());
@@ -283,10 +283,10 @@ public class StarterActivity extends Activity {
 			final FuelConsumed fuel = (FuelConsumed) measurement;
 
 			if (++fuelConsumedListenerCount % moduloValue != 0) {
-				//Log.i(TAG, "Skipped fuel level measurement");
+				Log.i(TAG, "Skipped fuel level measurement");
 			} else {
 				Log.i(TAG, "Received Fuel Measurement");
-				if (firstFuel == true) {
+				if (firstFuel) {
 					firstFuel = false;
 					startFuel = fuel.getValue().doubleValue();
 				} else {
@@ -324,7 +324,7 @@ public class StarterActivity extends Activity {
 
 			//add every 25th data point to the ArrayList
 			if (++batteryStateListenerCount % moduloValue != 0) {
-				//Log.i(TAG, "Skipped battery charge measurement");
+				Log.i(TAG, "Skipped battery charge measurement");
 			} else {
 				Log.i(TAG, "Received Battery Charge Measurement");
 				listBatStateCharge.add(charge.getValue().doubleValue());
@@ -373,7 +373,7 @@ public class StarterActivity extends Activity {
 
 			//add every 25th data point to the ArrayList
 			if (++AccListenerCount % moduloValue != 0) {
-				//Log.i(TAG, "Skipped acceleration measurement");
+				Log.i(TAG, "Skipped acceleration measurement");
 			} else {
 				Log.i(TAG, "Received Acceleration Measurement");
 				listAcc.add(acc.getValue().doubleValue());
@@ -422,10 +422,10 @@ public class StarterActivity extends Activity {
 
 			//add every 25th data point to the ArrayList
 			if (++DistCount % moduloValue != 0) {
-				//Log.i(TAG, "Skipped odometer measurement");
+				Log.i(TAG, "Skipped odometer measurement");
 			} else {
 				Log.i(TAG, "Received Odometer Measurement");
-				if (firstDist == true) {
+				if (firstDist) {
 					firstDist = false;
 					startDist = odo.getValue().doubleValue();
 				} else {

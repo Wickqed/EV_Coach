@@ -102,8 +102,8 @@
         android:text="Grade"
         android:id="@+id/coach_gasGrade"
         android:layout_alignTop="@+id/coach_gasScore"
-        android:layout_toRightOf="@+id/coach_grade"
-        android:layout_toEndOf="@+id/coach_grade" />
+        android:layout_toRightOf="@+id/coach_rpmGrade"
+        android:layout_toEndOf="@+id/coach_rpmGrade" />
 
     <TextView
         android:layout_width="wrap_content"
