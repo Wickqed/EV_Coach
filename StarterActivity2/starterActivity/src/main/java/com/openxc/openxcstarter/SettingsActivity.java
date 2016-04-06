@@ -1,9 +1,9 @@
 package com.openxc.openxcstarter;
 
-import android.app.Activity;
-import android.os.Bundle;
+        import android.app.Activity;
+        import android.os.Bundle;
 
-import com.openxcplatform.openxcstarter.R;
+        import com.openxcplatform.openxcstarter.R;
 
 public class SettingsActivity extends Activity {
 

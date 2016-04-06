@@ -66,4 +66,13 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bring Up Dialog"
+        android:id="@+id/dialog_button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
 </RelativeLayout>

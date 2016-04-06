@@ -32,11 +32,16 @@
         <activity
             android:name="com.openxc.openxcstarter.GraphingActivity"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.openxc.openxcstarter.BreakdownActivity"
+            android:label="OpenXC EV Coach"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.openxc.openxcstarter.CoachActivity"/>
 
         <service android:name="com.openxc.VehicleManager" />
 
-        <activity android:name="com.openxc.openxcstarter.SettingsActivity"></activity>
+        <activity android:name="com.openxc.openxcstarter.SettingsActivity"/>
     </application>
 
 </manifest>

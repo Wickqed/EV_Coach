@@ -1,5 +1,5 @@
 package com.openxc.openxcstarter;
-//Testing the commets
+//Testing the comments
 import java.util.Locale;
 import java.util.UUID;
 import java.util.ArrayList;
@@ -18,8 +18,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.getpebble.android.kit.PebbleKit;
-import com.getpebble.android.kit.util.PebbleDictionary;
 import com.openxc.measurements.AcceleratorPedalPosition;
 import com.openxc.measurements.Odometer;
 import com.openxcplatform.openxcstarter.R;
@@ -37,7 +35,7 @@ public class StarterActivity extends Activity {
 
 	private VehicleManager mVehicleManager;
 	private TextView mEngineSpeedView;
-    private final int moduloValue = 15;
+	private final int moduloValue = 15;
 	TextToSpeech ttobj;
 	String status = "";
 
@@ -67,10 +65,10 @@ public class StarterActivity extends Activity {
 	int count = 0;
 	Timer t = new Timer();
 
-	ArrayList<Double> listRPM = new ArrayList<Double>();
-	ArrayList<Double> listSpeed = new ArrayList<Double>();
-	ArrayList<Double> listBatStateCharge = new ArrayList<Double>();
-	ArrayList<Double> listAcc = new ArrayList<Double>();
+	ArrayList<Double> listRPM = new ArrayList<>();
+	ArrayList<Double> listSpeed = new ArrayList<>();
+	ArrayList<Double> listBatStateCharge = new ArrayList<>();
+	ArrayList<Double> listAcc = new ArrayList<>();
 	double fuelCon = 0.0;
 	double startFuel = 0.0;
 	boolean firstFuel = true;
@@ -91,15 +89,15 @@ public class StarterActivity extends Activity {
 		connection_status.setTextColor(Color.RED);
 		connection_status.setText("Not connected");
 
-		ttobj=new TextToSpeech(getApplicationContext(), 
+		ttobj = new TextToSpeech(getApplicationContext(),
 				new TextToSpeech.OnInitListener() {
-			@Override
-			public void onInit(int status) {
-				if(status != TextToSpeech.ERROR){
-					ttobj.setLanguage(Locale.UK);
-				}				
-			}
-		});
+					@Override
+					public void onInit(int status) {
+						if (status != TextToSpeech.ERROR) {
+							ttobj.setLanguage(Locale.UK);
+						}
+					}
+				});
 
 	}
 
@@ -108,7 +106,7 @@ public class StarterActivity extends Activity {
 		super.onPause();
 		// When the activity goes into the background or exits, we want to make
 		// sure to unbind from the service to avoid leaking memory
-		if(mVehicleManager != null) {
+		if (mVehicleManager != null) {
 			Log.i(TAG, "Unbinding from Vehicle Manager");
 			// Remember to remove your listeners, in typical Android
 			// fashion.
@@ -125,7 +123,7 @@ public class StarterActivity extends Activity {
 			mVehicleManager = null;
 		}
 
-		if(ttobj !=null){
+		if (ttobj != null) {
 			ttobj.stop();
 			ttobj.shutdown();
 		}
@@ -137,7 +135,7 @@ public class StarterActivity extends Activity {
 		super.onResume();
 		// When the activity starts up or returns from the background,
 		// re-connect to the VehicleManager so we can receive updates.
-		if(mVehicleManager == null) {
+		if (mVehicleManager == null) {
 			Intent intent = new Intent(this, VehicleManager.class);
 			bindService(intent, mConnection, Context.BIND_AUTO_CREATE);
 		}
@@ -148,7 +146,7 @@ public class StarterActivity extends Activity {
 	 * Later in the file, we'll ask the VehicleManager to call the receive()
 	 * function here whenever a new EngineSpeed value arrives.
 	 */
-    int speedListenerCount = 0;
+	int speedListenerCount = 0;
 	EngineSpeed.Listener mSpeedListener = new EngineSpeed.Listener() {
 		@Override
 		public void receive(Measurement measurement) {
@@ -158,13 +156,13 @@ public class StarterActivity extends Activity {
 			final EngineSpeed speed = (EngineSpeed) measurement;
 
 
-            //add every 25th data point to the ArrayList
-            if(++speedListenerCount % moduloValue != 0) {
-                Log.i(TAG, "Skipped Measurement Speed");
-            } else {
-				Log.i(TAG, "Receieved Measurement Engine Speed");
-                listRPM.add(speed.getValue().doubleValue());
-            }
+			//add every 25th data point to the ArrayList
+			if(++speedListenerCount % moduloValue != 0) {
+				Log.i(TAG, "Skipped Measurement Speed");
+			} else {
+				Log.i(TAG, "Received Measurement Engine Speed");
+				listRPM.add(speed.getValue().doubleValue());
+			}
 
 			// In order to modify the UI, we have to make sure the code is
 			// running on the "UI thread" - Google around for this, it's an
@@ -193,24 +191,23 @@ public class StarterActivity extends Activity {
 					}*/
 
 
-
 				}
 			});
 		}
 	};
 
-	IgnitionStatus.Listener mIgnitionListener = new IgnitionStatus.Listener(){
+	IgnitionStatus.Listener mIgnitionListener = new IgnitionStatus.Listener() {
 
 		@Override
 		public void receive(Measurement measurement) {
 			final IgnitionStatus status = (IgnitionStatus) measurement;
-			Log.i(TAG, "received measurement IgnitionStatus");
-			if(status.getValue().toString().equals("OFF")){
+			Log.i(TAG, "Received measurement IgnitionStatus");
+			if (status.getValue().toString().equals("OFF")) {
 				Log.i(TAG, "IS RUNNING");
-				Intent i = new Intent(getApplicationContext(),GraphingActivity.class);
-				i.putExtra("listRPM",listRPM);
+				Intent i = new Intent(getApplicationContext(), GraphingActivity.class);
+				i.putExtra("listRPM", listRPM);
 				i.putExtra("listSpeed", listSpeed);
-				i.putExtra("listBatStateCharge",listBatStateCharge);
+				i.putExtra("listBatStateCharge", listBatStateCharge);
 				i.putExtra("listAcc", listAcc);
 				i.putExtra("fuelCon", fuelCon);
 				i.putExtra("dist", dist);
@@ -221,7 +218,7 @@ public class StarterActivity extends Activity {
 
 	};
 
-    int vehicleSpeedListenerCount = 0;
+	int vehicleSpeedListenerCount = 0;
 	VehicleSpeed.Listener mSpeedVehicleListener = new VehicleSpeed.Listener() {
 		public void receive(Measurement measurement) {
 			// When we receive a new VehicleSpeed value from the car, we want to
@@ -229,13 +226,13 @@ public class StarterActivity extends Activity {
 			// Measurement back to the type we know it to be, an EngineSpeed.
 			final VehicleSpeed speed = (VehicleSpeed) measurement;
 
-            //add every 25th data point to the ArrayList
-            if(++vehicleSpeedListenerCount % moduloValue != 0) {
-                Log.i(TAG, "Skipped vehicle speed measurement");
-            } else {
-                Log.i(TAG, "Received Vehicle Speed Measurement");
-                listSpeed.add(speed.getValue().doubleValue());
-            }
+			//add every 25th data point to the ArrayList
+			if (++vehicleSpeedListenerCount % moduloValue != 0) {
+				Log.i(TAG, "Skipped vehicle speed measurement");
+			} else {
+				Log.i(TAG, "Received Vehicle Speed Measurement");
+				listSpeed.add(speed.getValue().doubleValue());
+			}
 
 			// In order to modify the UI, we have to make sure the code is
 			// running on the "UI thread" - Google around for this, it's an
@@ -277,7 +274,7 @@ public class StarterActivity extends Activity {
 		}
 	};
 
-    int fuelConsumedListenerCount = 0;
+	int fuelConsumedListenerCount = 0;
 	FuelConsumed.Listener mFuelListener = new FuelConsumed.Listener() {
 		public void receive(Measurement measurement) {
 			// When we receive a new FuelLevel value from the car, we want to
@@ -285,31 +282,29 @@ public class StarterActivity extends Activity {
 			// Measurement back to the type we know it to be, an FuelLevel.
 			final FuelConsumed fuel = (FuelConsumed) measurement;
 
-            //add every 25th data point to the ArrayList
-            if(++fuelConsumedListenerCount % moduloValue != 0) {
-                Log.i(TAG, "Skipped fuel level measurement");
-            } else {
-                Log.i(TAG, "Received Fuel Measurement");
-				if(firstFuel == true){
+			if (++fuelConsumedListenerCount % moduloValue != 0) {
+				Log.i(TAG, "Skipped fuel level measurement");
+			} else {
+				Log.i(TAG, "Received Fuel Measurement");
+				if (firstFuel) {
 					firstFuel = false;
 					startFuel = fuel.getValue().doubleValue();
-				}
-				else{
+				} else {
 					fuelCon = fuel.getValue().doubleValue() - startFuel;
 				}
-            }
+			}
 
 
 			// In order to modify the UI, we have to make sure the code is
 			// running on the "UI thread" - Google around for this, it's an
 			// important concept in Android.
 			StarterActivity.this.runOnUiThread(new Runnable() {
-                public void run() {
-                    // Finally, we've got a new value and we're running on the
-                    // UI thread - we set the text of the EngineSpeed view to
-                    // the latest value
-                }
-            });
+				public void run() {
+					// Finally, we've got a new value and we're running on the
+					// UI thread - we set the text of the EngineSpeed view to
+					// the latest value
+				}
+			});
 		}
 	};
 
@@ -319,7 +314,7 @@ public class StarterActivity extends Activity {
 	 * function here whenever a new EngineSpeed value arrives.
 	 */
 
-    int batteryStateListenerCount = 0;
+	int batteryStateListenerCount = 0;
 	BatteryStateOfCharge.Listener mBatteryStateOfChargeListener = new BatteryStateOfCharge.Listener() {
 		public void receive(Measurement measurement) {
 			// When we receive a new BatteryLevel value from the car, we want to
@@ -327,15 +322,15 @@ public class StarterActivity extends Activity {
 			// Measurement back to the type we know it to be, an EngineSpeed.
 			final BatteryStateOfCharge charge = (BatteryStateOfCharge) measurement;
 
-            //add every 25th data point to the ArrayList
-            if(++batteryStateListenerCount % moduloValue != 0) {
-                Log.i(TAG, "Skipped battery charge measurement");
-            } else {
-                Log.i(TAG, "Received Battery Charge Measurement");
-                listBatStateCharge.add(charge.getValue().doubleValue());
-            }
+			//add every 25th data point to the ArrayList
+			if (++batteryStateListenerCount % moduloValue != 0) {
+				Log.i(TAG, "Skipped battery charge measurement");
+			} else {
+				Log.i(TAG, "Received Battery Charge Measurement");
+				listBatStateCharge.add(charge.getValue().doubleValue());
+			}
 
-            // In order to modify the UI, we have to make sure the code is
+			// In order to modify the UI, we have to make sure the code is
 			// running on the "UI thread" - Google around for this, it's an
 			// important concept in Android.
 			StarterActivity.this.runOnUiThread(new Runnable() {
@@ -377,7 +372,7 @@ public class StarterActivity extends Activity {
 			final AcceleratorPedalPosition acc = (AcceleratorPedalPosition) measurement;
 
 			//add every 25th data point to the ArrayList
-			if(++AccListenerCount % moduloValue != 0) {
+			if (++AccListenerCount % moduloValue != 0) {
 				Log.i(TAG, "Skipped acceleration measurement");
 			} else {
 				Log.i(TAG, "Received Acceleration Measurement");
@@ -426,15 +421,14 @@ public class StarterActivity extends Activity {
 			final Odometer odo = (Odometer) measurement;
 
 			//add every 25th data point to the ArrayList
-			if(++DistCount % moduloValue != 0) {
+			if (++DistCount % moduloValue != 0) {
 				Log.i(TAG, "Skipped odometer measurement");
 			} else {
 				Log.i(TAG, "Received Odometer Measurement");
-				if(firstDist == true){
+				if (firstDist) {
 					firstDist = false;
 					startDist = odo.getValue().doubleValue();
-				}
-				else{
+				} else {
 					dist = odo.getValue().doubleValue() - startDist;
 				}
 			}
@@ -476,7 +470,7 @@ public class StarterActivity extends Activity {
 		// Called when the connection with the VehicleManager service is
 		// established, i.e. bound.
 		public void onServiceConnected(ComponentName className,
-				IBinder service) {
+									   IBinder service) {
 			Log.i(TAG, "Bound to VehicleManager");
 			// When the VehicleManager starts up, we store a reference to it
 			// here in "mVehicleManager" so we can call functions on it
@@ -522,13 +516,14 @@ public class StarterActivity extends Activity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 
 		int id = item.getItemId();
-		if(id == R.id.action_settings) {
+		if (id == R.id.action_settings) {
 			startActivity(new Intent(this, SettingsActivity.class));
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
 	}
-
+}
+/*
 	public boolean isPebbleConnected() {
 		boolean connected = PebbleKit.isWatchConnected(getApplicationContext());
 		Log.i(getLocalClassName(), "Pebble is " + (connected ? "connected" : "not connected"));
@@ -548,3 +543,4 @@ public class StarterActivity extends Activity {
 		PebbleKit.sendDataToPebble(getApplicationContext(), VIBE_UUID, data);
 	}
 }
+*/
