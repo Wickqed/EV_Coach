@@ -32,6 +32,7 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 	double RPMScore = 0;
 	double speedScore = 0;
 	double accelScore = 0;
+	double MPGScore = 0;
 
 	private DecimalFormat formatter;
 
@@ -73,42 +74,46 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 		ArrayList<Double> listBatStateCharge = (ArrayList<Double>) getIntent().getSerializableExtra("listBatStateCharge");
 		ArrayList<Double> listAcc = (ArrayList<Double>) getIntent().getSerializableExtra("listAcc");
 
+		double fuelCon = (double) getIntent().getSerializableExtra("fuelCon");
+		double dist = (double) getIntent().getSerializableExtra("dist");
+
 		//Determine which type of driving we are doing
 		String dType = sharedPreferences.getString("unit", "0");
 		int driveType = Integer.parseInt(dType);
 
+		fuelCon = fuelCon * 0.264172;
+		mpg = (dist * 0.621371) / fuelCon;
+
 		//city driving
 		if(driveType == 0) {
-			RPMScore = calcScore (500, listRPM, .33);
-			speedScore = calcScore(73, listSpeed, .33);
-			accelScore = calcScore(15, listAcc, 0.34);
+			RPMScore = calcScore (500, listRPM, .25);
+			speedScore = calcScore(73, listSpeed, .25);
+			accelScore = calcScore(15, listAcc, .25);
 
 		} else if(driveType == 1) {
 			//rural driving
 			//TODO: Not yet implemented - rural driving
-			RPMScore = calcScore(1500, listRPM, .33);
-			speedScore = calcScore(100, listSpeed, .33);
-			accelScore = calcScore(15, listAcc, 0.34);
+			RPMScore = calcScore(1500, listRPM, .25);
+			speedScore = calcScore(100, listSpeed, .25);
+			accelScore = calcScore(15, listAcc, .25);
 
 		} else {
 			//highway driving
-			RPMScore = calcScore(2000, listRPM, .33);
-			speedScore = calcScore(117, listSpeed, .33);
-			accelScore = calcScore(25, listAcc, 0.34);
+			RPMScore = calcScore(2000, listRPM, .25);
+			speedScore = calcScore(117, listSpeed, .25);
+			accelScore = calcScore(25, listAcc, .25);
 
 		}
-
-		double fuelCon = (double) getIntent().getSerializableExtra("fuelCon");
-		double dist = (double) getIntent().getSerializableExtra("dist");
+		MPGScore = calcMPG(mpg, 0.25);
 
 		//Calculate score here and put it into the text box
 		Log.i("GraphingActivity", "Speed Score: " + speedScore);
 		Log.i("GraphingActivity", "RPM Score: " + RPMScore);
 		Log.i("GraphingActivity", "Accelerating Score: " + accelScore);
-
+		Log.i("GraphingActivity", "MPG Score: " + MPGScore);
 
 		
-		totalScore = RPMScore + speedScore + accelScore;
+		totalScore = RPMScore + speedScore + accelScore + MPGScore;
 		dialog.setTitle("Score Screen");
 		dialog.setContentView(R.layout.userinterface);
 		dialog.show();
@@ -124,7 +129,12 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 
 
 		//TODO Make the dialog button do something
-
+		dialogButton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				dialog.show();
+			}
+		});
 
 		//Calculates the letter grade associated with the user's score
 		if(totalScore >= 900) {
@@ -170,11 +180,12 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 			public void onClick(View view) {
 				Intent startNewActivityOpen = new Intent(getApplicationContext(), BreakdownActivity.class);
 				dialog.cancel();
-				//TODO FUEL SCORE
+
 				startNewActivityOpen.putExtra("SpeedScore", formatter.format(speedScore));
 				startNewActivityOpen.putExtra("AccScore", formatter.format(accelScore));
 				startNewActivityOpen.putExtra("RPMScore", formatter.format(RPMScore));
 				startNewActivityOpen.putExtra("totalScore", formatter.format(totalScore));
+				startNewActivityOpen.putExtra("MPGScore", formatter.format(MPGScore));
 				startNewActivityOpen.putExtra("grade", gradeView.getText().toString());
 				dialog.cancel();
 				startActivity(startNewActivityOpen);
@@ -189,15 +200,14 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 				//TODO FUEL SCORE, ACCEL SCORE
 				newActivity.putExtra("rpmScore", RPMScore);
 				newActivity.putExtra("speedScore", speedScore);
-				newActivity.putExtra("fuelScore", 0.0);
+				newActivity.putExtra("mpgScore", MPGScore);
+				newActivity.putExtra("accelScore", accelScore);
 				//newActivity.putExtra("accelScore", accelScore));
 				startActivity(newActivity);
 			}
 		});
-
-		mpg = (dist * 0.621371) / (fuelCon * 0.264172);
 		
-		text = "Start Charge: " + listBatStateCharge.get(0) + "%\nFuel Consumed: " + formatter.format(fuelCon) + " gal\nEnd Charge: " + listBatStateCharge.get(listBatStateCharge.size() - 1) + "%\nMPGe: " + formatter.format(mpg) + " mpg";
+		text = "Start Charge: " + listBatStateCharge.get(0) + "%\nEnd Charge: " + listBatStateCharge.get(listBatStateCharge.size() - 1) + " %\nFuel Consumed: " + formatter.format(fuelCon) + "gal\nMPGe: " + formatter.format(mpg) + " mpg";
 		TextView battery;
 		battery = (TextView)findViewById(R.id.battery);
 		battery.setText(text);
@@ -343,6 +353,31 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 			//Toast.makeText(getApplicationContext(), "Acceleration", Toast.LENGTH_SHORT).show();
 
 		}
+	}
+
+	//TODO COMMENT
+	private double calcMPG(double mpg, double weight) {
+		double score = 100;
+		if(mpg <= 5) {
+			score = 0;
+		} else if(mpg <= 10) {
+			score = 10;
+		} else if(mpg <= 15) {
+			score = 20;
+		} else if(mpg <= 20) {
+			score = 30;
+		} else if(mpg <= 25) {
+			score = 50;
+		} else if(mpg <= 30) {
+			score = 75;
+		} else if(mpg <= 35) {
+			score = 90;
+		}
+
+		score *= 10;
+
+		return score * weight;
+
 	}
 
 	@Override
