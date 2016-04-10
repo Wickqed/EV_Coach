@@ -316,6 +316,9 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 
 		//TODO Set the max x value by looking at the last point in each array list
 		if(canSelect.getSelectedItem().toString().equals("Vehicle Speed")){
+			graph.getViewport().setXAxisBoundsManual(true);
+			graph.getViewport().setMinX(0.0);
+			graph.getViewport().setMaxX(speedSeries.getHighestValueX() + 5);
 			graph.getViewport().setYAxisBoundsManual(true);
 			graph.getViewport().setMinY(0.0);
 			graph.getViewport().setMaxY(110.0);
@@ -325,6 +328,9 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 			//Toast.makeText(getApplicationContext(), "vehicle speed selected", Toast.LENGTH_SHORT).show();
 		}
 		else if(canSelect.getSelectedItem().toString().equals("Engine Speed")){
+			graph.getViewport().setXAxisBoundsManual(true);
+			graph.getViewport().setMinX(0.0);
+			graph.getViewport().setMaxX(rpmSeries.getHighestValueX() + 5);
 			graph.getViewport().setYAxisBoundsManual(true);
 			graph.getViewport().setMinY(0.0);
 			graph.getViewport().setMaxY(6000.0);
@@ -334,6 +340,9 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 			//Toast.makeText(getApplicationContext(), "engine speed selected", Toast.LENGTH_SHORT).show();
 		}
 		else if(canSelect.getSelectedItem().toString().equals("Battery State of Charge")){
+			graph.getViewport().setXAxisBoundsManual(true);
+			graph.getViewport().setMinX(0.0);
+			graph.getViewport().setMaxX(bSCSeries.getHighestValueX() + 5);
 			graph.getViewport().setYAxisBoundsManual(true);
 			graph.getViewport().setMinY(0.0);
 			graph.getViewport().setMaxY(100.0);
@@ -344,6 +353,9 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 
 		}
 		else if(canSelect.getSelectedItem().toString().equals("Acceleration")){
+			graph.getViewport().setXAxisBoundsManual(true);
+			graph.getViewport().setMinX(0.0);
+			graph.getViewport().setMaxX(accSeries.getHighestValueX() + 5);
 			graph.getViewport().setYAxisBoundsManual(true);
 			graph.getViewport().setMinY(0.0);
 			graph.getViewport().setMaxY(100.0);
