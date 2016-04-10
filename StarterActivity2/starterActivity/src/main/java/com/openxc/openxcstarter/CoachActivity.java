@@ -16,8 +16,9 @@ public class CoachActivity extends Activity {
 
     private double rpmScore;
     private double speedScore;
-    private double fuelScore;
+    private double mpgScore;
     private double totalScore;
+    private double accelScore;
     private SharedPreferences sharedPreferences;
 
     @Override
@@ -26,28 +27,32 @@ public class CoachActivity extends Activity {
         setContentView(R.layout.coach_activity);
         DecimalFormat formatter = new DecimalFormat("#0.00");
 
-        //TODO Add accel score - change hardcoded values
+
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         Bundle bundle = getIntent().getExtras();
         rpmScore = bundle.getDouble("rpmScore");
         speedScore = bundle.getDouble("speedScore");
-        fuelScore = bundle.getDouble("fuelScore");
-        totalScore = rpmScore + speedScore + fuelScore;
+        mpgScore = bundle.getDouble("mpgScore");
+        accelScore = bundle.getDouble("accelScore");
+        totalScore = rpmScore + speedScore + mpgScore + accelScore;
 
         Log.i("CoachActivity", "RPM Score " + rpmScore);
         Log.i("CoachActivity", "Speed Score " + speedScore);
-        Log.i("CoachActivity", "Fuel Score " + fuelScore);
+        Log.i("CoachActivity", "MPG Score " + mpgScore);
+        Log.i("CoachActivity", "Accel Score " + accelScore);
 
 
-        String rpmGrade = calculateGrade(rpmScore * 3);
-        String speedGrade = calculateGrade(speedScore * 3);
-        String fuelGrade = calculateGrade(fuelScore * 3);
+        String rpmGrade = calculateGrade(rpmScore * 4);
+        String speedGrade = calculateGrade(speedScore * 4);
+        String mpgGrade = calculateGrade(mpgScore * 4);
+        String accelGrade = calculateGrade(accelScore * 4);
         String totalGrade = calculateGrade(totalScore);
 
-        double rpmPercent = 100 * (rpmScore / 333.0);
-        double speedPercent = 100 * (speedScore / 333.0);
-        double fuelPercent = 100 * (fuelScore / 333.0);
-        double totalPercent = 100 * (totalScore / 1000.0);
+        double rpmPercent = 100 * (rpmScore / 250.);
+        double speedPercent = 100 * (speedScore / 250.);
+        double mpgPercent = 100 * (mpgScore / 250.);
+        double accelPercent = 100 * (accelScore / 250.);
+        double totalPercent = 100 * (totalScore / 1000.);
 
         //Find the TextViews
         TextView totalScoreView = (TextView) findViewById(R.id.coach_totalScore);
@@ -58,9 +63,12 @@ public class CoachActivity extends Activity {
         TextView speedScoreView = (TextView) findViewById(R.id.coach_speedScore);
         TextView speedGradeView = (TextView) findViewById(R.id.coach_speedGrade);
         TextView speedMessageView = (TextView) findViewById(R.id.coach_speedContents);
-        TextView fuelScoreView = (TextView) findViewById(R.id.coach_gasScore);
-        TextView fuelGradeView = (TextView) findViewById(R.id.coach_gasGrade);
-        TextView fuelMessageView = (TextView) findViewById(R.id.coach_gasContents);
+        TextView mpgScoreView = (TextView) findViewById(R.id.coach_gasScore);
+        TextView mpgGradeView = (TextView) findViewById(R.id.coach_gasGrade);
+        TextView mpgMessageView = (TextView) findViewById(R.id.coach_gasContents);
+        TextView accelScoreView = (TextView) findViewById(R.id.coach_accelScore);
+        TextView accelGradeView = (TextView) findViewById(R.id.coach_accelGrade);
+        TextView accelMessageView = (TextView) findViewById(R.id.coach_accelContents);
 
         //Update the TextViews
         totalScoreView.append(totalGrade + " ");
@@ -69,14 +77,18 @@ public class CoachActivity extends Activity {
         rpmGradeView.setText(formatter.format(rpmPercent) + "%");
         speedScoreView.append(speedGrade + " ");
         speedGradeView.setText(formatter.format(speedPercent) + "%");
-        fuelScoreView.append(fuelGrade + "");
-        fuelGradeView.setText(formatter.format(fuelPercent) + "%");
+        mpgScoreView.append(mpgGrade + " ");
+        mpgGradeView.setText(formatter.format(mpgPercent) + "%");
+        accelScoreView.append(accelGrade + " ");
+        accelGradeView.setText(formatter.format(accelPercent) + "%");
+
 
         //Display messages
         //TODO - Move these into the strings.xml file
         String rpmMessage = "Try to not accelerate as rapidly when driving.";
         String speedMessage;
-        String fuelMessage = "Make sure you have a fully charged battery, and to keep your speed and RPMs low";
+        String mpgMessage = "Make sure you have a fully charged battery, and to keep your speed and RPMs low";
+        String accelMessage = "Try to not accelerate as rapidly when driving.";
 
         if(Integer.parseInt(sharedPreferences.getString("road", "0")) == 2) {
             speedMessage = "Try slowing down when traveling on the highway.";
@@ -93,16 +105,22 @@ public class CoachActivity extends Activity {
             rpmMessageView.setText("Good job!");
         }
 
-        if(fuelPercent < 80.0) {
-            fuelMessageView.setText(fuelMessage);
+        if(mpgPercent < 80.0) {
+            mpgMessageView.setText(mpgMessage);
         } else {
-            fuelMessageView.setText("Good job!");
+            mpgMessageView.setText("Good job!");
         }
 
         if(speedPercent < 80.0) {
             speedMessageView.setText(speedMessage);
         } else {
             speedMessageView.setText("Good job!");
+        }
+
+        if(accelPercent < 80.0) {
+            accelMessageView.setText(accelMessage);
+        } else {
+            accelMessageView.setText("Good job!");
         }
     }
 

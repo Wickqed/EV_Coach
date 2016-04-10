@@ -211,6 +211,8 @@ public class StarterActivity extends Activity {
 				i.putExtra("listAcc", listAcc);
 				i.putExtra("fuelCon", fuelCon);
 				i.putExtra("dist", dist);
+				firstDist = true;
+				firstFuel = true;
 
 				startActivity(i);
 			}
