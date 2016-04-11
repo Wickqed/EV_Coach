@@ -78,7 +78,7 @@ public class GraphingActivity extends Activity implements OnItemSelectedListener
 		double dist = (double) getIntent().getSerializableExtra("dist");
 
 		//Determine which type of driving we are doing
-		String dType = sharedPreferences.getString("unit", "0");
+		String dType = sharedPreferences.getString("road", "0");
 		int driveType = Integer.parseInt(dType);
 
 		fuelCon = fuelCon * 0.264172;
